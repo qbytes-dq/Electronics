@@ -1,0 +1,17 @@
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.dll
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.pdb
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications_3_0_0_0.csprojResolveAssemblyReference.cache

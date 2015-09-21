@@ -1,0 +1,2975 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.82 build 9453 
+                                                                                               Tue Sep 08 23:35:30 2015
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 9453
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 9453"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F628A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           # 25 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f6
+                                 28_FrequencyMeter_2\FrequencyCounterLCD.c"
+    43                           	psect config,class=CONFIG,delta=2 ;#
+    44                           # 25 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f6
+                                 28_FrequencyMeter_2\FrequencyCounterLCD.c"
+    45  2007  3F79               	dw 0x3FFB & 0x3FFF & 0x3F7F & 0x3FFD ;#
+    46                           	FNCALL	_main,_init
+    47                           	FNCALL	_main,___lldiv
+    48                           	FNCALL	_main,___llmod
+    49                           	FNCALL	_main,_clear
+    50                           	FNCALL	_main,_display
+    51                           	FNCALL	_main,_clock
+    52                           	FNCALL	_display,_clock
+    53                           	FNCALL	_clear,_clock
+    54                           	FNCALL	_init,_clock
+    55                           	FNROOT	_main
+    56                           	global	_d1
+    57                           	global	_d2
+    58                           	global	_d3
+    59                           	global	_d4
+    60                           	global	_d5
+    61                           	global	_d6
+    62                           	global	_d7
+    63                           	global	_period
+    64                           	global	_CMCON
+    65                           psect	text206,local,class=CODE,delta=2
+    66                           global __ptext206
+    67  0000                     __ptext206:
+    68  001F                     _CMCON	set	31
+    69                           	global	_PORTA
+    70  0005                     _PORTA	set	5
+    71                           	global	_PORTB
+    72  0006                     _PORTB	set	6
+    73                           	global	_T1CON
+    74  0010                     _T1CON	set	16
+    75                           	global	_TMR0
+    76  0001                     _TMR0	set	1
+    77                           	global	_TMR1H
+    78  000F                     _TMR1H	set	15
+    79                           	global	_TMR1L
+    80  000E                     _TMR1L	set	14
+    81                           	global	_CARRY
+    82  0018                     _CARRY	set	24
+    83                           	global	_GIE
+    84  005F                     _GIE	set	95
+    85                           	global	_RA0
+    86  0028                     _RA0	set	40
+    87                           	global	_RA1
+    88  0029                     _RA1	set	41
+    89                           	global	_RB0
+    90  0030                     _RB0	set	48
+    91                           	global	_RB7
+    92  0037                     _RB7	set	55
+    93                           	global	_T0IF
+    94  005A                     _T0IF	set	90
+    95                           	global	_TMR1IF
+    96  0060                     _TMR1IF	set	96
+    97                           	global	_TMR1ON
+    98  0080                     _TMR1ON	set	128
+    99                           	global	_EEADR
+   100  009B                     _EEADR	set	155
+   101                           	global	_EECON1
+   102  009C                     _EECON1	set	156
+   103                           	global	_EECON2
+   104  009D                     _EECON2	set	157
+   105                           	global	_EEDATA
+   106  009A                     _EEDATA	set	154
+   107                           	global	_OPTION
+   108  0081                     _OPTION	set	129
+   109                           	global	_TRISA
+   110  0085                     _TRISA	set	133
+   111                           	global	_TRISB
+   112  0086                     _TRISB	set	134
+   113                           	global	_RD
+   114  04E0                     _RD	set	1248
+   115                           	global	_WR
+   116  04E1                     _WR	set	1249
+   117                           	global	_WREN
+   118  04E2                     _WREN	set	1250
+   119                           	file	"FrequencyCounterLCD.as"
+   120                           	line	#
+   121                           psect cinit,class=CODE,delta=2
+   122                           global start_initialization
+   123  02DC                     start_initialization:
+   124                           
+   125                           psect	bssBANK0,class=BANK0,space=1
+   126                           global __pbssBANK0
+   127  0036                     __pbssBANK0:
+   128  0036                     _d1:
+   129  0036                            ds      1
+   130                           
+   131  0037                     _d2:
+   132  0037                            ds      1
+   133                           
+   134  0038                     _d3:
+   135  0038                            ds      1
+   136                           
+   137  0039                     _d4:
+   138  0039                            ds      1
+   139                           
+   140  003A                     _d5:
+   141  003A                            ds      1
+   142                           
+   143  003B                     _d6:
+   144  003B                            ds      1
+   145                           
+   146  003C                     _d7:
+   147  003C                            ds      1
+   148                           
+   149  003D                     _period:
+   150  003D                            ds      1
+   151                           
+   152                           ; Clear objects allocated to BANK0
+   153                           psect cinit,class=CODE,delta=2
+   154  02DC  01B6               	clrf	((__pbssBANK0)+0)&07Fh
+   155  02DD  01B7               	clrf	((__pbssBANK0)+1)&07Fh
+   156  02DE  01B8               	clrf	((__pbssBANK0)+2)&07Fh
+   157  02DF  01B9               	clrf	((__pbssBANK0)+3)&07Fh
+   158  02E0  01BA               	clrf	((__pbssBANK0)+4)&07Fh
+   159  02E1  01BB               	clrf	((__pbssBANK0)+5)&07Fh
+   160  02E2  01BC               	clrf	((__pbssBANK0)+6)&07Fh
+   161  02E3  01BD               	clrf	((__pbssBANK0)+7)&07Fh
+   162                           psect cinit,class=CODE,delta=2
+   163                           global end_of_initialization
+   164                           
+   165                           ;End of C runtime variable initialization code
+   166                           
+   167  02E4                     end_of_initialization:
+   168  02E4  0183               clrf status
+   169  02E5  2C30               ljmp _main	;jump to C main() function
+   170                           psect	cstackCOMMON,class=COMMON,space=1
+   171                           global __pcstackCOMMON
+   172  0070                     __pcstackCOMMON:
+   173                           	global	?_clock
+   174  0070                     ?_clock:	; 0 bytes @ 0x0
+   175                           	global	??_clock
+   176  0070                     ??_clock:	; 0 bytes @ 0x0
+   177                           	global	?_clear
+   178  0070                     ?_clear:	; 0 bytes @ 0x0
+   179                           	global	??_clear
+   180  0070                     ??_clear:	; 0 bytes @ 0x0
+   181                           	global	?_display
+   182  0070                     ?_display:	; 0 bytes @ 0x0
+   183                           	global	??_display
+   184  0070                     ??_display:	; 0 bytes @ 0x0
+   185                           	global	?_init
+   186  0070                     ?_init:	; 0 bytes @ 0x0
+   187                           	global	??_init
+   188  0070                     ??_init:	; 0 bytes @ 0x0
+   189                           	global	?_main
+   190  0070                     ?_main:	; 0 bytes @ 0x0
+   191                           	global	?___lldiv
+   192  0070                     ?___lldiv:	; 4 bytes @ 0x0
+   193                           	global	___lldiv@divisor
+   194  0070                     ___lldiv@divisor:	; 4 bytes @ 0x0
+   195  0070                     	ds	1
+   196                           	global	display@fig
+   197  0071                     display@fig:	; 1 bytes @ 0x1
+   198  0071                     	ds	3
+   199                           	global	___lldiv@dividend
+   200  0074                     ___lldiv@dividend:	; 4 bytes @ 0x4
+   201  0074                     	ds	4
+   202                           	global	??___lldiv
+   203  0078                     ??___lldiv:	; 0 bytes @ 0x8
+   204  0078                     	ds	1
+   205                           	global	___lldiv@quotient
+   206  0079                     ___lldiv@quotient:	; 4 bytes @ 0x9
+   207  0079                     	ds	4
+   208                           	global	___lldiv@counter
+   209  007D                     ___lldiv@counter:	; 1 bytes @ 0xD
+   210  007D                     	ds	1
+   211                           psect	cstackBANK0,class=BANK0,space=1
+   212                           global __pcstackBANK0
+   213  0020                     __pcstackBANK0:
+   214                           	global	?___llmod
+   215  0020                     ?___llmod:	; 4 bytes @ 0x0
+   216                           	global	___llmod@divisor
+   217  0020                     ___llmod@divisor:	; 4 bytes @ 0x0
+   218  0020                     	ds	4
+   219                           	global	___llmod@dividend
+   220  0024                     ___llmod@dividend:	; 4 bytes @ 0x4
+   221  0024                     	ds	4
+   222                           	global	??___llmod
+   223  0028                     ??___llmod:	; 0 bytes @ 0x8
+   224  0028                     	ds	1
+   225                           	global	___llmod@counter
+   226  0029                     ___llmod@counter:	; 1 bytes @ 0x9
+   227  0029                     	ds	1
+   228                           	global	??_main
+   229  002A                     ??_main:	; 0 bytes @ 0xA
+   230  002A                     	ds	4
+   231                           	global	main@freq2
+   232  002E                     main@freq2:	; 2 bytes @ 0xE
+   233  002E                     	ds	2
+   234                           	global	main@freq1
+   235  0030                     main@freq1:	; 1 bytes @ 0x10
+   236  0030                     	ds	1
+   237                           	global	main@nz
+   238  0031                     main@nz:	; 1 bytes @ 0x11
+   239  0031                     	ds	1
+   240                           	global	main@total
+   241  0032                     main@total:	; 4 bytes @ 0x12
+   242  0032                     	ds	4
+   243 ;;Data sizes: Strings 0, constant 0, data 0, bss 8, persistent 0 stack 0
+   244 ;;Auto spaces:   Size  Autos    Used
+   245 ;; COMMON          14     14      14
+   246 ;; BANK0           80     22      30
+   247 ;; BANK1           80      0       0
+   248 ;; BANK2           48      0       0
+   249                           
+   250 ;;
+   251 ;; Pointer list with targets:
+   252                           
+   253 ;; ?___llmod	unsigned long  size(1) Largest target is 4
+   254 ;;		 -> main@total(BANK0[4]), 
+   255 ;;
+   256 ;; ?___lldiv	unsigned long  size(1) Largest target is 0
+   257 ;;
+   258                           
+   259                           
+   260 ;;
+   261 ;; Critical Paths under _main in COMMON
+   262 ;;
+   263 ;;   _main->___lldiv
+   264 ;;   ___llmod->___lldiv
+   265 ;;
+   266 ;; Critical Paths under _main in BANK0
+   267 ;;
+   268 ;;   _main->___llmod
+   269 ;;
+   270 ;; Critical Paths under _main in BANK1
+   271 ;;
+   272 ;;   None.
+   273 ;;
+   274 ;; Critical Paths under _main in BANK2
+   275 ;;
+   276 ;;   None.
+   277                           
+   278 ;;
+   279 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   280 ;;
+   281                           
+   282 ;;
+   283 ;;Call Graph Tables:
+   284 ;;
+   285 ;; ---------------------------------------------------------------------------------
+   286 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   287 ;; ---------------------------------------------------------------------------------
+   288 ;; (0) _main                                                12    12      0     930
+   289 ;;                                             10 BANK0     12    12      0
+   290 ;;                               _init
+   291 ;;                            ___lldiv
+   292 ;;                            ___llmod
+   293 ;;                              _clear
+   294 ;;                            _display
+   295 ;;                              _clock
+   296 ;; ---------------------------------------------------------------------------------
+   297 ;; (1) _display                                              2     2      0      44
+   298 ;;                                              0 COMMON     2     2      0
+   299 ;;                              _clock
+   300 ;; ---------------------------------------------------------------------------------
+   301 ;; (1) _clear                                                1     1      0       0
+   302 ;;                                              0 COMMON     1     1      0
+   303 ;;                              _clock
+   304 ;; ---------------------------------------------------------------------------------
+   305 ;; (1) _init                                                 2     2      0       0
+   306 ;;                                              0 COMMON     2     2      0
+   307 ;;                              _clock
+   308 ;; ---------------------------------------------------------------------------------
+   309 ;; (1) _clock                                                0     0      0       0
+   310 ;; ---------------------------------------------------------------------------------
+   311 ;; (1) ___lldiv                                             14     6      8     162
+   312 ;;                                              0 COMMON    14     6      8
+   313 ;; ---------------------------------------------------------------------------------
+   314 ;; (1) ___llmod                                             10     2      8     159
+   315 ;;                                              0 BANK0     10     2      8
+   316 ;;                            ___lldiv (ARG)
+   317 ;; ---------------------------------------------------------------------------------
+   318 ;; Estimated maximum stack depth 1
+   319 ;; ---------------------------------------------------------------------------------
+   320                           
+   321 ;; Call Graph Graphs:
+   322                           
+   323 ;; _main (ROOT)
+   324 ;;   _init
+   325 ;;     _clock
+   326 ;;   ___lldiv
+   327 ;;   ___llmod
+   328 ;;     ___lldiv (ARG)
+   329 ;;   _clear
+   330 ;;     _clock
+   331 ;;   _display
+   332 ;;     _clock
+   333 ;;   _clock
+   334 ;;
+   335                           
+   336 ;; Address spaces:
+   337                           
+   338 ;;Name               Size   Autos  Total    Cost      Usage
+   339 ;;BITCOMMON            E      0       0       0        0.0%
+   340 ;;EEDATA              80      0       0       0        0.0%
+   341 ;;NULL                 0      0       0       0        0.0%
+   342 ;;CODE                 0      0       0       0        0.0%
+   343 ;;COMMON               E      E       E       1      100.0%
+   344 ;;BITSFR0              0      0       0       1        0.0%
+   345 ;;SFR0                 0      0       0       1        0.0%
+   346 ;;BITSFR1              0      0       0       2        0.0%
+   347 ;;SFR1                 0      0       0       2        0.0%
+   348 ;;STACK                0      0       2       2        0.0%
+   349 ;;BANK0               50     16      1E       3       37.5%
+   350 ;;BITSFR3              0      0       0       4        0.0%
+   351 ;;SFR3                 0      0       0       4        0.0%
+   352 ;;ABS                  0      0      2C       4        0.0%
+   353 ;;BITBANK0            50      0       0       5        0.0%
+   354 ;;BITSFR2              0      0       0       5        0.0%
+   355 ;;SFR2                 0      0       0       5        0.0%
+   356 ;;BITBANK1            50      0       0       6        0.0%
+   357 ;;BANK1               50      0       0       7        0.0%
+   358 ;;BITBANK2            30      0       0       8        0.0%
+   359 ;;BANK2               30      0       0       9        0.0%
+   360 ;;DATA                 0      0      2E      10        0.0%
+   361                           
+   362                           	global	_main
+   363                           psect	maintext,global,class=CODE,delta=2
+   364                           global __pmaintext
+   365  0430                     __pmaintext:
+   366                           
+   367 ;; *************** function _main *****************
+   368 ;; Defined at:
+   369 ;;		line 53 in file "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f628_FrequencyMeter
+       _2\FrequencyCounterLCD.c"
+   370 ;; Parameters:    Size  Location     Type
+   371 ;;		None
+   372 ;; Auto vars:     Size  Location     Type
+   373 ;;  total           4   18[BANK0 ] unsigned long 
+   374 ;;  freq2           2   14[BANK0 ] unsigned int 
+   375 ;;  nz              1   17[BANK0 ] unsigned char 
+   376 ;;  freq1           1   16[BANK0 ] unsigned char 
+   377 ;; Return value:  Size  Location     Type
+   378 ;;		None               void
+   379 ;; Registers used:
+   380 ;;		wreg, status,2, status,0, pclath, cstack
+   381 ;; Tracked objects:
+   382 ;;		On entry : 17F/0
+   383 ;;		On exit  : 0/0
+   384 ;;		Unchanged: 0/0
+   385 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   386 ;;      Params:         0       0       0       0
+   387 ;;      Locals:         0       8       0       0
+   388 ;;      Temps:          0       4       0       0
+   389 ;;      Totals:         0      12       0       0
+   390 ;;Total ram usage:       12 bytes
+   391 ;; Hardware stack levels required when called:    2
+   392 ;; This function calls:
+   393 ;;		_init
+   394 ;;		___lldiv
+   395 ;;		___llmod
+   396 ;;		_clear
+   397 ;;		_display
+   398 ;;		_clock
+   399 ;; This function is called by:
+   400 ;;		Startup code after reset
+   401 ;; This function uses a non-reentrant model
+   402 ;;
+   403                           psect	maintext
+   404                           	file	"C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f
+                                 628_FrequencyMeter_2\FrequencyCounterLCD.c"
+   405                           	line	53
+   406                           	global	__size_of_main
+   407  03D0                     	__size_of_main	equ	__end_of_main-_main
+   408                           	
+   409  0430                     _main:	
+   410                           	opt	stack 6
+   411                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   412                           	line	57
+   413                           	
+   414  0430                     l2814:	
+   415                           ;FrequencyCounterLCD.c: 54: unsigned long total;
+   416                           ;FrequencyCounterLCD.c: 55: unsigned int freq2;
+   417                           ;FrequencyCounterLCD.c: 56: unsigned char freq1,nz;
+   418                           ;FrequencyCounterLCD.c: 57: init();
+   419  0430  2318               	fcall	_init
+   420  0431  2C32               	goto	l2816
+   421                           	line	58
+   422                           ;FrequencyCounterLCD.c: 58: for(;;){
+   423                           	
+   424  0432                     l352:	
+   425                           	line	59
+   426                           	
+   427  0432                     l2816:	
+   428                           ;FrequencyCounterLCD.c: 59: freq1 = 0;
+   429  0432  1283               	bcf	status, 5	;RP0=0, select bank0
+   430  0433  1303               	bcf	status, 6	;RP1=0, select bank0
+   431  0434  01B0               	clrf	(main@freq1)
+   432                           	line	60
+   433                           	
+   434  0435                     l2818:	
+   435                           ;FrequencyCounterLCD.c: 60: freq2 = 0;
+   436  0435  01AE               	clrf	(main@freq2)
+   437  0436  01AF               	clrf	(main@freq2+1)
+   438                           	line	61
+   439                           	
+   440  0437                     l2820:	
+   441                           ;FrequencyCounterLCD.c: 61: TMR1L = 0;
+   442  0437  018E               	clrf	(14)	;volatile
+   443                           	line	62
+   444                           	
+   445  0438                     l2822:	
+   446                           ;FrequencyCounterLCD.c: 62: TMR1H = 0;
+   447  0438  018F               	clrf	(15)	;volatile
+   448                           	line	63
+   449                           	
+   450  0439                     l2824:	
+   451                           ;FrequencyCounterLCD.c: 63: TMR1IF = 0;
+   452  0439  100C               	bcf	(96/8),(96)&7
+   453                           	line	64
+   454                           	
+   455  043A                     l2826:	
+   456                           ;FrequencyCounterLCD.c: 64: nz=0;
+   457  043A  01B1               	clrf	(main@nz)
+   458                           	line	65
+   459                           	
+   460  043B                     l2828:	
+   461                           ;FrequencyCounterLCD.c: 65: TMR1ON = 1;
+   462  043B  1410               	bsf	(128/8),(128)&7
+   463                           	line	66
+   464                           	
+   465  043C                     l2830:	
+   466                           ;FrequencyCounterLCD.c: 66: TMR0 = 0;
+   467  043C  0181               	clrf	(1)	;volatile
+   468                           	line	67
+   469                           	
+   470  043D                     l2832:	
+   471                           ;FrequencyCounterLCD.c: 67: T0IF=0;
+   472  043D  110B               	bcf	(90/8),(90)&7
+   473                           	line	69
+   474                           ;FrequencyCounterLCD.c: 69: while (!TMR1IF){
+   475  043E  2C4C               	goto	l2838
+   476                           	
+   477  043F                     l354:	
+   478                           	line	70
+   479                           ;FrequencyCounterLCD.c: 70: if (T0IF){++freq2; T0IF=0;}
+   480  043F  1D0B               	btfss	(90/8),(90)&7
+   481  0440  2C42               	goto	u2551
+   482  0441  2C43               	goto	u2550
+   483  0442                     u2551:
+   484  0442  2C4C               	goto	l2838
+   485  0443                     u2550:
+   486                           	
+   487  0443                     l2834:	
+   488  0443  3001               	movlw	low(01h)
+   489  0444  07AE               	addwf	(main@freq2),f
+   490  0445  1803               	skipnc
+   491  0446  0AAF               	incf	(main@freq2+1),f
+   492  0447  3000               	movlw	high(01h)
+   493  0448  07AF               	addwf	(main@freq2+1),f
+   494                           	
+   495  0449                     l2836:	
+   496  0449  110B               	bcf	(90/8),(90)&7
+   497  044A  2C4C               	goto	l2838
+   498                           	
+   499  044B                     l355:	
+   500  044B  2C4C               	goto	l2838
+   501                           	line	71
+   502                           	
+   503  044C                     l353:	
+   504                           	line	69
+   505                           	
+   506  044C                     l2838:	
+   507  044C  1C0C               	btfss	(96/8),(96)&7
+   508  044D  2C4F               	goto	u2561
+   509  044E  2C50               	goto	u2560
+   510  044F                     u2561:
+   511  044F  2C3F               	goto	l354
+   512  0450                     u2560:
+   513  0450  2C51               	goto	l2840
+   514                           	
+   515  0451                     l356:	
+   516                           	line	73
+   517                           	
+   518  0451                     l2840:	
+   519                           ;FrequencyCounterLCD.c: 71: }
+   520                           ;FrequencyCounterLCD.c: 73: freq1=TMR0;
+   521  0451  0801               	movf	(1),w	;volatile
+   522  0452  00AA               	movwf	(??_main+0)+0
+   523  0453  082A               	movf	(??_main+0)+0,w
+   524  0454  00B0               	movwf	(main@freq1)
+   525                           	line	74
+   526                           	
+   527  0455                     l2842:	
+   528                           ;FrequencyCounterLCD.c: 74: TMR1ON = 0;
+   529  0455  1010               	bcf	(128/8),(128)&7
+   530                           	line	76
+   531                           	
+   532  0456                     l2844:	
+   533                           ;FrequencyCounterLCD.c: 76: total=(unsigned long)freq1 + (unsigned long)freq2 * 256;
+   534  0456  082E               	movf	(main@freq2),w
+   535  0457  00AA               	movwf	((??_main+0)+0)
+   536  0458  082F               	movf	(main@freq2+1),w
+   537  0459  00AB               	movwf	((??_main+0)+0+1)
+   538  045A  01AC               	clrf	((??_main+0)+0+2)
+   539  045B  01AD               	clrf	((??_main+0)+0+3)
+   540  045C  3008               	movlw	08h
+   541  045D                     u2575:
+   542  045D  1003               	clrc
+   543  045E  0DAA               	rlf	(??_main+0)+0,f
+   544  045F  0DAB               	rlf	(??_main+0)+1,f
+   545  0460  0DAC               	rlf	(??_main+0)+2,f
+   546  0461  0DAD               	rlf	(??_main+0)+3,f
+   547  0462                     u2570:
+   548  0462  3EFF               	addlw	-1
+   549  0463  1D03               	skipz
+   550  0464  2C5D               	goto	u2575
+   551  0465  0830               	movf	(main@freq1),w
+   552  0466  072A               	addwf	0+(??_main+0)+0,w
+   553  0467  00B2               	movwf	(main@total)
+   554  0468  082B               	movf	1+(??_main+0)+0,w
+   555  0469  1803               	skipnc
+   556  046A  0F2B               	incfsz	1+(??_main+0)+0,w
+   557  046B  1003               	clrc
+   558  046C  00B3               	movwf	((main@total))+1
+   559                           	
+   560  046D  082C               	movf	2+(??_main+0)+0,w
+   561  046E  1803               	skipnc
+   562  046F  0F2C               	incfsz	2+(??_main+0)+0,w
+   563  0470  1003               	clrc
+   564  0471  00B4               	movwf	((main@total))+2
+   565                           	
+   566  0472  082D               	movf	3+(??_main+0)+0,w
+   567  0473  1803               	skipnc
+   568  0474  0A2D               	incf	3+(??_main+0)+0,w
+   569  0475  00B5               	movwf	((main@total))+3
+   570                           	line	77
+   571                           	
+   572  0476                     l2846:	
+   573                           ;FrequencyCounterLCD.c: 77: d7=total/1000000+48;
+   574  0476  3000               	movlw	0
+   575  0477  00F3               	movwf	(?___lldiv+3)
+   576  0478  300F               	movlw	0Fh
+   577  0479  00F2               	movwf	(?___lldiv+2)
+   578  047A  3042               	movlw	042h
+   579  047B  00F1               	movwf	(?___lldiv+1)
+   580  047C  3040               	movlw	040h
+   581  047D  00F0               	movwf	(?___lldiv)
+   582                           
+   583  047E  0835               	movf	(main@total+3),w
+   584  047F  00F7               	movwf	3+(?___lldiv)+04h
+   585  0480  0834               	movf	(main@total+2),w
+   586  0481  00F6               	movwf	2+(?___lldiv)+04h
+   587  0482  0833               	movf	(main@total+1),w
+   588  0483  00F5               	movwf	1+(?___lldiv)+04h
+   589  0484  0832               	movf	(main@total),w
+   590  0485  00F4               	movwf	0+(?___lldiv)+04h
+   591                           
+   592  0486  23C2               	fcall	___lldiv
+   593  0487  0870               	movf	0+(((0+(?___lldiv)))),w
+   594  0488  3E30               	addlw	030h
+   595  0489  1283               	bcf	status, 5	;RP0=0, select bank0
+   596  048A  1303               	bcf	status, 6	;RP1=0, select bank0
+   597  048B  00AA               	movwf	(??_main+0)+0
+   598  048C  082A               	movf	(??_main+0)+0,w
+   599  048D  00BC               	movwf	(_d7)
+   600                           	line	78
+   601                           	
+   602  048E                     l2848:	
+   603                           ;FrequencyCounterLCD.c: 78: d6=(total/100000) %10+48;
+   604  048E  3000               	movlw	0
+   605  048F  00A3               	movwf	(?___llmod+3)
+   606  0490  3000               	movlw	0
+   607  0491  00A2               	movwf	(?___llmod+2)
+   608  0492  3000               	movlw	0
+   609  0493  00A1               	movwf	(?___llmod+1)
+   610  0494  300A               	movlw	0Ah
+   611  0495  00A0               	movwf	(?___llmod)
+   612                           
+   613  0496  3000               	movlw	0
+   614  0497  00F3               	movwf	(?___lldiv+3)
+   615  0498  3001               	movlw	01h
+   616  0499  00F2               	movwf	(?___lldiv+2)
+   617  049A  3086               	movlw	086h
+   618  049B  00F1               	movwf	(?___lldiv+1)
+   619  049C  30A0               	movlw	0A0h
+   620  049D  00F0               	movwf	(?___lldiv)
+   621                           
+   622  049E  0835               	movf	(main@total+3),w
+   623  049F  00F7               	movwf	3+(?___lldiv)+04h
+   624  04A0  0834               	movf	(main@total+2),w
+   625  04A1  00F6               	movwf	2+(?___lldiv)+04h
+   626  04A2  0833               	movf	(main@total+1),w
+   627  04A3  00F5               	movwf	1+(?___lldiv)+04h
+   628  04A4  0832               	movf	(main@total),w
+   629  04A5  00F4               	movwf	0+(?___lldiv)+04h
+   630                           
+   631  04A6  23C2               	fcall	___lldiv
+   632  04A7  0873               	movf	(3+(?___lldiv)),w
+   633  04A8  1283               	bcf	status, 5	;RP0=0, select bank0
+   634  04A9  1303               	bcf	status, 6	;RP1=0, select bank0
+   635  04AA  00A7               	movwf	3+(?___llmod)+04h
+   636  04AB  0872               	movf	(2+(?___lldiv)),w
+   637  04AC  00A6               	movwf	2+(?___llmod)+04h
+   638  04AD  0871               	movf	(1+(?___lldiv)),w
+   639  04AE  00A5               	movwf	1+(?___llmod)+04h
+   640  04AF  0870               	movf	(0+(?___lldiv)),w
+   641  04B0  00A4               	movwf	0+(?___llmod)+04h
+   642                           
+   643  04B1  2364               	fcall	___llmod
+   644  04B2  1283               	bcf	status, 5	;RP0=0, select bank0
+   645  04B3  1303               	bcf	status, 6	;RP1=0, select bank0
+   646  04B4  0820               	movf	0+(((0+(?___llmod)))),w
+   647  04B5  3E30               	addlw	030h
+   648  04B6  00AA               	movwf	(??_main+0)+0
+   649  04B7  082A               	movf	(??_main+0)+0,w
+   650  04B8  00BB               	movwf	(_d6)
+   651                           	line	79
+   652                           	
+   653  04B9                     l2850:	
+   654                           ;FrequencyCounterLCD.c: 79: d5=(total/10000) %10+48;
+   655  04B9  3000               	movlw	0
+   656  04BA  00A3               	movwf	(?___llmod+3)
+   657  04BB  3000               	movlw	0
+   658  04BC  00A2               	movwf	(?___llmod+2)
+   659  04BD  3000               	movlw	0
+   660  04BE  00A1               	movwf	(?___llmod+1)
+   661  04BF  300A               	movlw	0Ah
+   662  04C0  00A0               	movwf	(?___llmod)
+   663                           
+   664  04C1  3000               	movlw	0
+   665  04C2  00F3               	movwf	(?___lldiv+3)
+   666  04C3  3000               	movlw	0
+   667  04C4  00F2               	movwf	(?___lldiv+2)
+   668  04C5  3027               	movlw	027h
+   669  04C6  00F1               	movwf	(?___lldiv+1)
+   670  04C7  3010               	movlw	010h
+   671  04C8  00F0               	movwf	(?___lldiv)
+   672                           
+   673  04C9  0835               	movf	(main@total+3),w
+   674  04CA  00F7               	movwf	3+(?___lldiv)+04h
+   675  04CB  0834               	movf	(main@total+2),w
+   676  04CC  00F6               	movwf	2+(?___lldiv)+04h
+   677  04CD  0833               	movf	(main@total+1),w
+   678  04CE  00F5               	movwf	1+(?___lldiv)+04h
+   679  04CF  0832               	movf	(main@total),w
+   680  04D0  00F4               	movwf	0+(?___lldiv)+04h
+   681                           
+   682  04D1  23C2               	fcall	___lldiv
+   683  04D2  0873               	movf	(3+(?___lldiv)),w
+   684  04D3  1283               	bcf	status, 5	;RP0=0, select bank0
+   685  04D4  1303               	bcf	status, 6	;RP1=0, select bank0
+   686  04D5  00A7               	movwf	3+(?___llmod)+04h
+   687  04D6  0872               	movf	(2+(?___lldiv)),w
+   688  04D7  00A6               	movwf	2+(?___llmod)+04h
+   689  04D8  0871               	movf	(1+(?___lldiv)),w
+   690  04D9  00A5               	movwf	1+(?___llmod)+04h
+   691  04DA  0870               	movf	(0+(?___lldiv)),w
+   692  04DB  00A4               	movwf	0+(?___llmod)+04h
+   693                           
+   694  04DC  2364               	fcall	___llmod
+   695  04DD  1283               	bcf	status, 5	;RP0=0, select bank0
+   696  04DE  1303               	bcf	status, 6	;RP1=0, select bank0
+   697  04DF  0820               	movf	0+(((0+(?___llmod)))),w
+   698  04E0  3E30               	addlw	030h
+   699  04E1  00AA               	movwf	(??_main+0)+0
+   700  04E2  082A               	movf	(??_main+0)+0,w
+   701  04E3  00BA               	movwf	(_d5)
+   702                           	line	80
+   703                           	
+   704  04E4                     l2852:	
+   705                           ;FrequencyCounterLCD.c: 80: d4=(total/1000) %10+48;
+   706  04E4  3000               	movlw	0
+   707  04E5  00A3               	movwf	(?___llmod+3)
+   708  04E6  3000               	movlw	0
+   709  04E7  00A2               	movwf	(?___llmod+2)
+   710  04E8  3000               	movlw	0
+   711  04E9  00A1               	movwf	(?___llmod+1)
+   712  04EA  300A               	movlw	0Ah
+   713  04EB  00A0               	movwf	(?___llmod)
+   714                           
+   715  04EC  3000               	movlw	0
+   716  04ED  00F3               	movwf	(?___lldiv+3)
+   717  04EE  3000               	movlw	0
+   718  04EF  00F2               	movwf	(?___lldiv+2)
+   719  04F0  3003               	movlw	03h
+   720  04F1  00F1               	movwf	(?___lldiv+1)
+   721  04F2  30E8               	movlw	0E8h
+   722  04F3  00F0               	movwf	(?___lldiv)
+   723                           
+   724  04F4  0835               	movf	(main@total+3),w
+   725  04F5  00F7               	movwf	3+(?___lldiv)+04h
+   726  04F6  0834               	movf	(main@total+2),w
+   727  04F7  00F6               	movwf	2+(?___lldiv)+04h
+   728  04F8  0833               	movf	(main@total+1),w
+   729  04F9  00F5               	movwf	1+(?___lldiv)+04h
+   730  04FA  0832               	movf	(main@total),w
+   731  04FB  00F4               	movwf	0+(?___lldiv)+04h
+   732                           
+   733  04FC  23C2               	fcall	___lldiv
+   734  04FD  0873               	movf	(3+(?___lldiv)),w
+   735  04FE  1283               	bcf	status, 5	;RP0=0, select bank0
+   736  04FF  1303               	bcf	status, 6	;RP1=0, select bank0
+   737  0500  00A7               	movwf	3+(?___llmod)+04h
+   738  0501  0872               	movf	(2+(?___lldiv)),w
+   739  0502  00A6               	movwf	2+(?___llmod)+04h
+   740  0503  0871               	movf	(1+(?___lldiv)),w
+   741  0504  00A5               	movwf	1+(?___llmod)+04h
+   742  0505  0870               	movf	(0+(?___lldiv)),w
+   743  0506  00A4               	movwf	0+(?___llmod)+04h
+   744                           
+   745  0507  2364               	fcall	___llmod
+   746  0508  1283               	bcf	status, 5	;RP0=0, select bank0
+   747  0509  1303               	bcf	status, 6	;RP1=0, select bank0
+   748  050A  0820               	movf	0+(((0+(?___llmod)))),w
+   749  050B  3E30               	addlw	030h
+   750  050C  00AA               	movwf	(??_main+0)+0
+   751  050D  082A               	movf	(??_main+0)+0,w
+   752  050E  00B9               	movwf	(_d4)
+   753                           	line	81
+   754                           	
+   755  050F                     l2854:	
+   756                           ;FrequencyCounterLCD.c: 81: d3=(total/100) %10+48;
+   757  050F  3000               	movlw	0
+   758  0510  00A3               	movwf	(?___llmod+3)
+   759  0511  3000               	movlw	0
+   760  0512  00A2               	movwf	(?___llmod+2)
+   761  0513  3000               	movlw	0
+   762  0514  00A1               	movwf	(?___llmod+1)
+   763  0515  300A               	movlw	0Ah
+   764  0516  00A0               	movwf	(?___llmod)
+   765                           
+   766  0517  3000               	movlw	0
+   767  0518  00F3               	movwf	(?___lldiv+3)
+   768  0519  3000               	movlw	0
+   769  051A  00F2               	movwf	(?___lldiv+2)
+   770  051B  3000               	movlw	0
+   771  051C  00F1               	movwf	(?___lldiv+1)
+   772  051D  3064               	movlw	064h
+   773  051E  00F0               	movwf	(?___lldiv)
+   774                           
+   775  051F  0835               	movf	(main@total+3),w
+   776  0520  00F7               	movwf	3+(?___lldiv)+04h
+   777  0521  0834               	movf	(main@total+2),w
+   778  0522  00F6               	movwf	2+(?___lldiv)+04h
+   779  0523  0833               	movf	(main@total+1),w
+   780  0524  00F5               	movwf	1+(?___lldiv)+04h
+   781  0525  0832               	movf	(main@total),w
+   782  0526  00F4               	movwf	0+(?___lldiv)+04h
+   783                           
+   784  0527  23C2               	fcall	___lldiv
+   785  0528  0873               	movf	(3+(?___lldiv)),w
+   786  0529  1283               	bcf	status, 5	;RP0=0, select bank0
+   787  052A  1303               	bcf	status, 6	;RP1=0, select bank0
+   788  052B  00A7               	movwf	3+(?___llmod)+04h
+   789  052C  0872               	movf	(2+(?___lldiv)),w
+   790  052D  00A6               	movwf	2+(?___llmod)+04h
+   791  052E  0871               	movf	(1+(?___lldiv)),w
+   792  052F  00A5               	movwf	1+(?___llmod)+04h
+   793  0530  0870               	movf	(0+(?___lldiv)),w
+   794  0531  00A4               	movwf	0+(?___llmod)+04h
+   795                           
+   796  0532  2364               	fcall	___llmod
+   797  0533  1283               	bcf	status, 5	;RP0=0, select bank0
+   798  0534  1303               	bcf	status, 6	;RP1=0, select bank0
+   799  0535  0820               	movf	0+(((0+(?___llmod)))),w
+   800  0536  3E30               	addlw	030h
+   801  0537  00AA               	movwf	(??_main+0)+0
+   802  0538  082A               	movf	(??_main+0)+0,w
+   803  0539  00B8               	movwf	(_d3)
+   804                           	line	82
+   805                           	
+   806  053A                     l2856:	
+   807                           ;FrequencyCounterLCD.c: 82: d2=(total/10) %10+48;
+   808  053A  3000               	movlw	0
+   809  053B  00A3               	movwf	(?___llmod+3)
+   810  053C  3000               	movlw	0
+   811  053D  00A2               	movwf	(?___llmod+2)
+   812  053E  3000               	movlw	0
+   813  053F  00A1               	movwf	(?___llmod+1)
+   814  0540  300A               	movlw	0Ah
+   815  0541  00A0               	movwf	(?___llmod)
+   816                           
+   817  0542  3000               	movlw	0
+   818  0543  00F3               	movwf	(?___lldiv+3)
+   819  0544  3000               	movlw	0
+   820  0545  00F2               	movwf	(?___lldiv+2)
+   821  0546  3000               	movlw	0
+   822  0547  00F1               	movwf	(?___lldiv+1)
+   823  0548  300A               	movlw	0Ah
+   824  0549  00F0               	movwf	(?___lldiv)
+   825                           
+   826  054A  0835               	movf	(main@total+3),w
+   827  054B  00F7               	movwf	3+(?___lldiv)+04h
+   828  054C  0834               	movf	(main@total+2),w
+   829  054D  00F6               	movwf	2+(?___lldiv)+04h
+   830  054E  0833               	movf	(main@total+1),w
+   831  054F  00F5               	movwf	1+(?___lldiv)+04h
+   832  0550  0832               	movf	(main@total),w
+   833  0551  00F4               	movwf	0+(?___lldiv)+04h
+   834                           
+   835  0552  23C2               	fcall	___lldiv
+   836  0553  0873               	movf	(3+(?___lldiv)),w
+   837  0554  1283               	bcf	status, 5	;RP0=0, select bank0
+   838  0555  1303               	bcf	status, 6	;RP1=0, select bank0
+   839  0556  00A7               	movwf	3+(?___llmod)+04h
+   840  0557  0872               	movf	(2+(?___lldiv)),w
+   841  0558  00A6               	movwf	2+(?___llmod)+04h
+   842  0559  0871               	movf	(1+(?___lldiv)),w
+   843  055A  00A5               	movwf	1+(?___llmod)+04h
+   844  055B  0870               	movf	(0+(?___lldiv)),w
+   845  055C  00A4               	movwf	0+(?___llmod)+04h
+   846                           
+   847  055D  2364               	fcall	___llmod
+   848  055E  1283               	bcf	status, 5	;RP0=0, select bank0
+   849  055F  1303               	bcf	status, 6	;RP1=0, select bank0
+   850  0560  0820               	movf	0+(((0+(?___llmod)))),w
+   851  0561  3E30               	addlw	030h
+   852  0562  00AA               	movwf	(??_main+0)+0
+   853  0563  082A               	movf	(??_main+0)+0,w
+   854  0564  00B7               	movwf	(_d2)
+   855                           	line	83
+   856                           	
+   857  0565                     l2858:	
+   858                           ;FrequencyCounterLCD.c: 83: d1=total %10+48;
+   859  0565  3000               	movlw	0
+   860  0566  00A3               	movwf	(?___llmod+3)
+   861  0567  3000               	movlw	0
+   862  0568  00A2               	movwf	(?___llmod+2)
+   863  0569  3000               	movlw	0
+   864  056A  00A1               	movwf	(?___llmod+1)
+   865  056B  300A               	movlw	0Ah
+   866  056C  00A0               	movwf	(?___llmod)
+   867                           
+   868  056D  0835               	movf	(main@total+3),w
+   869  056E  00A7               	movwf	3+(?___llmod)+04h
+   870  056F  0834               	movf	(main@total+2),w
+   871  0570  00A6               	movwf	2+(?___llmod)+04h
+   872  0571  0833               	movf	(main@total+1),w
+   873  0572  00A5               	movwf	1+(?___llmod)+04h
+   874  0573  0832               	movf	(main@total),w
+   875  0574  00A4               	movwf	0+(?___llmod)+04h
+   876                           
+   877  0575  2364               	fcall	___llmod
+   878  0576  1283               	bcf	status, 5	;RP0=0, select bank0
+   879  0577  1303               	bcf	status, 6	;RP1=0, select bank0
+   880  0578  0820               	movf	0+(((0+(?___llmod)))),w
+   881  0579  3E30               	addlw	030h
+   882  057A  00AA               	movwf	(??_main+0)+0
+   883  057B  082A               	movf	(??_main+0)+0,w
+   884  057C  00B6               	movwf	(_d1)
+   885                           	line	84
+   886                           	
+   887  057D                     l2860:	
+   888                           ;FrequencyCounterLCD.c: 84: clear();
+   889  057D  22E6               	fcall	_clear
+   890                           	line	86
+   891                           	
+   892  057E                     l2862:	
+   893                           ;FrequencyCounterLCD.c: 86: display(32);
+   894  057E  3020               	movlw	(020h)
+   895  057F  22FF               	fcall	_display
+   896                           	line	87
+   897                           	
+   898  0580                     l2864:	
+   899                           ;FrequencyCounterLCD.c: 87: display(32);
+   900  0580  3020               	movlw	(020h)
+   901  0581  22FF               	fcall	_display
+   902                           	line	89
+   903                           	
+   904  0582                     l2866:	
+   905                           ;FrequencyCounterLCD.c: 89: if(d7 == 48){display(32); display(32);}
+   906  0582  1283               	bcf	status, 5	;RP0=0, select bank0
+   907  0583  1303               	bcf	status, 6	;RP1=0, select bank0
+   908  0584  083C               	movf	(_d7),w
+   909  0585  3A30               	xorlw	030h
+   910  0586  1D03               	skipz
+   911  0587  2D89               	goto	u2581
+   912  0588  2D8A               	goto	u2580
+   913  0589                     u2581:
+   914  0589  2D8F               	goto	l2870
+   915  058A                     u2580:
+   916                           	
+   917  058A                     l2868:	
+   918  058A  3020               	movlw	(020h)
+   919  058B  22FF               	fcall	_display
+   920  058C  3020               	movlw	(020h)
+   921  058D  22FF               	fcall	_display
+   922  058E  2D9B               	goto	l2874
+   923                           	line	90
+   924                           	
+   925  058F                     l357:	
+   926                           	
+   927  058F                     l2870:	
+   928                           ;FrequencyCounterLCD.c: 90: else{display(d7); display(44); nz=1;}
+   929  058F  1283               	bcf	status, 5	;RP0=0, select bank0
+   930  0590  1303               	bcf	status, 6	;RP1=0, select bank0
+   931  0591  083C               	movf	(_d7),w
+   932  0592  22FF               	fcall	_display
+   933  0593  302C               	movlw	(02Ch)
+   934  0594  22FF               	fcall	_display
+   935                           	
+   936  0595                     l2872:	
+   937  0595  1283               	bcf	status, 5	;RP0=0, select bank0
+   938  0596  1303               	bcf	status, 6	;RP1=0, select bank0
+   939  0597  01B1               	clrf	(main@nz)
+   940  0598  1403               	bsf	status,0
+   941  0599  0DB1               	rlf	(main@nz),f
+   942  059A  2D9B               	goto	l2874
+   943                           	
+   944  059B                     l358:	
+   945                           	line	91
+   946                           	
+   947  059B                     l2874:	
+   948                           ;FrequencyCounterLCD.c: 91: if(d6 == 48 && nz==0){display(32);}
+   949  059B  1283               	bcf	status, 5	;RP0=0, select bank0
+   950  059C  1303               	bcf	status, 6	;RP1=0, select bank0
+   951  059D  083B               	movf	(_d6),w
+   952  059E  3A30               	xorlw	030h
+   953  059F  1D03               	skipz
+   954  05A0  2DA2               	goto	u2591
+   955  05A1  2DA3               	goto	u2590
+   956  05A2                     u2591:
+   957  05A2  2DAB               	goto	l2880
+   958  05A3                     u2590:
+   959                           	
+   960  05A3                     l2876:	
+   961  05A3  08B1               	movf	(main@nz),f
+   962  05A4  1D03               	skipz
+   963  05A5  2DA7               	goto	u2601
+   964  05A6  2DA8               	goto	u2600
+   965  05A7                     u2601:
+   966  05A7  2DAB               	goto	l2880
+   967  05A8                     u2600:
+   968                           	
+   969  05A8                     l2878:	
+   970  05A8  3020               	movlw	(020h)
+   971  05A9  22FF               	fcall	_display
+   972  05AA  2DB5               	goto	l2884
+   973                           	line	92
+   974                           	
+   975  05AB                     l359:	
+   976                           	
+   977  05AB                     l2880:	
+   978                           ;FrequencyCounterLCD.c: 92: else{display(d6); nz=1;}
+   979  05AB  1283               	bcf	status, 5	;RP0=0, select bank0
+   980  05AC  1303               	bcf	status, 6	;RP1=0, select bank0
+   981  05AD  083B               	movf	(_d6),w
+   982  05AE  22FF               	fcall	_display
+   983                           	
+   984  05AF                     l2882:	
+   985  05AF  1283               	bcf	status, 5	;RP0=0, select bank0
+   986  05B0  1303               	bcf	status, 6	;RP1=0, select bank0
+   987  05B1  01B1               	clrf	(main@nz)
+   988  05B2  1403               	bsf	status,0
+   989  05B3  0DB1               	rlf	(main@nz),f
+   990  05B4  2DB5               	goto	l2884
+   991                           	
+   992  05B5                     l360:	
+   993                           	line	93
+   994                           	
+   995  05B5                     l2884:	
+   996                           ;FrequencyCounterLCD.c: 93: if(d5 == 48 && nz==0){display(32);}
+   997  05B5  1283               	bcf	status, 5	;RP0=0, select bank0
+   998  05B6  1303               	bcf	status, 6	;RP1=0, select bank0
+   999  05B7  083A               	movf	(_d5),w
+  1000  05B8  3A30               	xorlw	030h
+  1001  05B9  1D03               	skipz
+  1002  05BA  2DBC               	goto	u2611
+  1003  05BB  2DBD               	goto	u2610
+  1004  05BC                     u2611:
+  1005  05BC  2DC5               	goto	l2890
+  1006  05BD                     u2610:
+  1007                           	
+  1008  05BD                     l2886:	
+  1009  05BD  08B1               	movf	(main@nz),f
+  1010  05BE  1D03               	skipz
+  1011  05BF  2DC1               	goto	u2621
+  1012  05C0  2DC2               	goto	u2620
+  1013  05C1                     u2621:
+  1014  05C1  2DC5               	goto	l2890
+  1015  05C2                     u2620:
+  1016                           	
+  1017  05C2                     l2888:	
+  1018  05C2  3020               	movlw	(020h)
+  1019  05C3  22FF               	fcall	_display
+  1020  05C4  2DCF               	goto	l2894
+  1021                           	line	94
+  1022                           	
+  1023  05C5                     l361:	
+  1024                           	
+  1025  05C5                     l2890:	
+  1026                           ;FrequencyCounterLCD.c: 94: else{display(d5); nz=1;}
+  1027  05C5  1283               	bcf	status, 5	;RP0=0, select bank0
+  1028  05C6  1303               	bcf	status, 6	;RP1=0, select bank0
+  1029  05C7  083A               	movf	(_d5),w
+  1030  05C8  22FF               	fcall	_display
+  1031                           	
+  1032  05C9                     l2892:	
+  1033  05C9  1283               	bcf	status, 5	;RP0=0, select bank0
+  1034  05CA  1303               	bcf	status, 6	;RP1=0, select bank0
+  1035  05CB  01B1               	clrf	(main@nz)
+  1036  05CC  1403               	bsf	status,0
+  1037  05CD  0DB1               	rlf	(main@nz),f
+  1038  05CE  2DCF               	goto	l2894
+  1039                           	
+  1040  05CF                     l362:	
+  1041                           	line	95
+  1042                           	
+  1043  05CF                     l2894:	
+  1044                           ;FrequencyCounterLCD.c: 95: if(d4 == 48 && nz==0){display(32); display(32);}
+  1045  05CF  1283               	bcf	status, 5	;RP0=0, select bank0
+  1046  05D0  1303               	bcf	status, 6	;RP1=0, select bank0
+  1047  05D1  0839               	movf	(_d4),w
+  1048  05D2  3A30               	xorlw	030h
+  1049  05D3  1D03               	skipz
+  1050  05D4  2DD6               	goto	u2631
+  1051  05D5  2DD7               	goto	u2630
+  1052  05D6                     u2631:
+  1053  05D6  2DE1               	goto	l2900
+  1054  05D7                     u2630:
+  1055                           	
+  1056  05D7                     l2896:	
+  1057  05D7  08B1               	movf	(main@nz),f
+  1058  05D8  1D03               	skipz
+  1059  05D9  2DDB               	goto	u2641
+  1060  05DA  2DDC               	goto	u2640
+  1061  05DB                     u2641:
+  1062  05DB  2DE1               	goto	l2900
+  1063  05DC                     u2640:
+  1064                           	
+  1065  05DC                     l2898:	
+  1066  05DC  3020               	movlw	(020h)
+  1067  05DD  22FF               	fcall	_display
+  1068  05DE  3020               	movlw	(020h)
+  1069  05DF  22FF               	fcall	_display
+  1070  05E0  2DE7               	goto	l364
+  1071                           	line	96
+  1072                           	
+  1073  05E1                     l363:	
+  1074                           	
+  1075  05E1                     l2900:	
+  1076                           ;FrequencyCounterLCD.c: 96: else{display(d4); display(44);}
+  1077  05E1  1283               	bcf	status, 5	;RP0=0, select bank0
+  1078  05E2  1303               	bcf	status, 6	;RP1=0, select bank0
+  1079  05E3  0839               	movf	(_d4),w
+  1080  05E4  22FF               	fcall	_display
+  1081  05E5  302C               	movlw	(02Ch)
+  1082  05E6  22FF               	fcall	_display
+  1083                           	
+  1084  05E7                     l364:	
+  1085                           	line	98
+  1086                           ;FrequencyCounterLCD.c: 98: display(d3);
+  1087  05E7  1283               	bcf	status, 5	;RP0=0, select bank0
+  1088  05E8  1303               	bcf	status, 6	;RP1=0, select bank0
+  1089  05E9  0838               	movf	(_d3),w
+  1090  05EA  22FF               	fcall	_display
+  1091                           	line	99
+  1092                           ;FrequencyCounterLCD.c: 99: display(d2);
+  1093  05EB  1283               	bcf	status, 5	;RP0=0, select bank0
+  1094  05EC  1303               	bcf	status, 6	;RP1=0, select bank0
+  1095  05ED  0837               	movf	(_d2),w
+  1096  05EE  22FF               	fcall	_display
+  1097                           	line	100
+  1098                           ;FrequencyCounterLCD.c: 100: display(d1);
+  1099  05EF  1283               	bcf	status, 5	;RP0=0, select bank0
+  1100  05F0  1303               	bcf	status, 6	;RP1=0, select bank0
+  1101  05F1  0836               	movf	(_d1),w
+  1102  05F2  22FF               	fcall	_display
+  1103                           	line	101
+  1104                           ;FrequencyCounterLCD.c: 101: display(32);
+  1105  05F3  3020               	movlw	(020h)
+  1106  05F4  22FF               	fcall	_display
+  1107                           	line	102
+  1108                           ;FrequencyCounterLCD.c: 102: display(72);
+  1109  05F5  3048               	movlw	(048h)
+  1110  05F6  22FF               	fcall	_display
+  1111                           	line	103
+  1112                           ;FrequencyCounterLCD.c: 103: display(122);
+  1113  05F7  307A               	movlw	(07Ah)
+  1114  05F8  22FF               	fcall	_display
+  1115                           	line	106
+  1116                           	
+  1117  05F9                     l2902:	
+  1118                           ;FrequencyCounterLCD.c: 106: PORTB=12; clock(); PORTB=0; clock();
+  1119  05F9  300C               	movlw	(0Ch)
+  1120  05FA  1283               	bcf	status, 5	;RP0=0, select bank0
+  1121  05FB  1303               	bcf	status, 6	;RP1=0, select bank0
+  1122  05FC  0086               	movwf	(6)	;volatile
+  1123  05FD  22D3               	fcall	_clock
+  1124                           	
+  1125  05FE                     l2904:	
+  1126  05FE  1283               	bcf	status, 5	;RP0=0, select bank0
+  1127  05FF  1303               	bcf	status, 6	;RP1=0, select bank0
+  1128  0600  0186               	clrf	(6)	;volatile
+  1129                           	
+  1130  0601                     l2906:	
+  1131  0601  22D3               	fcall	_clock
+  1132                           	line	107
+  1133                           	
+  1134  0602                     l2908:	
+  1135                           ;FrequencyCounterLCD.c: 107: _delay((unsigned long)((2)*(400000/4000.0)));
+  1136                           	opt asmopt_off
+  1137  0602  3042               movlw	66
+  1138  0603  1283               	bcf	status, 5	;RP0=0, select bank0
+  1139  0604  1303               	bcf	status, 6	;RP1=0, select bank0
+  1140  0605  00AA               movwf	(??_main+0)+0,f
+  1141  0606                     u2737:
+  1142  0606  0BAA               decfsz	(??_main+0)+0,f
+  1143  0607  2E06               	goto	u2737
+  1144  0608  0064               	clrwdt
+  1145                           opt asmopt_on
+  1146                           
+  1147                           	line	109
+  1148                           	
+  1149  0609                     l2910:	
+  1150                           ;FrequencyCounterLCD.c: 109: nz=0;
+  1151  0609  1283               	bcf	status, 5	;RP0=0, select bank0
+  1152  060A  1303               	bcf	status, 6	;RP1=0, select bank0
+  1153  060B  01B1               	clrf	(main@nz)
+  1154                           	line	110
+  1155                           	
+  1156  060C                     l2912:	
+  1157                           ;FrequencyCounterLCD.c: 110: if(total<1000){total=1000000/total; period=117;}
+  1158  060C  3000               	movlw	0
+  1159  060D  0235               	subwf	(main@total+3),w
+  1160  060E  1D03               	skipz
+  1161  060F  2E1A               	goto	u2655
+  1162  0610  3000               	movlw	0
+  1163  0611  0234               	subwf	(main@total+2),w
+  1164  0612  1D03               	skipz
+  1165  0613  2E1A               	goto	u2655
+  1166  0614  3003               	movlw	03h
+  1167  0615  0233               	subwf	(main@total+1),w
+  1168  0616  1D03               	skipz
+  1169  0617  2E1A               	goto	u2655
+  1170  0618  30E8               	movlw	0E8h
+  1171  0619  0232               	subwf	(main@total),w
+  1172  061A                     u2655:
+  1173  061A  1803               	skipnc
+  1174  061B  2E1D               	goto	u2651
+  1175  061C  2E1E               	goto	u2650
+  1176  061D                     u2651:
+  1177  061D  2E3E               	goto	l2918
+  1178  061E                     u2650:
+  1179                           	
+  1180  061E                     l2914:	
+  1181  061E  0835               	movf	(main@total+3),w
+  1182  061F  00F3               	movwf	(?___lldiv+3)
+  1183  0620  0834               	movf	(main@total+2),w
+  1184  0621  00F2               	movwf	(?___lldiv+2)
+  1185  0622  0833               	movf	(main@total+1),w
+  1186  0623  00F1               	movwf	(?___lldiv+1)
+  1187  0624  0832               	movf	(main@total),w
+  1188  0625  00F0               	movwf	(?___lldiv)
+  1189                           
+  1190  0626  3000               	movlw	0
+  1191  0627  00F7               	movwf	3+(?___lldiv)+04h
+  1192  0628  300F               	movlw	0Fh
+  1193  0629  00F6               	movwf	2+(?___lldiv)+04h
+  1194  062A  3042               	movlw	042h
+  1195  062B  00F5               	movwf	1+(?___lldiv)+04h
+  1196  062C  3040               	movlw	040h
+  1197  062D  00F4               	movwf	0+(?___lldiv)+04h
+  1198                           
+  1199  062E  23C2               	fcall	___lldiv
+  1200  062F  0873               	movf	(3+(?___lldiv)),w
+  1201  0630  1283               	bcf	status, 5	;RP0=0, select bank0
+  1202  0631  1303               	bcf	status, 6	;RP1=0, select bank0
+  1203  0632  00B5               	movwf	(main@total+3)
+  1204  0633  0872               	movf	(2+(?___lldiv)),w
+  1205  0634  00B4               	movwf	(main@total+2)
+  1206  0635  0871               	movf	(1+(?___lldiv)),w
+  1207  0636  00B3               	movwf	(main@total+1)
+  1208  0637  0870               	movf	(0+(?___lldiv)),w
+  1209  0638  00B2               	movwf	(main@total)
+  1210                           
+  1211                           	
+  1212  0639                     l2916:	
+  1213  0639  3075               	movlw	(075h)
+  1214  063A  00AA               	movwf	(??_main+0)+0
+  1215  063B  082A               	movf	(??_main+0)+0,w
+  1216  063C  00BD               	movwf	(_period)
+  1217  063D  2E5E               	goto	l2922
+  1218                           	line	111
+  1219                           	
+  1220  063E                     l365:	
+  1221                           	
+  1222  063E                     l2918:	
+  1223                           ;FrequencyCounterLCD.c: 111: else{total=1000000000/total; period=110;}
+  1224  063E  0835               	movf	(main@total+3),w
+  1225  063F  00F3               	movwf	(?___lldiv+3)
+  1226  0640  0834               	movf	(main@total+2),w
+  1227  0641  00F2               	movwf	(?___lldiv+2)
+  1228  0642  0833               	movf	(main@total+1),w
+  1229  0643  00F1               	movwf	(?___lldiv+1)
+  1230  0644  0832               	movf	(main@total),w
+  1231  0645  00F0               	movwf	(?___lldiv)
+  1232                           
+  1233  0646  303B               	movlw	03Bh
+  1234  0647  00F7               	movwf	3+(?___lldiv)+04h
+  1235  0648  309A               	movlw	09Ah
+  1236  0649  00F6               	movwf	2+(?___lldiv)+04h
+  1237  064A  30CA               	movlw	0CAh
+  1238  064B  00F5               	movwf	1+(?___lldiv)+04h
+  1239  064C  3000               	movlw	0
+  1240  064D  00F4               	movwf	0+(?___lldiv)+04h
+  1241                           
+  1242  064E  23C2               	fcall	___lldiv
+  1243  064F  0873               	movf	(3+(?___lldiv)),w
+  1244  0650  1283               	bcf	status, 5	;RP0=0, select bank0
+  1245  0651  1303               	bcf	status, 6	;RP1=0, select bank0
+  1246  0652  00B5               	movwf	(main@total+3)
+  1247  0653  0872               	movf	(2+(?___lldiv)),w
+  1248  0654  00B4               	movwf	(main@total+2)
+  1249  0655  0871               	movf	(1+(?___lldiv)),w
+  1250  0656  00B3               	movwf	(main@total+1)
+  1251  0657  0870               	movf	(0+(?___lldiv)),w
+  1252  0658  00B2               	movwf	(main@total)
+  1253                           
+  1254                           	
+  1255  0659                     l2920:	
+  1256  0659  306E               	movlw	(06Eh)
+  1257  065A  00AA               	movwf	(??_main+0)+0
+  1258  065B  082A               	movf	(??_main+0)+0,w
+  1259  065C  00BD               	movwf	(_period)
+  1260  065D  2E5E               	goto	l2922
+  1261                           	
+  1262  065E                     l366:	
+  1263                           	line	113
+  1264                           	
+  1265  065E                     l2922:	
+  1266                           ;FrequencyCounterLCD.c: 113: d7=total/1000000+48;
+  1267  065E  3000               	movlw	0
+  1268  065F  00F3               	movwf	(?___lldiv+3)
+  1269  0660  300F               	movlw	0Fh
+  1270  0661  00F2               	movwf	(?___lldiv+2)
+  1271  0662  3042               	movlw	042h
+  1272  0663  00F1               	movwf	(?___lldiv+1)
+  1273  0664  3040               	movlw	040h
+  1274  0665  00F0               	movwf	(?___lldiv)
+  1275                           
+  1276  0666  0835               	movf	(main@total+3),w
+  1277  0667  00F7               	movwf	3+(?___lldiv)+04h
+  1278  0668  0834               	movf	(main@total+2),w
+  1279  0669  00F6               	movwf	2+(?___lldiv)+04h
+  1280  066A  0833               	movf	(main@total+1),w
+  1281  066B  00F5               	movwf	1+(?___lldiv)+04h
+  1282  066C  0832               	movf	(main@total),w
+  1283  066D  00F4               	movwf	0+(?___lldiv)+04h
+  1284                           
+  1285  066E  23C2               	fcall	___lldiv
+  1286  066F  0870               	movf	0+(((0+(?___lldiv)))),w
+  1287  0670  3E30               	addlw	030h
+  1288  0671  1283               	bcf	status, 5	;RP0=0, select bank0
+  1289  0672  1303               	bcf	status, 6	;RP1=0, select bank0
+  1290  0673  00AA               	movwf	(??_main+0)+0
+  1291  0674  082A               	movf	(??_main+0)+0,w
+  1292  0675  00BC               	movwf	(_d7)
+  1293                           	line	114
+  1294                           	
+  1295  0676                     l2924:	
+  1296                           ;FrequencyCounterLCD.c: 114: d6=(total/100000) %10+48;
+  1297  0676  3000               	movlw	0
+  1298  0677  00A3               	movwf	(?___llmod+3)
+  1299  0678  3000               	movlw	0
+  1300  0679  00A2               	movwf	(?___llmod+2)
+  1301  067A  3000               	movlw	0
+  1302  067B  00A1               	movwf	(?___llmod+1)
+  1303  067C  300A               	movlw	0Ah
+  1304  067D  00A0               	movwf	(?___llmod)
+  1305                           
+  1306  067E  3000               	movlw	0
+  1307  067F  00F3               	movwf	(?___lldiv+3)
+  1308  0680  3001               	movlw	01h
+  1309  0681  00F2               	movwf	(?___lldiv+2)
+  1310  0682  3086               	movlw	086h
+  1311  0683  00F1               	movwf	(?___lldiv+1)
+  1312  0684  30A0               	movlw	0A0h
+  1313  0685  00F0               	movwf	(?___lldiv)
+  1314                           
+  1315  0686  0835               	movf	(main@total+3),w
+  1316  0687  00F7               	movwf	3+(?___lldiv)+04h
+  1317  0688  0834               	movf	(main@total+2),w
+  1318  0689  00F6               	movwf	2+(?___lldiv)+04h
+  1319  068A  0833               	movf	(main@total+1),w
+  1320  068B  00F5               	movwf	1+(?___lldiv)+04h
+  1321  068C  0832               	movf	(main@total),w
+  1322  068D  00F4               	movwf	0+(?___lldiv)+04h
+  1323                           
+  1324  068E  23C2               	fcall	___lldiv
+  1325  068F  0873               	movf	(3+(?___lldiv)),w
+  1326  0690  1283               	bcf	status, 5	;RP0=0, select bank0
+  1327  0691  1303               	bcf	status, 6	;RP1=0, select bank0
+  1328  0692  00A7               	movwf	3+(?___llmod)+04h
+  1329  0693  0872               	movf	(2+(?___lldiv)),w
+  1330  0694  00A6               	movwf	2+(?___llmod)+04h
+  1331  0695  0871               	movf	(1+(?___lldiv)),w
+  1332  0696  00A5               	movwf	1+(?___llmod)+04h
+  1333  0697  0870               	movf	(0+(?___lldiv)),w
+  1334  0698  00A4               	movwf	0+(?___llmod)+04h
+  1335                           
+  1336  0699  2364               	fcall	___llmod
+  1337  069A  1283               	bcf	status, 5	;RP0=0, select bank0
+  1338  069B  1303               	bcf	status, 6	;RP1=0, select bank0
+  1339  069C  0820               	movf	0+(((0+(?___llmod)))),w
+  1340  069D  3E30               	addlw	030h
+  1341  069E  00AA               	movwf	(??_main+0)+0
+  1342  069F  082A               	movf	(??_main+0)+0,w
+  1343  06A0  00BB               	movwf	(_d6)
+  1344                           	line	115
+  1345                           	
+  1346  06A1                     l2926:	
+  1347                           ;FrequencyCounterLCD.c: 115: d5=(total/10000) %10+48;
+  1348  06A1  3000               	movlw	0
+  1349  06A2  00A3               	movwf	(?___llmod+3)
+  1350  06A3  3000               	movlw	0
+  1351  06A4  00A2               	movwf	(?___llmod+2)
+  1352  06A5  3000               	movlw	0
+  1353  06A6  00A1               	movwf	(?___llmod+1)
+  1354  06A7  300A               	movlw	0Ah
+  1355  06A8  00A0               	movwf	(?___llmod)
+  1356                           
+  1357  06A9  3000               	movlw	0
+  1358  06AA  00F3               	movwf	(?___lldiv+3)
+  1359  06AB  3000               	movlw	0
+  1360  06AC  00F2               	movwf	(?___lldiv+2)
+  1361  06AD  3027               	movlw	027h
+  1362  06AE  00F1               	movwf	(?___lldiv+1)
+  1363  06AF  3010               	movlw	010h
+  1364  06B0  00F0               	movwf	(?___lldiv)
+  1365                           
+  1366  06B1  0835               	movf	(main@total+3),w
+  1367  06B2  00F7               	movwf	3+(?___lldiv)+04h
+  1368  06B3  0834               	movf	(main@total+2),w
+  1369  06B4  00F6               	movwf	2+(?___lldiv)+04h
+  1370  06B5  0833               	movf	(main@total+1),w
+  1371  06B6  00F5               	movwf	1+(?___lldiv)+04h
+  1372  06B7  0832               	movf	(main@total),w
+  1373  06B8  00F4               	movwf	0+(?___lldiv)+04h
+  1374                           
+  1375  06B9  23C2               	fcall	___lldiv
+  1376  06BA  0873               	movf	(3+(?___lldiv)),w
+  1377  06BB  1283               	bcf	status, 5	;RP0=0, select bank0
+  1378  06BC  1303               	bcf	status, 6	;RP1=0, select bank0
+  1379  06BD  00A7               	movwf	3+(?___llmod)+04h
+  1380  06BE  0872               	movf	(2+(?___lldiv)),w
+  1381  06BF  00A6               	movwf	2+(?___llmod)+04h
+  1382  06C0  0871               	movf	(1+(?___lldiv)),w
+  1383  06C1  00A5               	movwf	1+(?___llmod)+04h
+  1384  06C2  0870               	movf	(0+(?___lldiv)),w
+  1385  06C3  00A4               	movwf	0+(?___llmod)+04h
+  1386                           
+  1387  06C4  2364               	fcall	___llmod
+  1388  06C5  1283               	bcf	status, 5	;RP0=0, select bank0
+  1389  06C6  1303               	bcf	status, 6	;RP1=0, select bank0
+  1390  06C7  0820               	movf	0+(((0+(?___llmod)))),w
+  1391  06C8  3E30               	addlw	030h
+  1392  06C9  00AA               	movwf	(??_main+0)+0
+  1393  06CA  082A               	movf	(??_main+0)+0,w
+  1394  06CB  00BA               	movwf	(_d5)
+  1395                           	line	116
+  1396                           	
+  1397  06CC                     l2928:	
+  1398                           ;FrequencyCounterLCD.c: 116: d4=(total/1000) %10+48;
+  1399  06CC  3000               	movlw	0
+  1400  06CD  00A3               	movwf	(?___llmod+3)
+  1401  06CE  3000               	movlw	0
+  1402  06CF  00A2               	movwf	(?___llmod+2)
+  1403  06D0  3000               	movlw	0
+  1404  06D1  00A1               	movwf	(?___llmod+1)
+  1405  06D2  300A               	movlw	0Ah
+  1406  06D3  00A0               	movwf	(?___llmod)
+  1407                           
+  1408  06D4  3000               	movlw	0
+  1409  06D5  00F3               	movwf	(?___lldiv+3)
+  1410  06D6  3000               	movlw	0
+  1411  06D7  00F2               	movwf	(?___lldiv+2)
+  1412  06D8  3003               	movlw	03h
+  1413  06D9  00F1               	movwf	(?___lldiv+1)
+  1414  06DA  30E8               	movlw	0E8h
+  1415  06DB  00F0               	movwf	(?___lldiv)
+  1416                           
+  1417  06DC  0835               	movf	(main@total+3),w
+  1418  06DD  00F7               	movwf	3+(?___lldiv)+04h
+  1419  06DE  0834               	movf	(main@total+2),w
+  1420  06DF  00F6               	movwf	2+(?___lldiv)+04h
+  1421  06E0  0833               	movf	(main@total+1),w
+  1422  06E1  00F5               	movwf	1+(?___lldiv)+04h
+  1423  06E2  0832               	movf	(main@total),w
+  1424  06E3  00F4               	movwf	0+(?___lldiv)+04h
+  1425                           
+  1426  06E4  23C2               	fcall	___lldiv
+  1427  06E5  0873               	movf	(3+(?___lldiv)),w
+  1428  06E6  1283               	bcf	status, 5	;RP0=0, select bank0
+  1429  06E7  1303               	bcf	status, 6	;RP1=0, select bank0
+  1430  06E8  00A7               	movwf	3+(?___llmod)+04h
+  1431  06E9  0872               	movf	(2+(?___lldiv)),w
+  1432  06EA  00A6               	movwf	2+(?___llmod)+04h
+  1433  06EB  0871               	movf	(1+(?___lldiv)),w
+  1434  06EC  00A5               	movwf	1+(?___llmod)+04h
+  1435  06ED  0870               	movf	(0+(?___lldiv)),w
+  1436  06EE  00A4               	movwf	0+(?___llmod)+04h
+  1437                           
+  1438  06EF  2364               	fcall	___llmod
+  1439  06F0  1283               	bcf	status, 5	;RP0=0, select bank0
+  1440  06F1  1303               	bcf	status, 6	;RP1=0, select bank0
+  1441  06F2  0820               	movf	0+(((0+(?___llmod)))),w
+  1442  06F3  3E30               	addlw	030h
+  1443  06F4  00AA               	movwf	(??_main+0)+0
+  1444  06F5  082A               	movf	(??_main+0)+0,w
+  1445  06F6  00B9               	movwf	(_d4)
+  1446                           	line	117
+  1447                           	
+  1448  06F7                     l2930:	
+  1449                           ;FrequencyCounterLCD.c: 117: d3=(total/100) %10+48;
+  1450  06F7  3000               	movlw	0
+  1451  06F8  00A3               	movwf	(?___llmod+3)
+  1452  06F9  3000               	movlw	0
+  1453  06FA  00A2               	movwf	(?___llmod+2)
+  1454  06FB  3000               	movlw	0
+  1455  06FC  00A1               	movwf	(?___llmod+1)
+  1456  06FD  300A               	movlw	0Ah
+  1457  06FE  00A0               	movwf	(?___llmod)
+  1458                           
+  1459  06FF  3000               	movlw	0
+  1460  0700  00F3               	movwf	(?___lldiv+3)
+  1461  0701  3000               	movlw	0
+  1462  0702  00F2               	movwf	(?___lldiv+2)
+  1463  0703  3000               	movlw	0
+  1464  0704  00F1               	movwf	(?___lldiv+1)
+  1465  0705  3064               	movlw	064h
+  1466  0706  00F0               	movwf	(?___lldiv)
+  1467                           
+  1468  0707  0835               	movf	(main@total+3),w
+  1469  0708  00F7               	movwf	3+(?___lldiv)+04h
+  1470  0709  0834               	movf	(main@total+2),w
+  1471  070A  00F6               	movwf	2+(?___lldiv)+04h
+  1472  070B  0833               	movf	(main@total+1),w
+  1473  070C  00F5               	movwf	1+(?___lldiv)+04h
+  1474  070D  0832               	movf	(main@total),w
+  1475  070E  00F4               	movwf	0+(?___lldiv)+04h
+  1476                           
+  1477  070F  23C2               	fcall	___lldiv
+  1478  0710  0873               	movf	(3+(?___lldiv)),w
+  1479  0711  1283               	bcf	status, 5	;RP0=0, select bank0
+  1480  0712  1303               	bcf	status, 6	;RP1=0, select bank0
+  1481  0713  00A7               	movwf	3+(?___llmod)+04h
+  1482  0714  0872               	movf	(2+(?___lldiv)),w
+  1483  0715  00A6               	movwf	2+(?___llmod)+04h
+  1484  0716  0871               	movf	(1+(?___lldiv)),w
+  1485  0717  00A5               	movwf	1+(?___llmod)+04h
+  1486  0718  0870               	movf	(0+(?___lldiv)),w
+  1487  0719  00A4               	movwf	0+(?___llmod)+04h
+  1488                           
+  1489  071A  2364               	fcall	___llmod
+  1490  071B  1283               	bcf	status, 5	;RP0=0, select bank0
+  1491  071C  1303               	bcf	status, 6	;RP1=0, select bank0
+  1492  071D  0820               	movf	0+(((0+(?___llmod)))),w
+  1493  071E  3E30               	addlw	030h
+  1494  071F  00AA               	movwf	(??_main+0)+0
+  1495  0720  082A               	movf	(??_main+0)+0,w
+  1496  0721  00B8               	movwf	(_d3)
+  1497                           	line	118
+  1498                           	
+  1499  0722                     l2932:	
+  1500                           ;FrequencyCounterLCD.c: 118: d2=(total/10) %10+48;
+  1501  0722  3000               	movlw	0
+  1502  0723  00A3               	movwf	(?___llmod+3)
+  1503  0724  3000               	movlw	0
+  1504  0725  00A2               	movwf	(?___llmod+2)
+  1505  0726  3000               	movlw	0
+  1506  0727  00A1               	movwf	(?___llmod+1)
+  1507  0728  300A               	movlw	0Ah
+  1508  0729  00A0               	movwf	(?___llmod)
+  1509                           
+  1510  072A  3000               	movlw	0
+  1511  072B  00F3               	movwf	(?___lldiv+3)
+  1512  072C  3000               	movlw	0
+  1513  072D  00F2               	movwf	(?___lldiv+2)
+  1514  072E  3000               	movlw	0
+  1515  072F  00F1               	movwf	(?___lldiv+1)
+  1516  0730  300A               	movlw	0Ah
+  1517  0731  00F0               	movwf	(?___lldiv)
+  1518                           
+  1519  0732  0835               	movf	(main@total+3),w
+  1520  0733  00F7               	movwf	3+(?___lldiv)+04h
+  1521  0734  0834               	movf	(main@total+2),w
+  1522  0735  00F6               	movwf	2+(?___lldiv)+04h
+  1523  0736  0833               	movf	(main@total+1),w
+  1524  0737  00F5               	movwf	1+(?___lldiv)+04h
+  1525  0738  0832               	movf	(main@total),w
+  1526  0739  00F4               	movwf	0+(?___lldiv)+04h
+  1527                           
+  1528  073A  23C2               	fcall	___lldiv
+  1529  073B  0873               	movf	(3+(?___lldiv)),w
+  1530  073C  1283               	bcf	status, 5	;RP0=0, select bank0
+  1531  073D  1303               	bcf	status, 6	;RP1=0, select bank0
+  1532  073E  00A7               	movwf	3+(?___llmod)+04h
+  1533  073F  0872               	movf	(2+(?___lldiv)),w
+  1534  0740  00A6               	movwf	2+(?___llmod)+04h
+  1535  0741  0871               	movf	(1+(?___lldiv)),w
+  1536  0742  00A5               	movwf	1+(?___llmod)+04h
+  1537  0743  0870               	movf	(0+(?___lldiv)),w
+  1538  0744  00A4               	movwf	0+(?___llmod)+04h
+  1539                           
+  1540  0745  2364               	fcall	___llmod
+  1541  0746  1283               	bcf	status, 5	;RP0=0, select bank0
+  1542  0747  1303               	bcf	status, 6	;RP1=0, select bank0
+  1543  0748  0820               	movf	0+(((0+(?___llmod)))),w
+  1544  0749  3E30               	addlw	030h
+  1545  074A  00AA               	movwf	(??_main+0)+0
+  1546  074B  082A               	movf	(??_main+0)+0,w
+  1547  074C  00B7               	movwf	(_d2)
+  1548                           	line	119
+  1549                           	
+  1550  074D                     l2934:	
+  1551                           ;FrequencyCounterLCD.c: 119: d1=total %10+48;
+  1552  074D  3000               	movlw	0
+  1553  074E  00A3               	movwf	(?___llmod+3)
+  1554  074F  3000               	movlw	0
+  1555  0750  00A2               	movwf	(?___llmod+2)
+  1556  0751  3000               	movlw	0
+  1557  0752  00A1               	movwf	(?___llmod+1)
+  1558  0753  300A               	movlw	0Ah
+  1559  0754  00A0               	movwf	(?___llmod)
+  1560                           
+  1561  0755  0835               	movf	(main@total+3),w
+  1562  0756  00A7               	movwf	3+(?___llmod)+04h
+  1563  0757  0834               	movf	(main@total+2),w
+  1564  0758  00A6               	movwf	2+(?___llmod)+04h
+  1565  0759  0833               	movf	(main@total+1),w
+  1566  075A  00A5               	movwf	1+(?___llmod)+04h
+  1567  075B  0832               	movf	(main@total),w
+  1568  075C  00A4               	movwf	0+(?___llmod)+04h
+  1569                           
+  1570  075D  2364               	fcall	___llmod
+  1571  075E  1283               	bcf	status, 5	;RP0=0, select bank0
+  1572  075F  1303               	bcf	status, 6	;RP1=0, select bank0
+  1573  0760  0820               	movf	0+(((0+(?___llmod)))),w
+  1574  0761  3E30               	addlw	030h
+  1575  0762  00AA               	movwf	(??_main+0)+0
+  1576  0763  082A               	movf	(??_main+0)+0,w
+  1577  0764  00B6               	movwf	(_d1)
+  1578                           	line	121
+  1579                           	
+  1580  0765                     l2936:	
+  1581                           ;FrequencyCounterLCD.c: 121: display(32);
+  1582  0765  3020               	movlw	(020h)
+  1583  0766  22FF               	fcall	_display
+  1584                           	line	122
+  1585                           	
+  1586  0767                     l2938:	
+  1587                           ;FrequencyCounterLCD.c: 122: display(32);
+  1588  0767  3020               	movlw	(020h)
+  1589  0768  22FF               	fcall	_display
+  1590                           	line	124
+  1591                           ;FrequencyCounterLCD.c: 124: if(d7 == 48){display(32); display(32);}
+  1592  0769  1283               	bcf	status, 5	;RP0=0, select bank0
+  1593  076A  1303               	bcf	status, 6	;RP1=0, select bank0
+  1594  076B  083C               	movf	(_d7),w
+  1595  076C  3A30               	xorlw	030h
+  1596  076D  1D03               	skipz
+  1597  076E  2F70               	goto	u2661
+  1598  076F  2F71               	goto	u2660
+  1599  0770                     u2661:
+  1600  0770  2F76               	goto	l2942
+  1601  0771                     u2660:
+  1602                           	
+  1603  0771                     l2940:	
+  1604  0771  3020               	movlw	(020h)
+  1605  0772  22FF               	fcall	_display
+  1606  0773  3020               	movlw	(020h)
+  1607  0774  22FF               	fcall	_display
+  1608  0775  2F82               	goto	l2946
+  1609                           	line	125
+  1610                           	
+  1611  0776                     l367:	
+  1612                           	
+  1613  0776                     l2942:	
+  1614                           ;FrequencyCounterLCD.c: 125: else{display(d7); display(44); nz=1;}
+  1615  0776  1283               	bcf	status, 5	;RP0=0, select bank0
+  1616  0777  1303               	bcf	status, 6	;RP1=0, select bank0
+  1617  0778  083C               	movf	(_d7),w
+  1618  0779  22FF               	fcall	_display
+  1619  077A  302C               	movlw	(02Ch)
+  1620  077B  22FF               	fcall	_display
+  1621                           	
+  1622  077C                     l2944:	
+  1623  077C  1283               	bcf	status, 5	;RP0=0, select bank0
+  1624  077D  1303               	bcf	status, 6	;RP1=0, select bank0
+  1625  077E  01B1               	clrf	(main@nz)
+  1626  077F  1403               	bsf	status,0
+  1627  0780  0DB1               	rlf	(main@nz),f
+  1628  0781  2F82               	goto	l2946
+  1629                           	
+  1630  0782                     l368:	
+  1631                           	line	126
+  1632                           	
+  1633  0782                     l2946:	
+  1634                           ;FrequencyCounterLCD.c: 126: if(d6 == 48 && nz==0){display(32);}
+  1635  0782  1283               	bcf	status, 5	;RP0=0, select bank0
+  1636  0783  1303               	bcf	status, 6	;RP1=0, select bank0
+  1637  0784  083B               	movf	(_d6),w
+  1638  0785  3A30               	xorlw	030h
+  1639  0786  1D03               	skipz
+  1640  0787  2F89               	goto	u2671
+  1641  0788  2F8A               	goto	u2670
+  1642  0789                     u2671:
+  1643  0789  2F92               	goto	l2952
+  1644  078A                     u2670:
+  1645                           	
+  1646  078A                     l2948:	
+  1647  078A  08B1               	movf	(main@nz),f
+  1648  078B  1D03               	skipz
+  1649  078C  2F8E               	goto	u2681
+  1650  078D  2F8F               	goto	u2680
+  1651  078E                     u2681:
+  1652  078E  2F92               	goto	l2952
+  1653  078F                     u2680:
+  1654                           	
+  1655  078F                     l2950:	
+  1656  078F  3020               	movlw	(020h)
+  1657  0790  22FF               	fcall	_display
+  1658  0791  2F9C               	goto	l2956
+  1659                           	line	127
+  1660                           	
+  1661  0792                     l369:	
+  1662                           	
+  1663  0792                     l2952:	
+  1664                           ;FrequencyCounterLCD.c: 127: else{display(d6); nz=1;}
+  1665  0792  1283               	bcf	status, 5	;RP0=0, select bank0
+  1666  0793  1303               	bcf	status, 6	;RP1=0, select bank0
+  1667  0794  083B               	movf	(_d6),w
+  1668  0795  22FF               	fcall	_display
+  1669                           	
+  1670  0796                     l2954:	
+  1671  0796  1283               	bcf	status, 5	;RP0=0, select bank0
+  1672  0797  1303               	bcf	status, 6	;RP1=0, select bank0
+  1673  0798  01B1               	clrf	(main@nz)
+  1674  0799  1403               	bsf	status,0
+  1675  079A  0DB1               	rlf	(main@nz),f
+  1676  079B  2F9C               	goto	l2956
+  1677                           	
+  1678  079C                     l370:	
+  1679                           	line	128
+  1680                           	
+  1681  079C                     l2956:	
+  1682                           ;FrequencyCounterLCD.c: 128: if(d5 == 48 && nz==0){display(32);}
+  1683  079C  1283               	bcf	status, 5	;RP0=0, select bank0
+  1684  079D  1303               	bcf	status, 6	;RP1=0, select bank0
+  1685  079E  083A               	movf	(_d5),w
+  1686  079F  3A30               	xorlw	030h
+  1687  07A0  1D03               	skipz
+  1688  07A1  2FA3               	goto	u2691
+  1689  07A2  2FA4               	goto	u2690
+  1690  07A3                     u2691:
+  1691  07A3  2FAC               	goto	l2962
+  1692  07A4                     u2690:
+  1693                           	
+  1694  07A4                     l2958:	
+  1695  07A4  08B1               	movf	(main@nz),f
+  1696  07A5  1D03               	skipz
+  1697  07A6  2FA8               	goto	u2701
+  1698  07A7  2FA9               	goto	u2700
+  1699  07A8                     u2701:
+  1700  07A8  2FAC               	goto	l2962
+  1701  07A9                     u2700:
+  1702                           	
+  1703  07A9                     l2960:	
+  1704  07A9  3020               	movlw	(020h)
+  1705  07AA  22FF               	fcall	_display
+  1706  07AB  2FB6               	goto	l2966
+  1707                           	line	129
+  1708                           	
+  1709  07AC                     l371:	
+  1710                           	
+  1711  07AC                     l2962:	
+  1712                           ;FrequencyCounterLCD.c: 129: else{display(d5); nz=1;}
+  1713  07AC  1283               	bcf	status, 5	;RP0=0, select bank0
+  1714  07AD  1303               	bcf	status, 6	;RP1=0, select bank0
+  1715  07AE  083A               	movf	(_d5),w
+  1716  07AF  22FF               	fcall	_display
+  1717                           	
+  1718  07B0                     l2964:	
+  1719  07B0  1283               	bcf	status, 5	;RP0=0, select bank0
+  1720  07B1  1303               	bcf	status, 6	;RP1=0, select bank0
+  1721  07B2  01B1               	clrf	(main@nz)
+  1722  07B3  1403               	bsf	status,0
+  1723  07B4  0DB1               	rlf	(main@nz),f
+  1724  07B5  2FB6               	goto	l2966
+  1725                           	
+  1726  07B6                     l372:	
+  1727                           	line	130
+  1728                           	
+  1729  07B6                     l2966:	
+  1730                           ;FrequencyCounterLCD.c: 130: if(d4 == 48 && nz==0){display(32); display(32);}
+  1731  07B6  1283               	bcf	status, 5	;RP0=0, select bank0
+  1732  07B7  1303               	bcf	status, 6	;RP1=0, select bank0
+  1733  07B8  0839               	movf	(_d4),w
+  1734  07B9  3A30               	xorlw	030h
+  1735  07BA  1D03               	skipz
+  1736  07BB  2FBD               	goto	u2711
+  1737  07BC  2FBE               	goto	u2710
+  1738  07BD                     u2711:
+  1739  07BD  2FC8               	goto	l2972
+  1740  07BE                     u2710:
+  1741                           	
+  1742  07BE                     l2968:	
+  1743  07BE  08B1               	movf	(main@nz),f
+  1744  07BF  1D03               	skipz
+  1745  07C0  2FC2               	goto	u2721
+  1746  07C1  2FC3               	goto	u2720
+  1747  07C2                     u2721:
+  1748  07C2  2FC8               	goto	l2972
+  1749  07C3                     u2720:
+  1750                           	
+  1751  07C3                     l2970:	
+  1752  07C3  3020               	movlw	(020h)
+  1753  07C4  22FF               	fcall	_display
+  1754  07C5  3020               	movlw	(020h)
+  1755  07C6  22FF               	fcall	_display
+  1756  07C7  2FCE               	goto	l374
+  1757                           	line	131
+  1758                           	
+  1759  07C8                     l373:	
+  1760                           	
+  1761  07C8                     l2972:	
+  1762                           ;FrequencyCounterLCD.c: 131: else{display(d4); display(44);}
+  1763  07C8  1283               	bcf	status, 5	;RP0=0, select bank0
+  1764  07C9  1303               	bcf	status, 6	;RP1=0, select bank0
+  1765  07CA  0839               	movf	(_d4),w
+  1766  07CB  22FF               	fcall	_display
+  1767  07CC  302C               	movlw	(02Ch)
+  1768  07CD  22FF               	fcall	_display
+  1769                           	
+  1770  07CE                     l374:	
+  1771                           	line	133
+  1772                           ;FrequencyCounterLCD.c: 133: display(d3);
+  1773  07CE  1283               	bcf	status, 5	;RP0=0, select bank0
+  1774  07CF  1303               	bcf	status, 6	;RP1=0, select bank0
+  1775  07D0  0838               	movf	(_d3),w
+  1776  07D1  22FF               	fcall	_display
+  1777                           	line	134
+  1778                           ;FrequencyCounterLCD.c: 134: display(d2);
+  1779  07D2  1283               	bcf	status, 5	;RP0=0, select bank0
+  1780  07D3  1303               	bcf	status, 6	;RP1=0, select bank0
+  1781  07D4  0837               	movf	(_d2),w
+  1782  07D5  22FF               	fcall	_display
+  1783                           	line	135
+  1784                           ;FrequencyCounterLCD.c: 135: display(d1);
+  1785  07D6  1283               	bcf	status, 5	;RP0=0, select bank0
+  1786  07D7  1303               	bcf	status, 6	;RP1=0, select bank0
+  1787  07D8  0836               	movf	(_d1),w
+  1788  07D9  22FF               	fcall	_display
+  1789                           	line	136
+  1790                           ;FrequencyCounterLCD.c: 136: display(32);
+  1791  07DA  3020               	movlw	(020h)
+  1792  07DB  22FF               	fcall	_display
+  1793                           	line	137
+  1794                           ;FrequencyCounterLCD.c: 137: display(period);
+  1795  07DC  1283               	bcf	status, 5	;RP0=0, select bank0
+  1796  07DD  1303               	bcf	status, 6	;RP1=0, select bank0
+  1797  07DE  083D               	movf	(_period),w
+  1798  07DF  22FF               	fcall	_display
+  1799                           	line	138
+  1800                           ;FrequencyCounterLCD.c: 138: display(115);
+  1801  07E0  3073               	movlw	(073h)
+  1802  07E1  22FF               	fcall	_display
+  1803                           	line	140
+  1804                           	
+  1805  07E2                     l2974:	
+  1806                           ;FrequencyCounterLCD.c: 140: RB0 = 1;
+  1807  07E2  1283               	bcf	status, 5	;RP0=0, select bank0
+  1808  07E3  1303               	bcf	status, 6	;RP1=0, select bank0
+  1809  07E4  1406               	bsf	(48/8),(48)&7
+  1810                           	line	141
+  1811                           	
+  1812  07E5                     l2976:	
+  1813                           ;FrequencyCounterLCD.c: 141: _delay((unsigned long)((1)*(400000/4000.0)));
+  1814                           	opt asmopt_off
+  1815  07E5  3021               movlw	33
+  1816  07E6  00AA               movwf	(??_main+0)+0,f
+  1817  07E7                     u2747:
+  1818  07E7  0BAA               decfsz	(??_main+0)+0,f
+  1819  07E8  2FE7               	goto	u2747
+  1820                           opt asmopt_on
+  1821                           
+  1822                           	line	142
+  1823                           	
+  1824  07E9                     l2978:	
+  1825                           ;FrequencyCounterLCD.c: 142: RB0 = 0;
+  1826  07E9  1283               	bcf	status, 5	;RP0=0, select bank0
+  1827  07EA  1303               	bcf	status, 6	;RP1=0, select bank0
+  1828  07EB  1006               	bcf	(48/8),(48)&7
+  1829                           	line	143
+  1830                           	
+  1831  07EC                     l2980:	
+  1832                           ;FrequencyCounterLCD.c: 143: _delay((unsigned long)((1)*(400000/4000.0)));
+  1833                           	opt asmopt_off
+  1834  07EC  3021               movlw	33
+  1835  07ED  00AA               movwf	(??_main+0)+0,f
+  1836  07EE                     u2757:
+  1837  07EE  0BAA               decfsz	(??_main+0)+0,f
+  1838  07EF  2FEE               	goto	u2757
+  1839                           opt asmopt_on
+  1840                           
+  1841                           	line	145
+  1842                           	
+  1843  07F0                     l2982:	
+  1844                           ;FrequencyCounterLCD.c: 145: RB7 = 1;
+  1845  07F0  1283               	bcf	status, 5	;RP0=0, select bank0
+  1846  07F1  1303               	bcf	status, 6	;RP1=0, select bank0
+  1847  07F2  1786               	bsf	(55/8),(55)&7
+  1848                           	line	146
+  1849                           	
+  1850  07F3                     l2984:	
+  1851                           ;FrequencyCounterLCD.c: 146: _delay((unsigned long)((1)*(400000/4000.0)));
+  1852                           	opt asmopt_off
+  1853  07F3  3021               movlw	33
+  1854  07F4  00AA               movwf	(??_main+0)+0,f
+  1855  07F5                     u2767:
+  1856  07F5  0BAA               decfsz	(??_main+0)+0,f
+  1857  07F6  2FF5               	goto	u2767
+  1858                           opt asmopt_on
+  1859                           
+  1860                           	line	147
+  1861                           	
+  1862  07F7                     l2986:	
+  1863                           ;FrequencyCounterLCD.c: 147: RB7 = 0;
+  1864  07F7  1283               	bcf	status, 5	;RP0=0, select bank0
+  1865  07F8  1303               	bcf	status, 6	;RP1=0, select bank0
+  1866  07F9  1386               	bcf	(55/8),(55)&7
+  1867                           	line	148
+  1868                           	
+  1869  07FA                     l2988:	
+  1870                           ;FrequencyCounterLCD.c: 148: _delay((unsigned long)((1)*(400000/4000.0)));
+  1871                           	opt asmopt_off
+  1872  07FA  3021               movlw	33
+  1873  07FB  00AA               movwf	(??_main+0)+0,f
+  1874  07FC                     u2777:
+  1875  07FC  0BAA               decfsz	(??_main+0)+0,f
+  1876  07FD  2FFC               	goto	u2777
+  1877                           opt asmopt_on
+  1878                           
+  1879                           	line	149
+  1880                           ;FrequencyCounterLCD.c: 149: }
+  1881  07FE  2C32               	goto	l2816
+  1882                           	
+  1883  07FF                     l375:	
+  1884                           	line	150
+  1885                           	
+  1886  07FF                     l376:	
+  1887                           	global	start
+  1888  07FF  2800               	ljmp	start
+  1889                           	opt stack 0
+  1890                           GLOBAL	__end_of_main
+  1891  0800                     	__end_of_main:
+  1892 ;; =============== function _main ends ============
+  1893                           
+  1894                           	signat	_main,88
+  1895                           	global	_display
+  1896                           psect	text207,local,class=CODE,delta=2
+  1897                           global __ptext207
+  1898  02FF                     __ptext207:
+  1899                           
+  1900 ;; *************** function _display *****************
+  1901 ;; Defined at:
+  1902 ;;		line 166 in file "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f628_FrequencyMete
+       r_2\FrequencyCounterLCD.c"
+  1903 ;; Parameters:    Size  Location     Type
+  1904 ;;  fig             1    wreg     unsigned char 
+  1905 ;; Auto vars:     Size  Location     Type
+  1906 ;;  fig             1    1[COMMON] unsigned char 
+  1907 ;; Return value:  Size  Location     Type
+  1908 ;;		None               void
+  1909 ;; Registers used:
+  1910 ;;		wreg, status,2, status,0, pclath, cstack
+  1911 ;; Tracked objects:
+  1912 ;;		On entry : 0/0
+  1913 ;;		On exit  : 0/0
+  1914 ;;		Unchanged: 0/0
+  1915 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1916 ;;      Params:         0       0       0       0
+  1917 ;;      Locals:         1       0       0       0
+  1918 ;;      Temps:          1       0       0       0
+  1919 ;;      Totals:         2       0       0       0
+  1920 ;;Total ram usage:        2 bytes
+  1921 ;; Hardware stack levels used:    1
+  1922 ;; Hardware stack levels required when called:    1
+  1923 ;; This function calls:
+  1924 ;;		_clock
+  1925 ;; This function is called by:
+  1926 ;;		_main
+  1927 ;; This function uses a non-reentrant model
+  1928 ;;
+  1929                           psect	text207
+  1930                           	file	"C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f
+                                 628_FrequencyMeter_2\FrequencyCounterLCD.c"
+  1931                           	line	166
+  1932                           	global	__size_of_display
+  1933  0019                     	__size_of_display	equ	__end_of_display-_display
+  1934                           	
+  1935  02FF                     _display:	
+  1936                           	opt	stack 6
+  1937                           ; Regs used in _display: [wreg+status,2+status,0+pclath+cstack]
+  1938                           ;display@fig stored from wreg
+  1939  02FF  00F1               	movwf	(display@fig)
+  1940                           	line	167
+  1941                           	
+  1942  0300                     l2802:	
+  1943                           ;FrequencyCounterLCD.c: 167: RA0=1;
+  1944  0300  1283               	bcf	status, 5	;RP0=0, select bank0
+  1945  0301  1303               	bcf	status, 6	;RP1=0, select bank0
+  1946  0302  1405               	bsf	(40/8),(40)&7
+  1947                           	line	168
+  1948                           	
+  1949  0303                     l2804:	
+  1950                           ;FrequencyCounterLCD.c: 168: PORTB=(fig >> 4); clock();
+  1951  0303  0871               	movf	(display@fig),w
+  1952  0304  00F0               	movwf	(??_display+0)+0
+  1953  0305  3004               	movlw	04h
+  1954  0306                     u2545:
+  1955  0306  1003               	clrc
+  1956  0307  0CF0               	rrf	(??_display+0)+0,f
+  1957  0308  3EFF               	addlw	-1
+  1958  0309  1D03               	skipz
+  1959  030A  2B06               	goto	u2545
+  1960  030B  0870               	movf	0+(??_display+0)+0,w
+  1961  030C  0086               	movwf	(6)	;volatile
+  1962                           	
+  1963  030D                     l2806:	
+  1964  030D  22D3               	fcall	_clock
+  1965                           	line	169
+  1966                           	
+  1967  030E                     l2808:	
+  1968                           ;FrequencyCounterLCD.c: 169: PORTB=fig & 0b00001111; clock();
+  1969  030E  0871               	movf	(display@fig),w
+  1970  030F  390F               	andlw	0Fh
+  1971  0310  1283               	bcf	status, 5	;RP0=0, select bank0
+  1972  0311  1303               	bcf	status, 6	;RP1=0, select bank0
+  1973  0312  0086               	movwf	(6)	;volatile
+  1974                           	
+  1975  0313                     l2810:	
+  1976  0313  22D3               	fcall	_clock
+  1977                           	line	170
+  1978                           	
+  1979  0314                     l2812:	
+  1980                           ;FrequencyCounterLCD.c: 170: RA0=0;
+  1981  0314  1283               	bcf	status, 5	;RP0=0, select bank0
+  1982  0315  1303               	bcf	status, 6	;RP1=0, select bank0
+  1983  0316  1005               	bcf	(40/8),(40)&7
+  1984                           	line	171
+  1985                           	
+  1986  0317                     l385:	
+  1987  0317  0008               	return
+  1988                           	opt stack 0
+  1989                           GLOBAL	__end_of_display
+  1990  0318                     	__end_of_display:
+  1991 ;; =============== function _display ends ============
+  1992                           
+  1993                           	signat	_display,4216
+  1994                           	global	_clear
+  1995                           psect	text208,local,class=CODE,delta=2
+  1996                           global __ptext208
+  1997  02E6                     __ptext208:
+  1998                           
+  1999 ;; *************** function _clear *****************
+  2000 ;; Defined at:
+  2001 ;;		line 159 in file "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f628_FrequencyMete
+       r_2\FrequencyCounterLCD.c"
+  2002 ;; Parameters:    Size  Location     Type
+  2003 ;;		None
+  2004 ;; Auto vars:     Size  Location     Type
+  2005 ;;		None
+  2006 ;; Return value:  Size  Location     Type
+  2007 ;;		None               void
+  2008 ;; Registers used:
+  2009 ;;		wreg, status,2, status,0, pclath, cstack
+  2010 ;; Tracked objects:
+  2011 ;;		On entry : 0/0
+  2012 ;;		On exit  : 0/0
+  2013 ;;		Unchanged: 0/0
+  2014 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2015 ;;      Params:         0       0       0       0
+  2016 ;;      Locals:         0       0       0       0
+  2017 ;;      Temps:          1       0       0       0
+  2018 ;;      Totals:         1       0       0       0
+  2019 ;;Total ram usage:        1 bytes
+  2020 ;; Hardware stack levels used:    1
+  2021 ;; Hardware stack levels required when called:    1
+  2022 ;; This function calls:
+  2023 ;;		_clock
+  2024 ;; This function is called by:
+  2025 ;;		_main
+  2026 ;; This function uses a non-reentrant model
+  2027 ;;
+  2028                           psect	text208
+  2029                           	file	"C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f
+                                 628_FrequencyMeter_2\FrequencyCounterLCD.c"
+  2030                           	line	159
+  2031                           	global	__size_of_clear
+  2032  0019                     	__size_of_clear	equ	__end_of_clear-_clear
+  2033                           	
+  2034  02E6                     _clear:	
+  2035                           	opt	stack 6
+  2036                           ; Regs used in _clear: [wreg+status,2+status,0+pclath+cstack]
+  2037                           	line	160
+  2038                           	
+  2039  02E6                     l2784:	
+  2040                           ;FrequencyCounterLCD.c: 160: RA0=0;
+  2041  02E6  1283               	bcf	status, 5	;RP0=0, select bank0
+  2042  02E7  1303               	bcf	status, 6	;RP1=0, select bank0
+  2043  02E8  1005               	bcf	(40/8),(40)&7
+  2044                           	line	161
+  2045                           	
+  2046  02E9                     l2786:	
+  2047                           ;FrequencyCounterLCD.c: 161: PORTB=0; clock(); PORTB=1; clock();
+  2048  02E9  0186               	clrf	(6)	;volatile
+  2049                           	
+  2050  02EA                     l2788:	
+  2051  02EA  22D3               	fcall	_clock
+  2052                           	
+  2053  02EB                     l2790:	
+  2054  02EB  3001               	movlw	(01h)
+  2055  02EC  1283               	bcf	status, 5	;RP0=0, select bank0
+  2056  02ED  1303               	bcf	status, 6	;RP1=0, select bank0
+  2057  02EE  0086               	movwf	(6)	;volatile
+  2058                           	
+  2059  02EF                     l2792:	
+  2060  02EF  22D3               	fcall	_clock
+  2061                           	line	162
+  2062                           	
+  2063  02F0                     l2794:	
+  2064                           ;FrequencyCounterLCD.c: 162: PORTB=0; clock(); PORTB=2; clock();
+  2065  02F0  1283               	bcf	status, 5	;RP0=0, select bank0
+  2066  02F1  1303               	bcf	status, 6	;RP1=0, select bank0
+  2067  02F2  0186               	clrf	(6)	;volatile
+  2068                           	
+  2069  02F3                     l2796:	
+  2070  02F3  22D3               	fcall	_clock
+  2071                           	
+  2072  02F4                     l2798:	
+  2073  02F4  3002               	movlw	(02h)
+  2074  02F5  1283               	bcf	status, 5	;RP0=0, select bank0
+  2075  02F6  1303               	bcf	status, 6	;RP1=0, select bank0
+  2076  02F7  0086               	movwf	(6)	;volatile
+  2077  02F8  22D3               	fcall	_clock
+  2078                           	line	163
+  2079                           	
+  2080  02F9                     l2800:	
+  2081                           ;FrequencyCounterLCD.c: 163: _delay((unsigned long)((2)*(400000/4000.0)));
+  2082                           	opt asmopt_off
+  2083  02F9  3042               movlw	66
+  2084  02FA  00F0               movwf	(??_clear+0)+0,f
+  2085  02FB                     u2787:
+  2086  02FB  0BF0               decfsz	(??_clear+0)+0,f
+  2087  02FC  2AFB               	goto	u2787
+  2088  02FD  0064               	clrwdt
+  2089                           opt asmopt_on
+  2090                           
+  2091                           	line	164
+  2092                           	
+  2093  02FE                     l382:	
+  2094  02FE  0008               	return
+  2095                           	opt stack 0
+  2096                           GLOBAL	__end_of_clear
+  2097  02FF                     	__end_of_clear:
+  2098 ;; =============== function _clear ends ============
+  2099                           
+  2100                           	signat	_clear,88
+  2101                           	global	_init
+  2102                           psect	text209,local,class=CODE,delta=2
+  2103                           global __ptext209
+  2104  0318                     __ptext209:
+  2105                           
+  2106 ;; *************** function _init *****************
+  2107 ;; Defined at:
+  2108 ;;		line 29 in file "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f628_FrequencyMeter
+       _2\FrequencyCounterLCD.c"
+  2109 ;; Parameters:    Size  Location     Type
+  2110 ;;		None
+  2111 ;; Auto vars:     Size  Location     Type
+  2112 ;;		None
+  2113 ;; Return value:  Size  Location     Type
+  2114 ;;		None               void
+  2115 ;; Registers used:
+  2116 ;;		wreg, status,2, status,0, pclath, cstack
+  2117 ;; Tracked objects:
+  2118 ;;		On entry : 0/0
+  2119 ;;		On exit  : 0/0
+  2120 ;;		Unchanged: 0/0
+  2121 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2122 ;;      Params:         0       0       0       0
+  2123 ;;      Locals:         0       0       0       0
+  2124 ;;      Temps:          2       0       0       0
+  2125 ;;      Totals:         2       0       0       0
+  2126 ;;Total ram usage:        2 bytes
+  2127 ;; Hardware stack levels used:    1
+  2128 ;; Hardware stack levels required when called:    1
+  2129 ;; This function calls:
+  2130 ;;		_clock
+  2131 ;; This function is called by:
+  2132 ;;		_main
+  2133 ;; This function uses a non-reentrant model
+  2134 ;;
+  2135                           psect	text209
+  2136                           	file	"C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f
+                                 628_FrequencyMeter_2\FrequencyCounterLCD.c"
+  2137                           	line	29
+  2138                           	global	__size_of_init
+  2139  004C                     	__size_of_init	equ	__end_of_init-_init
+  2140                           	
+  2141  0318                     _init:	
+  2142                           	opt	stack 6
+  2143                           ; Regs used in _init: [wreg+status,2+status,0+pclath+cstack]
+  2144                           	line	31
+  2145                           	
+  2146  0318                     l2738:	
+  2147                           ;FrequencyCounterLCD.c: 31: CMCON = 0b00000111;
+  2148  0318  3007               	movlw	(07h)
+  2149  0319  1283               	bcf	status, 5	;RP0=0, select bank0
+  2150  031A  1303               	bcf	status, 6	;RP1=0, select bank0
+  2151  031B  009F               	movwf	(31)	;volatile
+  2152                           	line	32
+  2153                           ;FrequencyCounterLCD.c: 32: T1CON = 0b1110;
+  2154  031C  300E               	movlw	(0Eh)
+  2155  031D  0090               	movwf	(16)	;volatile
+  2156                           	line	33
+  2157                           ;FrequencyCounterLCD.c: 33: TRISB = 0b11000000;
+  2158  031E  30C0               	movlw	(0C0h)
+  2159  031F  1683               	bsf	status, 5	;RP0=1, select bank1
+  2160  0320  1303               	bcf	status, 6	;RP1=0, select bank1
+  2161  0321  0086               	movwf	(134)^080h	;volatile
+  2162                           	line	34
+  2163                           ;FrequencyCounterLCD.c: 34: TRISA = 0b11110000;
+  2164  0322  30F0               	movlw	(0F0h)
+  2165  0323  0085               	movwf	(133)^080h	;volatile
+  2166                           	line	35
+  2167                           ;FrequencyCounterLCD.c: 35: OPTION = 0b10100000;
+  2168  0324  30A0               	movlw	(0A0h)
+  2169  0325  0081               	movwf	(129)^080h	;volatile
+  2170                           	line	38
+  2171                           ;FrequencyCounterLCD.c: 38: _delay((unsigned long)((100)*(400000/4000.0)));
+  2172                           	opt asmopt_off
+  2173  0326  300D               movlw	13
+  2174  0327  00F1               movwf	((??_init+0)+0+1),f
+  2175  0328  30FB               	movlw	251
+  2176  0329  00F0               movwf	((??_init+0)+0),f
+  2177  032A                     u2797:
+  2178  032A  0BF0               	decfsz	((??_init+0)+0),f
+  2179  032B  2B2A               	goto	u2797
+  2180  032C  0BF1               	decfsz	((??_init+0)+0+1),f
+  2181  032D  2B2A               	goto	u2797
+  2182  032E  2B2F               	nop2
+  2183                           opt asmopt_on
+  2184                           
+  2185                           	line	39
+  2186                           	
+  2187  032F                     l2740:	
+  2188                           ;FrequencyCounterLCD.c: 39: PORTA=0;
+  2189  032F  1283               	bcf	status, 5	;RP0=0, select bank0
+  2190  0330  1303               	bcf	status, 6	;RP1=0, select bank0
+  2191  0331  0185               	clrf	(5)	;volatile
+  2192                           	line	40
+  2193                           	
+  2194  0332                     l2742:	
+  2195                           ;FrequencyCounterLCD.c: 40: PORTB=2; clock();
+  2196  0332  3002               	movlw	(02h)
+  2197  0333  0086               	movwf	(6)	;volatile
+  2198                           	
+  2199  0334                     l2744:	
+  2200  0334  22D3               	fcall	_clock
+  2201                           	line	41
+  2202                           	
+  2203  0335                     l2746:	
+  2204                           ;FrequencyCounterLCD.c: 41: PORTB=2; clock();
+  2205  0335  3002               	movlw	(02h)
+  2206  0336  1283               	bcf	status, 5	;RP0=0, select bank0
+  2207  0337  1303               	bcf	status, 6	;RP1=0, select bank0
+  2208  0338  0086               	movwf	(6)	;volatile
+  2209                           	
+  2210  0339                     l2748:	
+  2211  0339  22D3               	fcall	_clock
+  2212                           	line	42
+  2213                           	
+  2214  033A                     l2750:	
+  2215                           ;FrequencyCounterLCD.c: 42: PORTB=8; clock();
+  2216  033A  3008               	movlw	(08h)
+  2217  033B  1283               	bcf	status, 5	;RP0=0, select bank0
+  2218  033C  1303               	bcf	status, 6	;RP1=0, select bank0
+  2219  033D  0086               	movwf	(6)	;volatile
+  2220                           	
+  2221  033E                     l2752:	
+  2222  033E  22D3               	fcall	_clock
+  2223                           	line	43
+  2224                           	
+  2225  033F                     l2754:	
+  2226                           ;FrequencyCounterLCD.c: 43: _delay((unsigned long)((25)*(400000/4000000.0))); _delay((un
+                                 signed long)((25)*(400000/4000000.0)));
+  2227                           		opt asmopt_off
+  2228  033F  2B40               	nop2	;2 cycle nop
+  2229                           	opt asmopt_on
+  2230                           
+  2231                           	
+  2232  0340                     l2756:	
+  2233                           		opt asmopt_off
+  2234  0340  2B41               	nop2	;2 cycle nop
+  2235                           	opt asmopt_on
+  2236                           
+  2237                           	line	44
+  2238                           	
+  2239  0341                     l2758:	
+  2240                           ;FrequencyCounterLCD.c: 44: PORTB=0; clock();
+  2241  0341  1283               	bcf	status, 5	;RP0=0, select bank0
+  2242  0342  1303               	bcf	status, 6	;RP1=0, select bank0
+  2243  0343  0186               	clrf	(6)	;volatile
+  2244  0344  22D3               	fcall	_clock
+  2245                           	line	45
+  2246                           	
+  2247  0345                     l2760:	
+  2248                           ;FrequencyCounterLCD.c: 45: PORTB=12; clock();
+  2249  0345  300C               	movlw	(0Ch)
+  2250  0346  1283               	bcf	status, 5	;RP0=0, select bank0
+  2251  0347  1303               	bcf	status, 6	;RP1=0, select bank0
+  2252  0348  0086               	movwf	(6)	;volatile
+  2253                           	
+  2254  0349                     l2762:	
+  2255  0349  22D3               	fcall	_clock
+  2256                           	line	46
+  2257                           	
+  2258  034A                     l2764:	
+  2259                           ;FrequencyCounterLCD.c: 46: _delay((unsigned long)((25)*(400000/4000000.0))); _delay((un
+                                 signed long)((25)*(400000/4000000.0)));
+  2260                           		opt asmopt_off
+  2261  034A  2B4B               	nop2	;2 cycle nop
+  2262                           	opt asmopt_on
+  2263                           
+  2264                           	
+  2265  034B                     l2766:	
+  2266                           		opt asmopt_off
+  2267  034B  2B4C               	nop2	;2 cycle nop
+  2268                           	opt asmopt_on
+  2269                           
+  2270                           	line	47
+  2271                           	
+  2272  034C                     l2768:	
+  2273                           ;FrequencyCounterLCD.c: 47: PORTB=0; clock(); PORTB=1; clock();
+  2274  034C  1283               	bcf	status, 5	;RP0=0, select bank0
+  2275  034D  1303               	bcf	status, 6	;RP1=0, select bank0
+  2276  034E  0186               	clrf	(6)	;volatile
+  2277                           	
+  2278  034F                     l2770:	
+  2279  034F  22D3               	fcall	_clock
+  2280                           	
+  2281  0350                     l2772:	
+  2282  0350  3001               	movlw	(01h)
+  2283  0351  1283               	bcf	status, 5	;RP0=0, select bank0
+  2284  0352  1303               	bcf	status, 6	;RP1=0, select bank0
+  2285  0353  0086               	movwf	(6)	;volatile
+  2286                           	
+  2287  0354                     l2774:	
+  2288  0354  22D3               	fcall	_clock
+  2289                           	line	48
+  2290                           	
+  2291  0355                     l2776:	
+  2292                           ;FrequencyCounterLCD.c: 48: _delay((unsigned long)((2)*(400000/4000.0)));
+  2293                           	opt asmopt_off
+  2294  0355  3042               movlw	66
+  2295  0356  00F0               movwf	(??_init+0)+0,f
+  2296  0357                     u2807:
+  2297  0357  0BF0               decfsz	(??_init+0)+0,f
+  2298  0358  2B57               	goto	u2807
+  2299  0359  0064               	clrwdt
+  2300                           opt asmopt_on
+  2301                           
+  2302                           	line	49
+  2303                           	
+  2304  035A                     l2778:	
+  2305                           ;FrequencyCounterLCD.c: 49: PORTB=0; clock();
+  2306  035A  1283               	bcf	status, 5	;RP0=0, select bank0
+  2307  035B  1303               	bcf	status, 6	;RP1=0, select bank0
+  2308  035C  0186               	clrf	(6)	;volatile
+  2309                           	
+  2310  035D                     l2780:	
+  2311  035D  22D3               	fcall	_clock
+  2312                           	line	50
+  2313                           	
+  2314  035E                     l2782:	
+  2315                           ;FrequencyCounterLCD.c: 50: PORTB=6; clock();
+  2316  035E  3006               	movlw	(06h)
+  2317  035F  1283               	bcf	status, 5	;RP0=0, select bank0
+  2318  0360  1303               	bcf	status, 6	;RP1=0, select bank0
+  2319  0361  0086               	movwf	(6)	;volatile
+  2320  0362  22D3               	fcall	_clock
+  2321                           	line	51
+  2322                           	
+  2323  0363                     l349:	
+  2324  0363  0008               	return
+  2325                           	opt stack 0
+  2326                           GLOBAL	__end_of_init
+  2327  0364                     	__end_of_init:
+  2328 ;; =============== function _init ends ============
+  2329                           
+  2330                           	signat	_init,88
+  2331                           	global	_clock
+  2332                           psect	text210,local,class=CODE,delta=2
+  2333                           global __ptext210
+  2334  02D3                     __ptext210:
+  2335                           
+  2336 ;; *************** function _clock *****************
+  2337 ;; Defined at:
+  2338 ;;		line 152 in file "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f628_FrequencyMete
+       r_2\FrequencyCounterLCD.c"
+  2339 ;; Parameters:    Size  Location     Type
+  2340 ;;		None
+  2341 ;; Auto vars:     Size  Location     Type
+  2342 ;;		None
+  2343 ;; Return value:  Size  Location     Type
+  2344 ;;		None               void
+  2345 ;; Registers used:
+  2346 ;;		None
+  2347 ;; Tracked objects:
+  2348 ;;		On entry : 0/0
+  2349 ;;		On exit  : 0/0
+  2350 ;;		Unchanged: 0/0
+  2351 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2352 ;;      Params:         0       0       0       0
+  2353 ;;      Locals:         0       0       0       0
+  2354 ;;      Temps:          0       0       0       0
+  2355 ;;      Totals:         0       0       0       0
+  2356 ;;Total ram usage:        0 bytes
+  2357 ;; Hardware stack levels used:    1
+  2358 ;; This function calls:
+  2359 ;;		Nothing
+  2360 ;; This function is called by:
+  2361 ;;		_init
+  2362 ;;		_main
+  2363 ;;		_clear
+  2364 ;;		_display
+  2365 ;; This function uses a non-reentrant model
+  2366 ;;
+  2367                           psect	text210
+  2368                           	file	"C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628\Firmware\16f
+                                 628_FrequencyMeter_2\FrequencyCounterLCD.c"
+  2369                           	line	152
+  2370                           	global	__size_of_clock
+  2371  0009                     	__size_of_clock	equ	__end_of_clock-_clock
+  2372                           	
+  2373  02D3                     _clock:	
+  2374                           	opt	stack 7
+  2375                           ; Regs used in _clock: []
+  2376                           	line	153
+  2377                           	
+  2378  02D3                     l2736:	
+  2379                           ;FrequencyCounterLCD.c: 153: RA1=1;
+  2380  02D3  1283               	bcf	status, 5	;RP0=0, select bank0
+  2381  02D4  1303               	bcf	status, 6	;RP1=0, select bank0
+  2382  02D5  1485               	bsf	(41/8),(41)&7
+  2383                           	line	154
+  2384                           ;FrequencyCounterLCD.c: 154: _delay((unsigned long)((25)*(400000/4000000.0)));
+  2385                           		opt asmopt_off
+  2386  02D6  2AD7               	nop2	;2 cycle nop
+  2387                           	opt asmopt_on
+  2388                           
+  2389                           	line	155
+  2390                           ;FrequencyCounterLCD.c: 155: RA1=0;
+  2391  02D7  1283               	bcf	status, 5	;RP0=0, select bank0
+  2392  02D8  1303               	bcf	status, 6	;RP1=0, select bank0
+  2393  02D9  1085               	bcf	(41/8),(41)&7
+  2394                           	line	156
+  2395                           ;FrequencyCounterLCD.c: 156: _delay((unsigned long)((25)*(400000/4000000.0)));
+  2396                           		opt asmopt_off
+  2397  02DA  2ADB               	nop2	;2 cycle nop
+  2398                           	opt asmopt_on
+  2399                           
+  2400                           	line	157
+  2401                           	
+  2402  02DB                     l379:	
+  2403  02DB  0008               	return
+  2404                           	opt stack 0
+  2405                           GLOBAL	__end_of_clock
+  2406  02DC                     	__end_of_clock:
+  2407 ;; =============== function _clock ends ============
+  2408                           
+  2409                           	signat	_clock,88
+  2410                           	global	___lldiv
+  2411                           psect	text211,local,class=CODE,delta=2
+  2412                           global __ptext211
+  2413  03C2                     __ptext211:
+  2414                           
+  2415 ;; *************** function ___lldiv *****************
+  2416 ;; Defined at:
+  2417 ;;		line 5 in file "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\lldiv.c"
+  2418 ;; Parameters:    Size  Location     Type
+  2419 ;;  divisor         4    0[COMMON] unsigned long 
+  2420 ;;  dividend        4    4[COMMON] unsigned long 
+  2421 ;; Auto vars:     Size  Location     Type
+  2422 ;;  quotient        4    9[COMMON] unsigned long 
+  2423 ;;  counter         1   13[COMMON] unsigned char 
+  2424 ;; Return value:  Size  Location     Type
+  2425 ;;                  4    0[COMMON] unsigned long 
+  2426 ;; Registers used:
+  2427 ;;		wreg, status,2, status,0
+  2428 ;; Tracked objects:
+  2429 ;;		On entry : 0/0
+  2430 ;;		On exit  : 0/0
+  2431 ;;		Unchanged: 0/0
+  2432 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2433 ;;      Params:         8       0       0       0
+  2434 ;;      Locals:         5       0       0       0
+  2435 ;;      Temps:          1       0       0       0
+  2436 ;;      Totals:        14       0       0       0
+  2437 ;;Total ram usage:       14 bytes
+  2438 ;; Hardware stack levels used:    1
+  2439 ;; This function calls:
+  2440 ;;		Nothing
+  2441 ;; This function is called by:
+  2442 ;;		_main
+  2443 ;; This function uses a non-reentrant model
+  2444 ;;
+  2445                           psect	text211
+  2446                           	file	"C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\lldiv.c"
+  2447                           	line	5
+  2448                           	global	__size_of___lldiv
+  2449  006E                     	__size_of___lldiv	equ	__end_of___lldiv-___lldiv
+  2450                           	
+  2451  03C2                     ___lldiv:	
+  2452                           	opt	stack 7
+  2453                           ; Regs used in ___lldiv: [wreg+status,2+status,0]
+  2454                           	line	9
+  2455                           	
+  2456  03C2                     l2712:	
+  2457  03C2  3000               	movlw	0
+  2458  03C3  00FC               	movwf	(___lldiv@quotient+3)
+  2459  03C4  3000               	movlw	0
+  2460  03C5  00FB               	movwf	(___lldiv@quotient+2)
+  2461  03C6  3000               	movlw	0
+  2462  03C7  00FA               	movwf	(___lldiv@quotient+1)
+  2463  03C8  3000               	movlw	0
+  2464  03C9  00F9               	movwf	(___lldiv@quotient)
+  2465                           
+  2466                           	line	10
+  2467  03CA  0873               	movf	(___lldiv@divisor+3),w
+  2468  03CB  0472               	iorwf	(___lldiv@divisor+2),w
+  2469  03CC  0471               	iorwf	(___lldiv@divisor+1),w
+  2470  03CD  0470               	iorwf	(___lldiv@divisor),w
+  2471  03CE  1903               	skipnz
+  2472  03CF  2BD1               	goto	u2471
+  2473  03D0  2BD2               	goto	u2470
+  2474  03D1                     u2471:
+  2475  03D1  2C26               	goto	l2732
+  2476  03D2                     u2470:
+  2477                           	line	11
+  2478                           	
+  2479  03D2                     l2714:	
+  2480  03D2  01FD               	clrf	(___lldiv@counter)
+  2481  03D3  1403               	bsf	status,0
+  2482  03D4  0DFD               	rlf	(___lldiv@counter),f
+  2483                           	line	12
+  2484  03D5  2BE4               	goto	l2718
+  2485                           	
+  2486  03D6                     l966:	
+  2487                           	line	13
+  2488                           	
+  2489  03D6                     l2716:	
+  2490  03D6  3001               	movlw	01h
+  2491  03D7  00F8               	movwf	(??___lldiv+0)+0
+  2492  03D8                     u2485:
+  2493  03D8  1003               	clrc
+  2494  03D9  0DF0               	rlf	(___lldiv@divisor),f
+  2495  03DA  0DF1               	rlf	(___lldiv@divisor+1),f
+  2496  03DB  0DF2               	rlf	(___lldiv@divisor+2),f
+  2497  03DC  0DF3               	rlf	(___lldiv@divisor+3),f
+  2498  03DD  0BF8               	decfsz	(??___lldiv+0)+0
+  2499  03DE  2BD8               	goto	u2485
+  2500                           	line	14
+  2501  03DF  3001               	movlw	(01h)
+  2502  03E0  00F8               	movwf	(??___lldiv+0)+0
+  2503  03E1  0878               	movf	(??___lldiv+0)+0,w
+  2504  03E2  07FD               	addwf	(___lldiv@counter),f
+  2505  03E3  2BE4               	goto	l2718
+  2506                           	line	15
+  2507                           	
+  2508  03E4                     l965:	
+  2509                           	line	12
+  2510                           	
+  2511  03E4                     l2718:	
+  2512  03E4  1FF3               	btfss	(___lldiv@divisor+3),(31)&7
+  2513  03E5  2BE7               	goto	u2491
+  2514  03E6  2BE8               	goto	u2490
+  2515  03E7                     u2491:
+  2516  03E7  2BD6               	goto	l2716
+  2517  03E8                     u2490:
+  2518  03E8  2BEA               	goto	l2720
+  2519                           	
+  2520  03E9                     l967:	
+  2521  03E9  2BEA               	goto	l2720
+  2522                           	line	16
+  2523                           	
+  2524  03EA                     l968:	
+  2525                           	line	17
+  2526                           	
+  2527  03EA                     l2720:	
+  2528  03EA  3001               	movlw	01h
+  2529  03EB  00F8               	movwf	(??___lldiv+0)+0
+  2530  03EC                     u2505:
+  2531  03EC  1003               	clrc
+  2532  03ED  0DF9               	rlf	(___lldiv@quotient),f
+  2533  03EE  0DFA               	rlf	(___lldiv@quotient+1),f
+  2534  03EF  0DFB               	rlf	(___lldiv@quotient+2),f
+  2535  03F0  0DFC               	rlf	(___lldiv@quotient+3),f
+  2536  03F1  0BF8               	decfsz	(??___lldiv+0)+0
+  2537  03F2  2BEC               	goto	u2505
+  2538                           	line	18
+  2539                           	
+  2540  03F3                     l2722:	
+  2541  03F3  0873               	movf	(___lldiv@divisor+3),w
+  2542  03F4  0277               	subwf	(___lldiv@dividend+3),w
+  2543  03F5  1D03               	skipz
+  2544  03F6  2C01               	goto	u2515
+  2545  03F7  0872               	movf	(___lldiv@divisor+2),w
+  2546  03F8  0276               	subwf	(___lldiv@dividend+2),w
+  2547  03F9  1D03               	skipz
+  2548  03FA  2C01               	goto	u2515
+  2549  03FB  0871               	movf	(___lldiv@divisor+1),w
+  2550  03FC  0275               	subwf	(___lldiv@dividend+1),w
+  2551  03FD  1D03               	skipz
+  2552  03FE  2C01               	goto	u2515
+  2553  03FF  0870               	movf	(___lldiv@divisor),w
+  2554  0400  0274               	subwf	(___lldiv@dividend),w
+  2555  0401                     u2515:
+  2556  0401  1C03               	skipc
+  2557  0402  2C04               	goto	u2511
+  2558  0403  2C05               	goto	u2510
+  2559  0404                     u2511:
+  2560  0404  2C15               	goto	l2728
+  2561  0405                     u2510:
+  2562                           	line	19
+  2563                           	
+  2564  0405                     l2724:	
+  2565  0405  0870               	movf	(___lldiv@divisor),w
+  2566  0406  02F4               	subwf	(___lldiv@dividend),f
+  2567  0407  0871               	movf	(___lldiv@divisor+1),w
+  2568  0408  1C03               	skipc
+  2569  0409  0F71               	incfsz	(___lldiv@divisor+1),w
+  2570  040A  02F5               	subwf	(___lldiv@dividend+1),f
+  2571  040B  0872               	movf	(___lldiv@divisor+2),w
+  2572  040C  1C03               	skipc
+  2573  040D  0F72               	incfsz	(___lldiv@divisor+2),w
+  2574  040E  02F6               	subwf	(___lldiv@dividend+2),f
+  2575  040F  0873               	movf	(___lldiv@divisor+3),w
+  2576  0410  1C03               	skipc
+  2577  0411  0F73               	incfsz	(___lldiv@divisor+3),w
+  2578  0412  02F7               	subwf	(___lldiv@dividend+3),f
+  2579                           	line	20
+  2580                           	
+  2581  0413                     l2726:	
+  2582  0413  1479               	bsf	(___lldiv@quotient)+(0/8),(0)&7
+  2583  0414  2C15               	goto	l2728
+  2584                           	line	21
+  2585                           	
+  2586  0415                     l969:	
+  2587                           	line	22
+  2588                           	
+  2589  0415                     l2728:	
+  2590  0415  3001               	movlw	01h
+  2591  0416                     u2525:
+  2592  0416  1003               	clrc
+  2593  0417  0CF3               	rrf	(___lldiv@divisor+3),f
+  2594  0418  0CF2               	rrf	(___lldiv@divisor+2),f
+  2595  0419  0CF1               	rrf	(___lldiv@divisor+1),f
+  2596  041A  0CF0               	rrf	(___lldiv@divisor),f
+  2597  041B  3EFF               	addlw	-1
+  2598  041C  1D03               	skipz
+  2599  041D  2C16               	goto	u2525
+  2600                           
+  2601                           	line	23
+  2602                           	
+  2603  041E                     l2730:	
+  2604  041E  3001               	movlw	low(01h)
+  2605  041F  02FD               	subwf	(___lldiv@counter),f
+  2606  0420  1D03               	btfss	status,2
+  2607  0421  2C23               	goto	u2531
+  2608  0422  2C24               	goto	u2530
+  2609  0423                     u2531:
+  2610  0423  2BEA               	goto	l2720
+  2611  0424                     u2530:
+  2612  0424  2C26               	goto	l2732
+  2613                           	
+  2614  0425                     l970:	
+  2615  0425  2C26               	goto	l2732
+  2616                           	line	24
+  2617                           	
+  2618  0426                     l964:	
+  2619                           	line	25
+  2620                           	
+  2621  0426                     l2732:	
+  2622  0426  087C               	movf	(___lldiv@quotient+3),w
+  2623  0427  00F3               	movwf	(?___lldiv+3)
+  2624  0428  087B               	movf	(___lldiv@quotient+2),w
+  2625  0429  00F2               	movwf	(?___lldiv+2)
+  2626  042A  087A               	movf	(___lldiv@quotient+1),w
+  2627  042B  00F1               	movwf	(?___lldiv+1)
+  2628  042C  0879               	movf	(___lldiv@quotient),w
+  2629  042D  00F0               	movwf	(?___lldiv)
+  2630                           
+  2631  042E  2C2F               	goto	l971
+  2632                           	
+  2633  042F                     l2734:	
+  2634                           	line	26
+  2635                           	
+  2636  042F                     l971:	
+  2637  042F  0008               	return
+  2638                           	opt stack 0
+  2639                           GLOBAL	__end_of___lldiv
+  2640  0430                     	__end_of___lldiv:
+  2641 ;; =============== function ___lldiv ends ============
+  2642                           
+  2643                           	signat	___lldiv,8316
+  2644                           	global	___llmod
+  2645                           psect	text212,local,class=CODE,delta=2
+  2646                           global __ptext212
+  2647  0364                     __ptext212:
+  2648                           
+  2649 ;; *************** function ___llmod *****************
+  2650 ;; Defined at:
+  2651 ;;		line 5 in file "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\llmod.c"
+  2652 ;; Parameters:    Size  Location     Type
+  2653 ;;  divisor         4    0[BANK0 ] unsigned long 
+  2654 ;;  dividend        4    4[BANK0 ] unsigned long 
+  2655 ;; Auto vars:     Size  Location     Type
+  2656 ;;  counter         1    9[BANK0 ] unsigned char 
+  2657 ;; Return value:  Size  Location     Type
+  2658 ;;                  4    0[BANK0 ] unsigned long 
+  2659 ;; Registers used:
+  2660 ;;		wreg, status,2, status,0
+  2661 ;; Tracked objects:
+  2662 ;;		On entry : 0/0
+  2663 ;;		On exit  : 0/0
+  2664 ;;		Unchanged: 0/0
+  2665 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2666 ;;      Params:         0       8       0       0
+  2667 ;;      Locals:         0       1       0       0
+  2668 ;;      Temps:          0       1       0       0
+  2669 ;;      Totals:         0      10       0       0
+  2670 ;;Total ram usage:       10 bytes
+  2671 ;; Hardware stack levels used:    1
+  2672 ;; This function calls:
+  2673 ;;		Nothing
+  2674 ;; This function is called by:
+  2675 ;;		_main
+  2676 ;; This function uses a non-reentrant model
+  2677 ;;
+  2678                           psect	text212
+  2679                           	file	"C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\llmod.c"
+  2680                           	line	5
+  2681                           	global	__size_of___llmod
+  2682  005E                     	__size_of___llmod	equ	__end_of___llmod-___llmod
+  2683                           	
+  2684  0364                     ___llmod:	
+  2685                           	opt	stack 7
+  2686                           ; Regs used in ___llmod: [wreg+status,2+status,0]
+  2687                           	line	8
+  2688                           	
+  2689  0364                     l2692:	
+  2690  0364  1283               	bcf	status, 5	;RP0=0, select bank0
+  2691  0365  1303               	bcf	status, 6	;RP1=0, select bank0
+  2692  0366  0823               	movf	(___llmod@divisor+3),w
+  2693  0367  0422               	iorwf	(___llmod@divisor+2),w
+  2694  0368  0421               	iorwf	(___llmod@divisor+1),w
+  2695  0369  0420               	iorwf	(___llmod@divisor),w
+  2696  036A  1903               	skipnz
+  2697  036B  2B6D               	goto	u2411
+  2698  036C  2B6E               	goto	u2410
+  2699  036D                     u2411:
+  2700  036D  2BB8               	goto	l2708
+  2701  036E                     u2410:
+  2702                           	line	9
+  2703                           	
+  2704  036E                     l2694:	
+  2705  036E  01A9               	clrf	(___llmod@counter)
+  2706  036F  1403               	bsf	status,0
+  2707  0370  0DA9               	rlf	(___llmod@counter),f
+  2708                           	line	10
+  2709  0371  2B80               	goto	l2698
+  2710                           	
+  2711  0372                     l947:	
+  2712                           	line	11
+  2713                           	
+  2714  0372                     l2696:	
+  2715  0372  3001               	movlw	01h
+  2716  0373  00A8               	movwf	(??___llmod+0)+0
+  2717  0374                     u2425:
+  2718  0374  1003               	clrc
+  2719  0375  0DA0               	rlf	(___llmod@divisor),f
+  2720  0376  0DA1               	rlf	(___llmod@divisor+1),f
+  2721  0377  0DA2               	rlf	(___llmod@divisor+2),f
+  2722  0378  0DA3               	rlf	(___llmod@divisor+3),f
+  2723  0379  0BA8               	decfsz	(??___llmod+0)+0
+  2724  037A  2B74               	goto	u2425
+  2725                           	line	12
+  2726  037B  3001               	movlw	(01h)
+  2727  037C  00A8               	movwf	(??___llmod+0)+0
+  2728  037D  0828               	movf	(??___llmod+0)+0,w
+  2729  037E  07A9               	addwf	(___llmod@counter),f
+  2730  037F  2B80               	goto	l2698
+  2731                           	line	13
+  2732                           	
+  2733  0380                     l946:	
+  2734                           	line	10
+  2735                           	
+  2736  0380                     l2698:	
+  2737  0380  1FA3               	btfss	(___llmod@divisor+3),(31)&7
+  2738  0381  2B83               	goto	u2431
+  2739  0382  2B84               	goto	u2430
+  2740  0383                     u2431:
+  2741  0383  2B72               	goto	l2696
+  2742  0384                     u2430:
+  2743  0384  2B86               	goto	l2700
+  2744                           	
+  2745  0385                     l948:	
+  2746  0385  2B86               	goto	l2700
+  2747                           	line	14
+  2748                           	
+  2749  0386                     l949:	
+  2750                           	line	15
+  2751                           	
+  2752  0386                     l2700:	
+  2753  0386  0823               	movf	(___llmod@divisor+3),w
+  2754  0387  0227               	subwf	(___llmod@dividend+3),w
+  2755  0388  1D03               	skipz
+  2756  0389  2B94               	goto	u2445
+  2757  038A  0822               	movf	(___llmod@divisor+2),w
+  2758  038B  0226               	subwf	(___llmod@dividend+2),w
+  2759  038C  1D03               	skipz
+  2760  038D  2B94               	goto	u2445
+  2761  038E  0821               	movf	(___llmod@divisor+1),w
+  2762  038F  0225               	subwf	(___llmod@dividend+1),w
+  2763  0390  1D03               	skipz
+  2764  0391  2B94               	goto	u2445
+  2765  0392  0820               	movf	(___llmod@divisor),w
+  2766  0393  0224               	subwf	(___llmod@dividend),w
+  2767  0394                     u2445:
+  2768  0394  1C03               	skipc
+  2769  0395  2B97               	goto	u2441
+  2770  0396  2B98               	goto	u2440
+  2771  0397                     u2441:
+  2772  0397  2BA7               	goto	l2704
+  2773  0398                     u2440:
+  2774                           	line	16
+  2775                           	
+  2776  0398                     l2702:	
+  2777  0398  0820               	movf	(___llmod@divisor),w
+  2778  0399  02A4               	subwf	(___llmod@dividend),f
+  2779  039A  0821               	movf	(___llmod@divisor+1),w
+  2780  039B  1C03               	skipc
+  2781  039C  0F21               	incfsz	(___llmod@divisor+1),w
+  2782  039D  02A5               	subwf	(___llmod@dividend+1),f
+  2783  039E  0822               	movf	(___llmod@divisor+2),w
+  2784  039F  1C03               	skipc
+  2785  03A0  0F22               	incfsz	(___llmod@divisor+2),w
+  2786  03A1  02A6               	subwf	(___llmod@dividend+2),f
+  2787  03A2  0823               	movf	(___llmod@divisor+3),w
+  2788  03A3  1C03               	skipc
+  2789  03A4  0F23               	incfsz	(___llmod@divisor+3),w
+  2790  03A5  02A7               	subwf	(___llmod@dividend+3),f
+  2791  03A6  2BA7               	goto	l2704
+  2792                           	
+  2793  03A7                     l950:	
+  2794                           	line	17
+  2795                           	
+  2796  03A7                     l2704:	
+  2797  03A7  3001               	movlw	01h
+  2798  03A8                     u2455:
+  2799  03A8  1003               	clrc
+  2800  03A9  0CA3               	rrf	(___llmod@divisor+3),f
+  2801  03AA  0CA2               	rrf	(___llmod@divisor+2),f
+  2802  03AB  0CA1               	rrf	(___llmod@divisor+1),f
+  2803  03AC  0CA0               	rrf	(___llmod@divisor),f
+  2804  03AD  3EFF               	addlw	-1
+  2805  03AE  1D03               	skipz
+  2806  03AF  2BA8               	goto	u2455
+  2807                           
+  2808                           	line	18
+  2809                           	
+  2810  03B0                     l2706:	
+  2811  03B0  3001               	movlw	low(01h)
+  2812  03B1  02A9               	subwf	(___llmod@counter),f
+  2813  03B2  1D03               	btfss	status,2
+  2814  03B3  2BB5               	goto	u2461
+  2815  03B4  2BB6               	goto	u2460
+  2816  03B5                     u2461:
+  2817  03B5  2B86               	goto	l2700
+  2818  03B6                     u2460:
+  2819  03B6  2BB8               	goto	l2708
+  2820                           	
+  2821  03B7                     l951:	
+  2822  03B7  2BB8               	goto	l2708
+  2823                           	line	19
+  2824                           	
+  2825  03B8                     l945:	
+  2826                           	line	20
+  2827                           	
+  2828  03B8                     l2708:	
+  2829  03B8  0827               	movf	(___llmod@dividend+3),w
+  2830  03B9  00A3               	movwf	(?___llmod+3)
+  2831  03BA  0826               	movf	(___llmod@dividend+2),w
+  2832  03BB  00A2               	movwf	(?___llmod+2)
+  2833  03BC  0825               	movf	(___llmod@dividend+1),w
+  2834  03BD  00A1               	movwf	(?___llmod+1)
+  2835  03BE  0824               	movf	(___llmod@dividend),w
+  2836  03BF  00A0               	movwf	(?___llmod)
+  2837                           
+  2838  03C0  2BC1               	goto	l952
+  2839                           	
+  2840  03C1                     l2710:	
+  2841                           	line	21
+  2842                           	
+  2843  03C1                     l952:	
+  2844  03C1  0008               	return
+  2845                           	opt stack 0
+  2846                           GLOBAL	__end_of___llmod
+  2847  03C2                     	__end_of___llmod:
+  2848 ;; =============== function ___llmod ends ============
+  2849                           
+  2850                           	signat	___llmod,8316
+  2851                           psect	text213,local,class=CODE,delta=2
+  2852                           global __ptext213
+  2853  0000                     __ptext213:
+  2854                           	global	btemp
+  2855  007E                     	btemp set 07Eh
+  2856                           
+  2857                           	DABS	1,126,2	;btemp
+  2858                           	global	wtemp0
+  2859  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.82 build 9453 
+Symbol Table                                                                                   Tue Sep 08 23:35:30 2015
+
+                  _RD 04E0                    _d1 0036                    _d2 0037                    _d3 0038  
+                  _d4 0039                    _d5 003A                    _d6 003B                    _d7 003C  
+                  _WR 04E1                   l360 05B5                   l352 0432                   l361 05C5  
+                 l353 044C                   l370 079C                   l362 05CF                   l354 043F  
+                 l371 07AC                   l363 05E1                   l355 044B                   l372 07B6  
+                 l364 05E7                   l356 0451                   l349 0363                   l373 07C8  
+                 l365 063E                   l357 058F                   l382 02FE                   l374 07CE  
+                 l366 065E                   l358 059B                   l375 07FF                   l367 0776  
+                 l359 05AB                   l376 07FF                   l368 0782                   l385 0317  
+                 l369 0792                   l379 02DB                   l950 03A7                   l951 03B7  
+                 l952 03C1                   l945 03B8                   l946 0380                   l970 0425  
+                 l947 0372                   l971 042F                   l948 0385                   l964 0426  
+                 l949 0386                   l965 03E4                   l966 03D6                   l967 03E9  
+                 l968 03EA                   l969 0415                   _GIE 005F                   _RA0 0028  
+                 _RA1 0029                   _RB0 0030                   _RB7 0037                  l2700 0386  
+                l2710 03C1                  l2702 0398                  l2704 03A7                  l2720 03EA  
+                l2712 03C2                  l2800 02F9                  l2706 03B0                  l2730 041E  
+                l2722 03F3                  l2714 03D2                  l2810 0313                  l2802 0300  
+                l2708 03B8                  l2724 0405                  l2716 03D6                  l2732 0426  
+                l2740 032F                  l2812 0314                  l2804 0303                  l2900 05E1  
+                l2820 0437                  l2734 042F                  l2726 0413                  l2718 03E4  
+                l2750 033A                  l2742 0332                  l2806 030D                  l2910 0609  
+                l2902 05F9                  l2830 043C                  l2822 0438                  l2814 0430  
+                l2728 0415                  l2736 02D3                  l2760 0345                  l2752 033E  
+                l2744 0334                  l2808 030E                  l2920 0659                  l2912 060C  
+                l2904 05FE                  l2840 0451                  l2832 043D                  l2824 0439  
+                l2816 0432                  l2770 034F                  l2762 0349                  l2754 033F  
+                l2746 0335                  l2738 0318                  l2930 06F7                  l2922 065E  
+                l2914 061E                  l2906 0601                  l2850 04B9                  l2842 0455  
+                l2834 0443                  l2826 043A                  l2818 0435                  l2692 0364  
+                l2780 035D                  l2772 0350                  l2764 034A                  l2756 0340  
+                l2748 0339                  l2940 0771                  l2932 0722                  l2924 0676  
+                l2916 0639                  l2908 0602                  l2860 057D                  l2852 04E4  
+                l2844 0456                  l2836 0449                  l2828 043B                  l2694 036E  
+                l2782 035E                  l2774 0354                  l2766 034B                  l2758 0341  
+                l2790 02EB                  l2950 078F                  l2942 0776                  l2934 074D  
+                l2926 06A1                  l2918 063E                  l2870 058F                  l2862 057E  
+                l2854 050F                  l2846 0476                  l2838 044C                  l2696 0372  
+                l2776 0355                  l2768 034C                  l2792 02EF                  l2784 02E6  
+                l2960 07A9                  l2952 0792                  l2944 077C                  l2936 0765  
+                l2928 06CC                  l2880 05AB                  l2872 0595                  l2864 0580  
+                l2856 053A                  l2848 048E                  l2698 0380                  l2778 035A  
+                l2794 02F0                  l2786 02E9                  l2970 07C3                  l2962 07AC  
+                l2954 0796                  l2946 0782                  l2938 0767                  l2890 05C5  
+                l2882 05AF                  l2874 059B                  l2866 0582                  l2858 0565  
+                l2796 02F3                  l2788 02EA                  l2980 07EC                  l2972 07C8  
+                l2964 07B0                  l2956 079C                  l2948 078A                  l2892 05C9  
+                l2884 05B5                  l2876 05A3                  l2868 058A                  l2798 02F4  
+                l2982 07F0                  l2974 07E2                  l2966 07B6                  l2958 07A4  
+                l2894 05CF                  l2886 05BD                  l2878 05A8                  l2984 07F3  
+                l2976 07E5                  l2968 07BE                  l2896 05D7                  l2888 05C2  
+                l2986 07F7                  l2978 07E9                  l2898 05DC                  l2988 07FA  
+                _T0IF 005A                  u2410 036E                  u2411 036D                  u2430 0384  
+                u2510 0405                  u2431 0383                  u2511 0404                  u2440 0398  
+                u2600 05A8                  u2441 0397                  u2425 0374                  u2505 03EC  
+                u2601 05A7                  u2530 0424                  u2610 05BD                  u2531 0423  
+                u2515 0401                  u2611 05BC                  u2460 03B6                  u2700 07A9  
+                u2620 05C2                  u2461 03B5                  u2445 0394                  u2525 0416  
+                u2701 07A8                  u2621 05C1                  u2470 03D2                  u2710 07BE  
+                u2630 05D7                  u2550 0443                  u2455 03A8                  u2471 03D1  
+                u2711 07BD                  u2631 05D6                  u2551 0442                  u2720 07C3  
+                u2640 05DC                  u2560 0450                  u2545 0306                  u2721 07C2  
+                u2641 05DB                  u2561 044F                  u2490 03E8                  u2650 061E  
+                u2570 0462                  u2491 03E7                  u2651 061D                  u2660 0771  
+                u2580 058A                  u2485 03D8                  u2661 0770                  u2581 0589  
+                u2670 078A                  u2590 05A3                  u2807 0357                  u2671 0789  
+                u2655 061A                  u2591 05A2                  u2575 045D                  u2680 078F  
+                u2681 078E                  u2737 0606                  u2690 07A4                  u2747 07E7  
+                u2691 07A3                  u2757 07EE                  u2767 07F5                  u2777 07FC  
+                u2787 02FB                  u2797 032A                  _TMR0 0001                  _WREN 04E2  
+                _main 0430                  _init 0318                  btemp 007E                  start 0000  
+               ?_main 0070                 ?_init 0070                 _EEADR 009B                 _CARRY 0018  
+               _CMCON 001F       __end_of___lldiv 0430                 _T1CON 0010       __end_of___llmod 03C2  
+               _TMR1H 000F                 _TMR1L 000E                 _PORTA 0005                 _PORTB 0006  
+               _TRISA 0085                 _TRISB 0086       __end_of_display 0318                 _clear 02E6  
+               _clock 02D3                 status 0003                 wtemp0 007E          __end_of_main 0800  
+        __end_of_init 0364                ??_main 002A                ??_init 0070                ?_clear 0070  
+              ?_clock 0070      ___llmod@dividend 0024                _EEDATA 009A                _EECON1 009C  
+              _EECON2 009D                _TMR1IF 0060                _OPTION 0081                _TMR1ON 0080  
+           ??___lldiv 0078             ??___llmod 0028                _period 003D                main@nz 0031  
+           ??_display 0070        __pcstackCOMMON 0070         __end_of_clear 02FF         __end_of_clock 02DC  
+             ??_clear 0070               ??_clock 0070            __pbssBANK0 0036            __pmaintext 0430  
+             ___lldiv 03C2               ___llmod 0364               _display 02FF  end_of_initialization 02E4  
+     ___lldiv@divisor 0070       ___lldiv@counter 007D            display@fig 0071   start_initialization 02DC  
+     ___llmod@divisor 0020       ___llmod@counter 0029         __pcstackBANK0 0020             __ptext210 02D3  
+           __ptext211 03C2             __ptext212 0364             __ptext213 0000             __ptext206 0000  
+           __ptext207 02FF             __ptext208 02E6             __ptext209 0318              ?___lldiv 0070  
+            ?___llmod 0020              ?_display 0070        __size_of_clear 0019        __size_of_clock 0009  
+           main@freq1 0030             main@freq2 002E             main@total 0032      __size_of___lldiv 006E  
+    __size_of___llmod 005E      __size_of_display 0019         __size_of_main 03D0         __size_of_init 004C  
+    ___lldiv@dividend 0074      ___lldiv@quotient 0079  

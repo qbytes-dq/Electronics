@@ -1,0 +1,31 @@
+#######################################
+## CM LL CC CC
+## 	     CC CC = Color
+##     LL       = LED
+##  CM          = CMD
+## --------------------------------
+## D ##           = Device    
+#######################################
+
+#^clearAll.txt
+
+
+
+# =====================================
+# Device 0
+D 00
+
+^dotcorrect.txt
+
+#^default.led.txt
+
+^default.hyperspin.txt
+
+# =====================================
+# Device 01 
+D 01
+
+^dotcorrect.txt
+
+^default.led.txt
+

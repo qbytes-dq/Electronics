@@ -1,0 +1,8 @@
+_init: CODE, 792 0 76
+_clock: CODE, 723 0 9
+_display: CODE, 767 0 25
+_main: CODE, 1072 0 976
+___lldiv: CODE, 962 0 110
+_clear: CODE, 742 0 25
+___llmod: CODE, 868 0 94
+Total: 1315

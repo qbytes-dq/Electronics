@@ -1,0 +1,10 @@
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Debug\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Debug\QBW_Magic_LED.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Debug\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Debug\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\QBW_Magic_LED.csprojResolveAssemblyReference.cache
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\WFF_Generic_HID_Demo_3.Form1.resources
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\WFF_Generic_HID_Demo_3.Properties.Resources.resources
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\QBW_Magic_LED.csproj.GenerateResource.Cache
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Debug\QBW_Magic_LED.pdb

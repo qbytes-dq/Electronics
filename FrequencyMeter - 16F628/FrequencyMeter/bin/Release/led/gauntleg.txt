@@ -1,0 +1,28 @@
+#################################
+## CM LL CC CC
+## 	     CC CC  = Color
+##     LL       = LED
+##  CM          = CMD
+## ------------------------------
+## D ##         = Device    
+#################################
+
+^clearAll.txt
+
+## JoyStick = 8 way
+## Button 1 = 
+## Button 2 = 
+## Button 3 = 
+
+
+^gauntleg.p1.txt
+^gauntleg.p2.txt
+^gauntleg.p3.txt
+^gauntleg.p4.txt
+
+#################################
+#################################
+#################################
+
+
+>default.p4.txt

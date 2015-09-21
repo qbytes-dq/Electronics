@@ -1,0 +1,59 @@
+#######################################
+## CM LL BB BB
+## 	     BB BB = Brightness
+##     LL       = LED
+##  CM          = CMD
+## --------------------------------
+## D ##           = Device    
+#######################################
+# All OFF
+00 00 0F FF
+00 01 0F FF
+00 02 0F FF
+00 03 0F FF
+00 04 0F FF
+00 05 0F FF
+00 06 0F FF
+00 07 0F FF
+00 08 0F FF
+00 09 0F FF
+00 0a 0F FF
+00 0b 0F FF
+00 0c 0F FF
+00 0d 0F FF
+00 0e 0F FF
+00 0f 0F FF
+
+00 10 0F FF
+00 11 0F FF
+00 12 0F FF
+00 13 0F FF
+00 14 0F FF
+00 15 0F FF
+00 16 0F FF
+00 17 0F FF
+00 18 0F FF
+00 19 0F FF
+00 1a 0F FF
+00 1b 0F FF
+00 1c 0F FF
+00 1d 0F FF
+00 1e 0F FF
+00 1f 0F FF
+
+00 20 0F FF
+00 21 0F FF
+00 22 0F FF
+00 23 0F FF
+00 24 0F FF
+00 25 0F FF
+00 26 0F FF
+00 27 0F FF
+00 28 0F FF
+00 29 0F FF
+00 2a 0F FF
+00 2b 0F FF
+00 2c 0F FF
+00 2d 0F FF
+00 2e 0F FF
+00 2f 0F FF

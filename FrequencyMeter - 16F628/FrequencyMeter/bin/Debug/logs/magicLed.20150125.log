@@ -1,0 +1,409 @@
+2015/01/25 17:29:54.239 ::: Info -- =========================================================
+2015/01/25 17:29:54.854 ::: Info -- Arg[0]: pacman.txt
+2015/01/25 17:29:54.862 ::: Info -- Runfile:::pacman.txt
+2015/01/25 17:29:54.868 ::: Error -- SKIPPING --> File NOT found::: ./led/pacman.txt.
+2015/01/25 19:06:59.571 ::: Info -- =========================================================
+2015/01/25 19:07:00.356 ::: Info -- Arg[0]: pacman.txt
+2015/01/25 19:07:00.384 ::: Info -- Runfile:::pacman.txt
+2015/01/25 19:07:00.389 ::: Error -- SKIPPING --> File NOT found::: ./led/pacman.txt.
+2015/01/25 19:07:01.845 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 19:07:01.901 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:07:01.907 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:07:02.020 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 19:07:02.032 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 19:07:02.090 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 19:07:02.151 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 19:07:02.202 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 19:07:02.254 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 19:07:02.264 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 19:07:02.314 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 19:07:02.367 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 19:07:02.433 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 19:07:02.506 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 19:07:23.347 ::: Debug -- 
+OOPS - Invalid command 0xFF 0x0 0x1 0xF 0xFF 0x0 from host.
+2015/01/25 19:07:27.774 ::: Debug -- 
+OOPS - Invalid command 0xEE 0x0 0x1 0xF 0xFF 0x0 from host.
+2015/01/25 19:19:26.339 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:19:28.738 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:20:59.432 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:00.402 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:06.686 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:07.924 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:09.328 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:09.730 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:10.177 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:17.492 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:22.713 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:31.835 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:32.250 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:21:32.859 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:37:31.246 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:37:31.459 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:37:31.738 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 19:37:31.794 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:37:31.803 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:37:31.856 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 19:37:31.904 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 19:37:34.919 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:37:34.987 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 19:37:35.047 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 19:37:35.099 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 19:37:35.149 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 19:37:35.199 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 19:37:35.248 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 19:37:35.297 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 19:37:35.897 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:37:38.860 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 19:37:38.916 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:37:38.925 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:37:38.976 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 19:37:39.030 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 19:37:39.043 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 19:37:39.093 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 19:37:39.144 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 19:37:39.195 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 19:37:39.207 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 19:37:39.265 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 19:37:39.323 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 19:37:39.372 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 19:37:39.423 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 19:37:42.460 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:37:42.493 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:39:45.749 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 19:39:45.806 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:39:45.814 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:39:45.863 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 19:39:45.916 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 19:39:45.977 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 19:39:45.991 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 19:39:46.050 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 19:39:49.745 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 19:39:49.800 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 19:39:49.854 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 19:39:49.866 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 19:39:49.920 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 19:39:49.975 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 19:39:56.307 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:40:12.047 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:40:12.090 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 19:57:03.413 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 19:57:03.495 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:57:03.504 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 19:57:03.518 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 19:57:03.586 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 19:57:03.646 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 19:57:03.700 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 19:57:03.713 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 19:57:03.767 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 19:57:03.825 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 19:57:03.902 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 19:57:03.985 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 19:57:04.061 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 19:57:04.120 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 19:58:02.898 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:03.508 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:03.922 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:04.141 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:04.520 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:04.938 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:05.331 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 19:58:06.142 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:28:31.317 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:28:31.359 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:28:44.007 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 20:28:44.059 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:28:44.069 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:28:44.119 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 20:28:44.178 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 20:28:44.192 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 20:28:44.289 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 20:28:44.412 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 20:28:44.435 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 20:28:44.527 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 20:28:44.659 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 20:28:44.727 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 20:28:44.799 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 20:28:44.864 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 20:28:49.818 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:28:50.251 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:02.816 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:04.827 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:06.268 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:35.447 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:36.062 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:36.460 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:37.703 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:38.898 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:29:40.314 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:31:18.073 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:31:18.470 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:31:18.806 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:31:19.080 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:04.999 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:05.399 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:05.824 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:06.224 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:06.621 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:07.070 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:07.259 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:26.863 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:35:26.916 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:35:41.470 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 20:35:41.526 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:35:41.535 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:35:41.595 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 20:35:41.608 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 20:35:41.665 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 20:35:41.721 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 20:35:41.735 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 20:35:41.789 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 20:35:41.846 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 20:35:41.901 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 20:35:41.961 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 20:35:42.021 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 20:35:42.100 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 20:35:45.764 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:46.376 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:46.973 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:47.386 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:47.641 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:48.404 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:55.516 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:57.177 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:57.727 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:35:58.551 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:07.734 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:08.485 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:10.328 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:10.701 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:11.313 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:36:12.120 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:20.267 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:20.880 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:22.098 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:25.341 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:29.210 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:37:32.648 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:49:11.455 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:49:11.513 ::: Debug -- USB Device #0 is UNattached.
+
+2015/01/25 20:49:50.480 ::: Debug -- USB Device #? is UNattached.
+
+2015/01/25 20:49:50.536 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:49:50.545 ::: Debug -- USB Device #0 is attached.
+
+2015/01/25 20:49:50.608 ::: Debug -- USB Device #1 is UNattached.
+
+2015/01/25 20:49:50.676 ::: Debug -- USB Device #2 is UNattached.
+
+2015/01/25 20:49:50.690 ::: Debug -- Q-Berry CNT Hz
+QBW v1.0.0
+(C)2014 David Quesenberry - http:/
+2015/01/25 20:49:50.784 ::: Debug -- USB Device #3 is UNattached.
+
+2015/01/25 20:49:50.902 ::: Debug -- USB Device #4 is UNattached.
+
+2015/01/25 20:49:50.926 ::: Debug -- /www.QBytesWorld.com
+USB Device Initialised.
+2015/01/25 20:49:51.019 ::: Debug -- USB Device #5 is UNattached.
+
+2015/01/25 20:49:51.110 ::: Debug -- USB Device #6 is UNattached.
+
+2015/01/25 20:49:51.174 ::: Debug -- USB Device #7 is UNattached.
+
+2015/01/25 20:49:51.233 ::: Debug -- USB Device #8 is UNattached.
+
+2015/01/25 20:49:51.295 ::: Debug -- USB Device #9 is UNattached.
+
+2015/01/25 20:49:58.379 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:49:58.761 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 20:49:59.550 ::: Debug -- 
+Received command 0x80 from host.
+2015/01/25 22:20:18.439 ::: Debug -- USB Device #0 is UNattached.
+

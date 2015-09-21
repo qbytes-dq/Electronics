@@ -1,0 +1,20 @@
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\bin\Release\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\bin\Release\QBW_Magic_LED.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\bin\Release\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\bin\Release\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\QBW_Magic_LED.csprojResolveAssemblyReference.cache
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\WFF_Generic_HID_Demo_3.Form1.resources
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\WFF_Generic_HID_Demo_3.Properties.Resources.resources
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\QBW_Magic_LED.csproj.GenerateResource.Cache
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\WFF Generic HID Demo 3\obj\x86\Release\QBW_Magic_LED.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Release\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Release\QBW_Magic_LED.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Release\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\bin\Release\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\QBW_Magic_LED.csprojResolveAssemblyReference.cache
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\WFF_Generic_HID_Demo_3.Form1.resources
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\WFF_Generic_HID_Demo_3.Properties.Resources.resources
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\QBW_Magic_LED.csproj.GenerateResource.Cache
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\QBW_Magic_LED.exe
+C:\PIC\__arcade_temp\QBWmagicLED\QBW_Magic_LED\obj\x86\Release\QBW_Magic_LED.pdb

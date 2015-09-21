@@ -1,0 +1,10 @@
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\bin\Debug\usbGenericHidCommunications.dll
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\bin\Debug\usbGenericHidCommunications.pdb
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\WFF Generic HID Demo 3.csprojResolveAssemblyReference.cache
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\WFF_Generic_HID_Demo_3.Form1.resources
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\WFF_Generic_HID_Demo_3.Properties.Resources.resources
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\WFF Generic HID Demo 3.csproj.GenerateResource.Cache
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\bin\Debug\QBW_Magic_LED.exe
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\bin\Debug\QBW_Magic_LED.pdb
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\QBW_Magic_LED.exe
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\WFF Generic HID Demo 3\obj\x86\Debug\QBW_Magic_LED.pdb

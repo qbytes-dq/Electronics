@@ -1,0 +1,14 @@
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.dll
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.pdb
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.dll
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.pdb
+C:\PIC\C# WFF USB LED\WFF_Generic_HID_Demo_3\WFF Generic HID Demo 3\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications_3_0_0_0.csprojResolveAssemblyReference.cache
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.pdb
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.dll
+C:\PIC\__arcade_temp\QBWmagicLED\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\bin\Release\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications_3_0_0_0.csprojResolveAssemblyReference.cache
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\arcade\QBWmagicLED\usbGenericHidCommunications\obj\Release\usbGenericHidCommunications.pdb

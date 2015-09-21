@@ -1,0 +1,10 @@
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\QBW.Magic.LED.exe
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\QBW.Magic.LED.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\bin\Release\QBW.Magic.LED.exe
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\bin\Release\QBW.Magic.LED.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\bin\Release\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\bin\Release\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\FrequencyMeter.csprojResolveAssemblyReference.cache
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\WFF_Generic_HID_Demo_3.Form1.resources
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\QBW.Magic.LED.Properties.Resources.resources
+C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\FrequencyMeter\obj\x86\Release\FrequencyMeter.csproj.GenerateResource.Cache
