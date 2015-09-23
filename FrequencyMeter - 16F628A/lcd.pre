@@ -1,5 +1,5 @@
 
-# 1 "C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c"
+# 1 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c"
 
 # 81 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f628a.h"
 volatile unsigned char INDF @ 0x000;
@@ -595,7 +595,7 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 8 "C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h"
+# 8 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h"
 extern void lcd_write(unsigned char);
 
 
@@ -620,7 +620,7 @@ extern void lcd_putdigit(unsigned char);
 
 extern void lcd_putnumber(unsigned long);
 
-# 44 "C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c"
+# 44 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c"
 unsigned long divBy = 0;
 
 

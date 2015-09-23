@@ -87,8 +87,10 @@ __CONFIG(FOSC_HS  & MCLRE_ON & BOREN_OFF & PWRTE_ON & WDTE_OFF & LVP_OFF & CP_OF
 // RA0 = interupt timer1
 
 
-const unsigned char FREQ = 10;
-const unsigned char SCALE = 1;
+//const unsigned char FREQ = 10;
+//const unsigned char SCALE = 1;
+const unsigned char FREQ = 80;
+const unsigned char SCALE = 10;
 unsigned char findScale = 1; // first thing we do is find the scale.
 
 void init(void){
@@ -122,21 +124,21 @@ void initTimer0(void)
 // bits               4     - 0 = low to high edge
 // bits                3    - 0 = prescale on timer 0  (1:x - x is the shift)
 // bits                 210 - PRESCALE
-//                      000 -   = Prescale  = 1:2    shift 1   ===   512
-//                      001 -   = Prescale  = 1:4    shift 2   ===  1024
-//                      010 -   = Prescale  = 1:8    shift 3   ===  2048
-//                      011 -   = Prescale  = 1:16   shift 4   ===  4096
-//                      100 -   = Prescale  = 1:32   shift 5   ===  8196
-//                      101 -   = Prescale  = 1:64   shift 6   === 16384
-//                      110 -   = Prescale  = 1:128  shift 7   === 32768
-//                      111 -   = Prescale  = 1:256  shift 8   === 65536
+//                      000 -   = Prescale  = 1:2
+//                      001 -   = Prescale  = 1:4
+//                      010 -   = Prescale  = 1:8
+//                      011 -   = Prescale  = 1:16
+//                      100 -   = Prescale  = 1:32
+//                      101 -   = Prescale  = 1:64
+//                      110 -   = Prescale  = 1:128
+//                      111 -   = Prescale  = 1:256
 //	OPTION_REG = 0b10100110;
 
 	OPTION_REG = 0b10100000;
 	OPTION_REG |= prescaleInternalBits[preScaleSelect];
 
-RB4 = !(!testbit(prescaleExternalBits[preScaleSelect],0));
-RB5 = !(!testbit(prescaleExternalBits[preScaleSelect],1));
+//RB4 = !(!testbit(prescaleExternalBits[preScaleSelect],0));
+//RB5 = !(!testbit(prescaleExternalBits[preScaleSelect],1));
 //RB6 = !(!testbit(prescaleInternalBits[preScaleSelect],2));
 
 	preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
@@ -176,36 +178,29 @@ void initTimer1(void)
 //	PEIE = 1; 		// Enable peripheral interrupts
 //	GIE = 1;		// Enable global interrupts	
 //===================================================================
-//// 4 mhz
-//  T1CON	 = 0x11;
-//  TMR1IF = 0;
-////TMR1H	 = 0x3C;
-//TMR1H	 = 0x4B;
-////TMR1L	 = 0xB0;
-//TMR1L	 = 0xCE;
-//  
-////  TMR1IE_bit	 = 1;
-//  INTCON	 = 0xC0;
-  
-//====================================================================
+
   T1CON	 = 0x31;
   TMR1IF = 0;
-  
-  // Calculated
-  //TMR1H	 = 0x0B;
-  //TMR1L	 = 0xDC;
   
   // HS 20MHz with Capacitor
   TMR1H	 = 0x09;
   TMR1L	 = 0xAC;
   
-  // EXTERN 20MHz
-  //TMR1H	 = 0x0C;
-  //TMR1L	 = 0x09;
-  
   INTCON = 0xC0;  
 }
 
+void initTimer2(void)
+{
+//Timer2
+//Prescaler 1:16; Postscaler 1:13; TMR2 Preload = 240; Actual Interrupt Time : 9.9866 ms	
+  //T2CON	 = 0x66;
+  T2CON	 = 0b01111111;
+  
+  PR2		 = 199;// Time period //PR2		 = 244;
+  TMR2IE	 = 1;
+//  INTCON	 = 0xC0;
+}	
+  		
 void interrupt ISR(void)
 {
 	// ==========================================
@@ -226,8 +221,10 @@ void interrupt ISR(void)
 		//Timer0
 		//Prescaler 1:256; TMR0 Preload = 61; Actual Interrupt Time : 9.984 ms
     	//TMR0		 = 61;
-		TMR0cnt++;    	
-	
+		TMR0cnt++; 
+		
+			
+		RB4 = !RB4;   		
 	}
 		
 	// ==========================================
@@ -236,27 +233,37 @@ void interrupt ISR(void)
 	// http://saeedsolutions.blogspot.com/2014/03/pic16f628a-timer1-code-proteus.html
 	if (TMR1IF) // If Timer1 Interrupt
 	{
-//		TMR1H = 0xF0;  // Cleat timer1 register
-//		TMR1L = 0x00;  // before enablining timer1  -- overflow @ 4096 cycles
-//	
-//		TMR1IF = 0;	// Clear the interrupt		
-//		
-//		TMR1cnt++;
-//		
-////		RA0 = ~RA0;	
-
-	// 4 MHZ 100 ms
-    //TMR1H	 = 0x3C;
-    //TMR1L	 = 0xB0;
-    
-    // 20 MHZ 100 ms    
-    TMR1H	 = 0x0B;
-    TMR1L	 = 0xDC;
-    
-    TMR1IF   = 0;
-    
-    TMR1cnt++;	
+	//		TMR1H = 0xF0;  // Cleat timer1 register
+	//		TMR1L = 0x00;  // before enablining timer1  -- overflow @ 4096 cycles
+	//	
+	//		TMR1IF = 0;	// Clear the interrupt		
+	//		
+	//		TMR1cnt++;
+	//		
+	////		RA0 = ~RA0;	
+	
+		// 4 MHZ 100 ms
+	    //TMR1H	 = 0x3C;
+	    //TMR1L	 = 0xB0;
+	    
+	    // 20 MHZ 100 ms    
+	    TMR1H	 = 0x0B;
+	    TMR1L	 = 0xDC;
+	    
+	    TMR1IF   = 0;
+	    
+//	    TMR1cnt++;	
+	    RB5 = ~RB5;
 	}	
+	
+  	if (TMR2IF)
+	{ 
+    	TMR2IF = 0;
+    	//Enter your code here
+  	    TMR1cnt++;
+  	    PR2 = 244;// Time period	
+	  	RB6 = !RB6; // Toggle RB6 pin
+  	} 	
 }	
 
 // -----------------------------------------------------------------------------
@@ -336,9 +343,9 @@ TMR1cnt = TMR0cnt;
 			}	
 		
 
-
-			// Show DB vs Volts vs Watts
-			lcd_puts("mW/dB ");// part of UHF, VHF, ..F, ...
+//
+//			// Show DB vs Volts vs Watts
+//			lcd_puts("mW/dB ");// part of UHF, VHF, ..F, ...
 								
 //			//Display shift	(multipy using preScaleValue)
 			char** pBands = bands;	
@@ -382,9 +389,11 @@ TRISA = 0x10;  //	TRISA0 = 0; RISA1 = 0; TRISA2 = 0; TRISA3 = 0; TRISA4 = 1; TRI
 
 			initTimer0();	
 			initTimer1();
+			initTimer2();
 			
 			TMR1cnt = 0;
 			
+			TMR2IE = 1; // Esable Timer1 interrupt	
 			TMR1IE = 1; 	// Enable Timer1 interrupt	
 			T0IE = 1;	// Enable Timer0 interrupt
 }		
@@ -396,7 +405,7 @@ void timersOFF()
 TRISA = 0x00;  //	TRISA0 = 0; RISA1 = 0; TRISA2 = 0; TRISA3 = 0; TRISA4 = 0; TRISA5 = 0; TRISA6 = 0; TRISA7 = 0;	
 			T0IE = 0;	// Disable Timer0 interrupt
 			TMR1IE = 0; // Disable Timer1 interrupt	
-	
+			TMR2IE = 0; // Disable Timer1 interrupt	
 			GATE = 1; // gate LED ON 
 			
 			number = (preScaleValue * POSTSCALE * TMR0cnt) + (preScaleValue * TMR0);

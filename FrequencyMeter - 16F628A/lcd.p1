@@ -473,20 +473,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S48 . . . ]
 "656 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f628a.h
 [v _VRCONbits `VS48  1 e@159 ]
-"44 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c
+"44 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c
 [v _divBy `ul  1 e ]
-"49 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c
+"49 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c
 [v _HZ `Cuc  -> 0 `x e ]
-"52 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c
+"52 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c
 [v _sig `uc  1 e ]
-"53 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c
+"53 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c
 [v _digit `uc  1 e ]
 "154 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic.h
 [v __delay `(v  0 ef1`ul ]
 [p i __delay ]
-"8 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"8 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_write `(v  0 ef1`uc ]
-"12 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"12 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_clear `(v  0 ef ]
 [; ;pic16f628a.h: 81: volatile unsigned char INDF @ 0x000;
 [; ;pic16f628a.h: 85: volatile unsigned char TMR0 @ 0x001;
@@ -929,7 +929,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd.h: 26: extern void lcd_putch(char);
 [; ;lcd.h: 28: extern void lcd_putdigit(unsigned char);
 [; ;lcd.h: 30: extern void lcd_putnumber(unsigned long);
-"44 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c
+"44 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.c
 [i _divBy
 -> -> -> 0 `i `l `ul
 ]

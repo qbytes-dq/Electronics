@@ -473,51 +473,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S48 . . . ]
 "656 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f628a.h
 [v _VRCONbits `VS48  1 e@159 ]
-"21 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"21 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _TMR1cnt `i  1 e ]
-"23 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"23 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _TMR0cnt `ul  1 e ]
-"24 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"24 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _number `ul  1 e ]
-"38 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"38 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _band `uc  1 e ]
-"41 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"41 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _qbytes `Cuc  -> 0 `x e ]
-"42 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"42 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _version `Cuc  -> 0 `x e ]
-"43 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"43 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _noinput `Cuc  -> 0 `x e ]
-"48 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"48 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _buffer `uc  -> 10 `i e ]
-"50 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"50 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _preScaleSelect `uc  1 e ]
-"52 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"52 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _preScaleValue `um  1 e ]
-"53 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"53 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _calcScaleValue `um  1 e ]
-"62 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"62 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _prescaleInternalBits `Cuc  -> 11 `i e ]
-"63 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"63 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _prescaleInternalShift `Cuc  -> 11 `i e ]
-"64 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"64 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _prescaleExternalBits `Cuc  -> 11 `i e ]
-"65 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"65 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _prescaleExternalShift `Cuc  -> 11 `i e ]
-"67 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"67 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v F878 `*Cuc  -> 2 `i t ]
-"67 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"67 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _bands `CF878  -> 8 `i e ]
-"90 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"92 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _FREQ `Cuc  1 e ]
-"91 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"93 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _SCALE `Cuc  1 e ]
-"92 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"94 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [v _findScale `uc  1 e ]
-"20 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"20 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_goto `(v  0 ef1`uc ]
-"30 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"30 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_putnumber `(v  0 ef1`ul ]
-"16 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"16 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_puts `(v  0 ef1`*Cuc ]
 "148 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdlib.h
 [v _ultoa `(*uc  0 ef3`*uc`ul`i ]
@@ -525,9 +525,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v __delay `(v  0 ef1`ul ]
 [p i __delay ]
 [p mainexit ]
-"24 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"24 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_init `(v  0 ef ]
-"12 C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h
+"12 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h
 [v _lcd_clear `(v  0 ef ]
 [; ;pic16f628a.h: 81: volatile unsigned char INDF @ 0x000;
 [; ;pic16f628a.h: 85: volatile unsigned char TMR0 @ 0x001;
@@ -1079,7 +1079,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;string.h: 57: extern char * strichr(const char *, int);
 [; ;string.h: 58: extern char * strrchr(const char *, int);
 [; ;string.h: 59: extern char * strrichr(const char *, int);
-"21 C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c
+"21 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c
 [i _TMR1cnt
 -> 0 `i
 ]
@@ -1283,504 +1283,549 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;blink.c: 79: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFEE & 0xFFFF & 0xFFBF & 0xFFF7 & 0xFFFB & 0xFF7F & 0xFFFF & 0xFFFF");
 [; 	psect config,class=CONFIG,delta=2 ;#
 [; 	dw 0xFFEE & 0xFFFF & 0xFFBF & 0xFFF7 & 0xFFFB & 0xFF7F & 0xFFFF & 0xFFFF ;#
-"90
+"92
 [i _FREQ
+-> -> 80 `i `uc
+]
+[; ;blink.c: 92: const unsigned char FREQ = 80;
+"93
+[i _SCALE
 -> -> 10 `i `uc
 ]
-[; ;blink.c: 90: const unsigned char FREQ = 10;
-"91
-[i _SCALE
--> -> 1 `i `uc
-]
-[; ;blink.c: 91: const unsigned char SCALE = 1;
-"92
+[; ;blink.c: 93: const unsigned char SCALE = 10;
+"94
 [i _findScale
 -> -> 1 `i `uc
 ]
-[; ;blink.c: 92: unsigned char findScale = 1;
-"94
+[; ;blink.c: 94: unsigned char findScale = 1;
+"96
 [v _init `(v  1 ef ]
 {
-[; ;blink.c: 94: void init(void){
+[; ;blink.c: 96: void init(void){
 [e :U _init ]
 [f ]
-[; ;blink.c: 101: CMCON = 0b00000111;
-"101
+[; ;blink.c: 103: CMCON = 0b00000111;
+"103
 [e = _CMCON -> -> 7 `i `uc ]
-[; ;blink.c: 106: TRISA = 0x10;
-"106
+[; ;blink.c: 108: TRISA = 0x10;
+"108
 [e = _TRISA -> -> 16 `i `uc ]
-[; ;blink.c: 107: TRISB = 0x00;
-"107
+[; ;blink.c: 109: TRISB = 0x00;
+"109
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;blink.c: 112: }
-"112
+[; ;blink.c: 114: }
+"114
 [e :UE 56 ]
 }
-"116
+"118
 [v _initTimer0 `(v  1 ef ]
 {
-[; ;blink.c: 115: void initTimer0(void)
-[; ;blink.c: 116: {
+[; ;blink.c: 117: void initTimer0(void)
+[; ;blink.c: 118: {
 [e :U _initTimer0 ]
 [f ]
-[; ;blink.c: 117: INTCON = 0xA0;
-"117
+[; ;blink.c: 119: INTCON = 0xA0;
+"119
 [e = _INTCON -> -> 160 `i `uc ]
-[; ;blink.c: 135: OPTION_REG = 0b10100000;
-"135
+[; ;blink.c: 137: OPTION_REG = 0b10100000;
+"137
 [e = _OPTION_REG -> -> 160 `i `uc ]
-[; ;blink.c: 136: OPTION_REG |= prescaleInternalBits[preScaleSelect];
-"136
-[e =| _OPTION_REG *U + &U _prescaleInternalBits * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalBits `ui `ux ]
-[; ;blink.c: 138: RB4 = !(!((prescaleExternalBits[preScaleSelect]) & (1 <<(0))));
+[; ;blink.c: 138: OPTION_REG |= prescaleInternalBits[preScaleSelect];
 "138
-[e = _RB4 ! ! != & -> *U + &U _prescaleExternalBits * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalBits `ui `ux `i << -> 1 `i -> 0 `i -> 0 `i ]
-[; ;blink.c: 139: RB5 = !(!((prescaleExternalBits[preScaleSelect]) & (1 <<(1))));
-"139
-[e = _RB5 ! ! != & -> *U + &U _prescaleExternalBits * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalBits `ui `ux `i << -> 1 `i -> 1 `i -> 0 `i ]
-[; ;blink.c: 142: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
-"142
-[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
-[; ;blink.c: 144: TMR0 = 0;
+[e =| _OPTION_REG *U + &U _prescaleInternalBits * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalBits `ui `ux ]
+[; ;blink.c: 144: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
 "144
-[e = _TMR0 -> -> 0 `i `uc ]
-[; ;blink.c: 145: TMR0cnt = 0;
-"145
-[e = _TMR0cnt -> -> -> 0 `i `l `ul ]
-[; ;blink.c: 146: number = 0;
+[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
+[; ;blink.c: 146: TMR0 = 0;
 "146
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;blink.c: 147: TMR0cnt = 0;
+"147
+[e = _TMR0cnt -> -> -> 0 `i `l `ul ]
+[; ;blink.c: 148: number = 0;
+"148
 [e = _number -> -> -> 0 `i `l `ul ]
-[; ;blink.c: 151: GIE = 1;
-"151
+[; ;blink.c: 153: GIE = 1;
+"153
 [e = _GIE -> -> 1 `i `b ]
-[; ;blink.c: 152: }
-"152
+[; ;blink.c: 154: }
+"154
 [e :UE 57 ]
 }
-"157
+"159
 [v _initTimer1 `(v  1 ef ]
 {
-[; ;blink.c: 156: void initTimer1(void)
-[; ;blink.c: 157: {
+[; ;blink.c: 158: void initTimer1(void)
+[; ;blink.c: 159: {
 [e :U _initTimer1 ]
 [f ]
-[; ;blink.c: 191: T1CON = 0x31;
-"191
+[; ;blink.c: 182: T1CON = 0x31;
+"182
 [e = _T1CON -> -> 49 `i `uc ]
-[; ;blink.c: 192: TMR1IF = 0;
-"192
+[; ;blink.c: 183: TMR1IF = 0;
+"183
 [e = _TMR1IF -> -> 0 `i `b ]
-[; ;blink.c: 199: TMR1H = 0x09;
-"199
+[; ;blink.c: 186: TMR1H = 0x09;
+"186
 [e = _TMR1H -> -> 9 `i `uc ]
-[; ;blink.c: 200: TMR1L = 0xAC;
-"200
+[; ;blink.c: 187: TMR1L = 0xAC;
+"187
 [e = _TMR1L -> -> 172 `i `uc ]
-[; ;blink.c: 206: INTCON = 0xC0;
-"206
+[; ;blink.c: 189: INTCON = 0xC0;
+"189
 [e = _INTCON -> -> 192 `i `uc ]
-[; ;blink.c: 207: }
-"207
+[; ;blink.c: 190: }
+"190
 [e :UE 58 ]
 }
-"210
-[v F903 `(v  1 tf ]
-[v _ISR `IF903  1 e ]
+"193
+[v _initTimer2 `(v  1 ef ]
 {
-[; ;blink.c: 209: void interrupt ISR(void)
-[; ;blink.c: 210: {
-[e :U _ISR ]
+[; ;blink.c: 192: void initTimer2(void)
+[; ;blink.c: 193: {
+[e :U _initTimer2 ]
 [f ]
-[; ;blink.c: 215: if (TMR0IF)
-"215
-[e $ ! _TMR0IF 60  ]
-[; ;blink.c: 216: {
-"216
-{
-[; ;blink.c: 217: TMR0IF = 0;
-"217
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;blink.c: 229: TMR0cnt++;
-"229
-[e ++ _TMR0cnt -> -> -> 1 `i `l `ul ]
-"231
-}
-[e :U 60 ]
-[; ;blink.c: 231: }
-[; ;blink.c: 237: if (TMR1IF)
-"237
-[e $ ! _TMR1IF 61  ]
-[; ;blink.c: 238: {
-"238
-{
-[; ;blink.c: 253: TMR1H = 0x0B;
-"253
-[e = _TMR1H -> -> 11 `i `uc ]
-[; ;blink.c: 254: TMR1L = 0xDC;
-"254
-[e = _TMR1L -> -> 220 `i `uc ]
-[; ;blink.c: 256: TMR1IF = 0;
-"256
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;blink.c: 258: TMR1cnt++;
-"258
-[e ++ _TMR1cnt -> 1 `i ]
-"259
-}
-[e :U 61 ]
-[; ;blink.c: 259: }
-[; ;blink.c: 260: }
-"260
+[; ;blink.c: 197: T2CON = 0b01111111;
+"197
+[e = _T2CON -> -> 127 `i `uc ]
+[; ;blink.c: 199: PR2 = 199;
+"199
+[e = _PR2 -> -> 199 `i `uc ]
+[; ;blink.c: 200: TMR2IE = 1;
+"200
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;blink.c: 202: }
+"202
 [e :UE 59 ]
 }
-"270
+"205
+[v F905 `(v  1 tf ]
+[v _ISR `IF905  1 e ]
+{
+[; ;blink.c: 204: void interrupt ISR(void)
+[; ;blink.c: 205: {
+[e :U _ISR ]
+[f ]
+[; ;blink.c: 210: if (TMR0IF)
+"210
+[e $ ! _TMR0IF 61  ]
+[; ;blink.c: 211: {
+"211
+{
+[; ;blink.c: 212: TMR0IF = 0;
+"212
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;blink.c: 224: TMR0cnt++;
+"224
+[e ++ _TMR0cnt -> -> -> 1 `i `l `ul ]
+[; ;blink.c: 227: RB4 = !RB4;
+"227
+[e = _RB4 ! _RB4 ]
+"228
+}
+[e :U 61 ]
+[; ;blink.c: 228: }
+[; ;blink.c: 234: if (TMR1IF)
+"234
+[e $ ! _TMR1IF 62  ]
+[; ;blink.c: 235: {
+"235
+{
+[; ;blink.c: 250: TMR1H = 0x0B;
+"250
+[e = _TMR1H -> -> 11 `i `uc ]
+[; ;blink.c: 251: TMR1L = 0xDC;
+"251
+[e = _TMR1L -> -> 220 `i `uc ]
+[; ;blink.c: 253: TMR1IF = 0;
+"253
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;blink.c: 256: RB5 = ~RB5;
+"256
+[e = _RB5 ! _RB5 ]
+"257
+}
+[e :U 62 ]
+[; ;blink.c: 257: }
+[; ;blink.c: 259: if (TMR2IF)
+"259
+[e $ ! _TMR2IF 63  ]
+[; ;blink.c: 260: {
+"260
+{
+[; ;blink.c: 261: TMR2IF = 0;
+"261
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;blink.c: 263: TMR1cnt++;
+"263
+[e ++ _TMR1cnt -> 1 `i ]
+[; ;blink.c: 264: PR2 = 244;
+"264
+[e = _PR2 -> -> 244 `i `uc ]
+[; ;blink.c: 265: RB6 = !RB6;
+"265
+[e = _RB6 ! _RB6 ]
+"266
+}
+[e :U 63 ]
+[; ;blink.c: 266: }
+[; ;blink.c: 267: }
+"267
+[e :UE 60 ]
+}
+"277
 [v _doScale `(v  1 ef ]
 {
-[; ;blink.c: 270: void doScale(){
+[; ;blink.c: 277: void doScale(){
 [e :U _doScale ]
 [f ]
-[; ;blink.c: 272: number = number >> (17);
-"272
+[; ;blink.c: 279: number = number >> (17);
+"279
 [e = _number >> _number -> 17 `i ]
-[; ;blink.c: 274: TMR0cnt = 1;
-"274
+[; ;blink.c: 281: TMR0cnt = 1;
+"281
 [e = _TMR0cnt -> -> -> 1 `i `l `ul ]
-[; ;blink.c: 275: for (preScaleSelect =0; preScaleSelect <= 7; preScaleSelect++)
-"275
+[; ;blink.c: 282: for (preScaleSelect =0; preScaleSelect <= 7; preScaleSelect++)
+"282
 {
 [e = _preScaleSelect -> -> 0 `i `uc ]
-[e $ <= -> _preScaleSelect `i -> 7 `i 63  ]
-[e $U 64  ]
-"276
-[e :U 63 ]
-[; ;blink.c: 276: {
-{
-[; ;blink.c: 277: if (TMR0cnt > number)
-"277
-[e $ ! > _TMR0cnt _number 66  ]
-[; ;blink.c: 278: {
-"278
-{
-[; ;blink.c: 279: break;
-"279
-[e $U 64  ]
-"280
-}
-[e :U 66 ]
-[; ;blink.c: 280: }
-[; ;blink.c: 281: TMR0cnt = TMR0cnt << 1;
-"281
-[e = _TMR0cnt << _TMR0cnt -> 1 `i ]
-"282
-}
-"275
-[e ++ _preScaleSelect -> -> 1 `i `uc ]
-[e $ <= -> _preScaleSelect `i -> 7 `i 63  ]
-[e :U 64 ]
-"282
-}
-[; ;blink.c: 282: }
-[; ;blink.c: 283: if (preScaleSelect>7)
+[e $ <= -> _preScaleSelect `i -> 7 `i 65  ]
+[e $U 66  ]
 "283
-[e $ ! > -> _preScaleSelect `i -> 7 `i 67  ]
-[; ;blink.c: 284: {
-"284
+[e :U 65 ]
+[; ;blink.c: 283: {
 {
-[; ;blink.c: 285: preScaleSelect=7;
+[; ;blink.c: 284: if (TMR0cnt > number)
+"284
+[e $ ! > _TMR0cnt _number 68  ]
+[; ;blink.c: 285: {
 "285
-[e = _preScaleSelect -> -> 7 `i `uc ]
+{
+[; ;blink.c: 286: break;
 "286
+[e $U 66  ]
+"287
 }
-[e :U 67 ]
-[; ;blink.c: 286: }
-[; ;blink.c: 288: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
+[e :U 68 ]
+[; ;blink.c: 287: }
+[; ;blink.c: 288: TMR0cnt = TMR0cnt << 1;
 "288
-[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
-[; ;blink.c: 289: calcScaleValue = preScaleSelect;
+[e = _TMR0cnt << _TMR0cnt -> 1 `i ]
 "289
-[e = _calcScaleValue -> _preScaleSelect `um ]
-[; ;blink.c: 300: }
-"300
-[e :UE 62 ]
 }
-"309
+"282
+[e ++ _preScaleSelect -> -> 1 `i `uc ]
+[e $ <= -> _preScaleSelect `i -> 7 `i 65  ]
+[e :U 66 ]
+"289
+}
+[; ;blink.c: 289: }
+[; ;blink.c: 290: if (preScaleSelect>7)
+"290
+[e $ ! > -> _preScaleSelect `i -> 7 `i 69  ]
+[; ;blink.c: 291: {
+"291
+{
+[; ;blink.c: 292: preScaleSelect=7;
+"292
+[e = _preScaleSelect -> -> 7 `i `uc ]
+"293
+}
+[e :U 69 ]
+[; ;blink.c: 293: }
+[; ;blink.c: 295: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
+"295
+[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
+[; ;blink.c: 296: calcScaleValue = preScaleSelect;
+"296
+[e = _calcScaleValue -> _preScaleSelect `um ]
+[; ;blink.c: 307: }
+"307
+[e :UE 64 ]
+}
+"316
 [v _doFrequency `(v  1 ef ]
 {
-[; ;blink.c: 309: void doFrequency(){
+[; ;blink.c: 316: void doFrequency(){
 [e :U _doFrequency ]
 [f ]
-[; ;blink.c: 310: TMR1cnt = TMR0cnt;
-"310
-[e = _TMR1cnt -> _TMR0cnt `i ]
-[; ;blink.c: 312: lcd_goto(0);
-"312
-[e ( _lcd_goto (1 -> -> 0 `i `uc ]
-[; ;blink.c: 314: if (number != 0)
-"314
-[e $ ! != _number -> -> -> 0 `i `l `ul 69  ]
-[; ;blink.c: 315: {
-"315
-{
-[; ;blink.c: 316: lcd_putnumber(number);
-"316
-[e ( _lcd_putnumber (1 _number ]
+[; ;blink.c: 317: TMR1cnt = TMR0cnt;
 "317
-}
-[; ;blink.c: 317: }
-[e $U 70  ]
-"318
-[e :U 69 ]
-[; ;blink.c: 318: else
-[; ;blink.c: 319: {
+[e = _TMR1cnt -> _TMR0cnt `i ]
+[; ;blink.c: 319: lcd_goto(0);
 "319
-{
-[; ;blink.c: 320: lcd_puts(&noinput);
-"320
-[e ( _lcd_puts (1 &U _noinput ]
+[e ( _lcd_goto (1 -> -> 0 `i `uc ]
+[; ;blink.c: 321: if (number != 0)
 "321
-}
-[e :U 70 ]
-[; ;blink.c: 321: }
-[; ;blink.c: 324: lcd_goto(0x40);
+[e $ ! != _number -> -> -> 0 `i `l `ul 71  ]
+[; ;blink.c: 322: {
+"322
+{
+[; ;blink.c: 323: lcd_putnumber(number);
+"323
+[e ( _lcd_putnumber (1 _number ]
 "324
-[e ( _lcd_goto (1 -> -> 64 `i `uc ]
-[; ;blink.c: 328: TMR0cnt = 3000;
+}
+[; ;blink.c: 324: }
+[e $U 72  ]
+"325
+[e :U 71 ]
+[; ;blink.c: 325: else
+[; ;blink.c: 326: {
+"326
+{
+[; ;blink.c: 327: lcd_puts(&noinput);
+"327
+[e ( _lcd_puts (1 &U _noinput ]
 "328
+}
+[e :U 72 ]
+[; ;blink.c: 328: }
+[; ;blink.c: 331: lcd_goto(0x40);
+"331
+[e ( _lcd_goto (1 -> -> 64 `i `uc ]
+[; ;blink.c: 335: TMR0cnt = 3000;
+"335
 [e = _TMR0cnt -> -> -> 3000 `i `l `ul ]
-[; ;blink.c: 329: for (band = 0;band <= 7; band ++)
-"329
+[; ;blink.c: 336: for (band = 0;band <= 7; band ++)
+"336
 {
 [e = _band -> -> 0 `i `uc ]
-[e $ <= -> _band `i -> 7 `i 71  ]
-[e $U 72  ]
-"330
-[e :U 71 ]
-[; ;blink.c: 330: {
+[e $ <= -> _band `i -> 7 `i 73  ]
+[e $U 74  ]
+"337
+[e :U 73 ]
+[; ;blink.c: 337: {
 {
-[; ;blink.c: 331: if (number < TMR0cnt)
-"331
-[e $ ! < _number _TMR0cnt 74  ]
-[; ;blink.c: 332: {
-"332
+[; ;blink.c: 338: if (number < TMR0cnt)
+"338
+[e $ ! < _number _TMR0cnt 76  ]
+[; ;blink.c: 339: {
+"339
 {
-[; ;blink.c: 333: break;
-"333
-[e $U 72  ]
-"334
-}
-[e :U 74 ]
-[; ;blink.c: 334: }
-[; ;blink.c: 335: TMR0cnt *=10;
-"335
-[e =* _TMR0cnt -> -> -> 10 `i `l `ul ]
-"336
-}
-"329
-[e ++ _band -> -> 1 `i `uc ]
-[e $ <= -> _band `i -> 7 `i 71  ]
-[e :U 72 ]
-"336
-}
-[; ;blink.c: 336: }
-[; ;blink.c: 341: lcd_puts("mW/dB ");
+[; ;blink.c: 340: break;
+"340
+[e $U 74  ]
 "341
-[e ( _lcd_puts (1 :s 10C ]
-"344
-[v _pBands `**uc  1 a ]
-[; ;blink.c: 344: char** pBands = bands;
-[e = _pBands -> &U _bands `**uc ]
-[; ;blink.c: 345: pBands += band;
-"345
-[e =+ _pBands * -> _band `ux -> -> # *U _pBands `ui `ux ]
-[; ;blink.c: 346: lcd_puts(*pBands);
-"346
-[e ( _lcd_puts (1 -> *U _pBands `*Cuc ]
-[; ;blink.c: 347: lcd_puts("F");
-"347
-[e ( _lcd_puts (1 :s 11C ]
-[; ;blink.c: 350: lcd_puts(" 1/");
-"350
-[e ( _lcd_puts (1 :s 12C ]
-[; ;blink.c: 351: ultoa(buffer,preScaleValue,10);
-"351
-[e ( _ultoa (3 , , &U _buffer -> _preScaleValue `ul -> 10 `i ]
-[; ;blink.c: 352: lcd_puts(buffer);
-"352
-[e ( _lcd_puts (1 -> &U _buffer `*Cuc ]
-[; ;blink.c: 355: preScaleSelect = 7;
-"355
-[e = _preScaleSelect -> -> 7 `i `uc ]
-[; ;blink.c: 356: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
-"356
-[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
-[; ;blink.c: 372: lcd_puts("   ");
-"372
-[e ( _lcd_puts (1 :s 13C ]
-[; ;blink.c: 373: }
-"373
-[e :UE 68 ]
 }
-"377
+[e :U 76 ]
+[; ;blink.c: 341: }
+[; ;blink.c: 342: TMR0cnt *=10;
+"342
+[e =* _TMR0cnt -> -> -> 10 `i `l `ul ]
+"343
+}
+"336
+[e ++ _band -> -> 1 `i `uc ]
+[e $ <= -> _band `i -> 7 `i 73  ]
+[e :U 74 ]
+"343
+}
+"351
+[v _pBands `**uc  1 a ]
+[; ;blink.c: 343: }
+[; ;blink.c: 351: char** pBands = bands;
+[e = _pBands -> &U _bands `**uc ]
+[; ;blink.c: 352: pBands += band;
+"352
+[e =+ _pBands * -> _band `ux -> -> # *U _pBands `ui `ux ]
+[; ;blink.c: 353: lcd_puts(*pBands);
+"353
+[e ( _lcd_puts (1 -> *U _pBands `*Cuc ]
+[; ;blink.c: 354: lcd_puts("F");
+"354
+[e ( _lcd_puts (1 :s 10C ]
+[; ;blink.c: 357: lcd_puts(" 1/");
+"357
+[e ( _lcd_puts (1 :s 11C ]
+[; ;blink.c: 358: ultoa(buffer,preScaleValue,10);
+"358
+[e ( _ultoa (3 , , &U _buffer -> _preScaleValue `ul -> 10 `i ]
+[; ;blink.c: 359: lcd_puts(buffer);
+"359
+[e ( _lcd_puts (1 -> &U _buffer `*Cuc ]
+[; ;blink.c: 362: preScaleSelect = 7;
+"362
+[e = _preScaleSelect -> -> 7 `i `uc ]
+[; ;blink.c: 363: preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
+"363
+[e = _preScaleValue -> -> << << -> 1 `i *U + &U _prescaleInternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleInternalShift `ui `ux *U + &U _prescaleExternalShift * -> _preScaleSelect `ux -> -> # *U &U _prescaleExternalShift `ui `ux `m `um ]
+[; ;blink.c: 379: lcd_puts("   ");
+"379
+[e ( _lcd_puts (1 :s 12C ]
+[; ;blink.c: 380: }
+"380
+[e :UE 70 ]
+}
+"384
 [v _timersON `(v  1 ef ]
 {
-[; ;blink.c: 376: void timersON()
-[; ;blink.c: 377: {
+[; ;blink.c: 383: void timersON()
+[; ;blink.c: 384: {
 [e :U _timersON ]
 [f ]
-[; ;blink.c: 378: RA0 = 0;
-"378
+[; ;blink.c: 385: RA0 = 0;
+"385
 [e = _RA0 -> -> 0 `i `b ]
-[; ;blink.c: 381: TRISA = 0x10;
-"381
-[e = _TRISA -> -> 16 `i `uc ]
-[; ;blink.c: 383: initTimer0();
-"383
-[e ( _initTimer0 ..  ]
-[; ;blink.c: 384: initTimer1();
-"384
-[e ( _initTimer1 ..  ]
-[; ;blink.c: 386: TMR1cnt = 0;
-"386
-[e = _TMR1cnt -> 0 `i ]
-[; ;blink.c: 388: TMR1IE = 1;
+[; ;blink.c: 388: TRISA = 0x10;
 "388
-[e = _TMR1IE -> -> 1 `i `b ]
-[; ;blink.c: 389: T0IE = 1;
-"389
-[e = _T0IE -> -> 1 `i `b ]
-[; ;blink.c: 390: }
+[e = _TRISA -> -> 16 `i `uc ]
+[; ;blink.c: 390: initTimer0();
 "390
-[e :UE 75 ]
-}
+[e ( _initTimer0 ..  ]
+[; ;blink.c: 391: initTimer1();
+"391
+[e ( _initTimer1 ..  ]
+[; ;blink.c: 392: initTimer2();
+"392
+[e ( _initTimer2 ..  ]
+[; ;blink.c: 394: TMR1cnt = 0;
 "394
+[e = _TMR1cnt -> 0 `i ]
+[; ;blink.c: 396: TMR2IE = 1;
+"396
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;blink.c: 397: TMR1IE = 1;
+"397
+[e = _TMR1IE -> -> 1 `i `b ]
+[; ;blink.c: 398: T0IE = 1;
+"398
+[e = _T0IE -> -> 1 `i `b ]
+[; ;blink.c: 399: }
+"399
+[e :UE 77 ]
+}
+"403
 [v _timersOFF `(v  1 ef ]
 {
-[; ;blink.c: 393: void timersOFF()
-[; ;blink.c: 394: {
+[; ;blink.c: 402: void timersOFF()
+[; ;blink.c: 403: {
 [e :U _timersOFF ]
 [f ]
-[; ;blink.c: 396: TRISA = 0x00;
-"396
+[; ;blink.c: 405: TRISA = 0x00;
+"405
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;blink.c: 397: T0IE = 0;
-"397
+[; ;blink.c: 406: T0IE = 0;
+"406
 [e = _T0IE -> -> 0 `i `b ]
-[; ;blink.c: 398: TMR1IE = 0;
-"398
+[; ;blink.c: 407: TMR1IE = 0;
+"407
 [e = _TMR1IE -> -> 0 `i `b ]
-[; ;blink.c: 400: RA0 = 1;
-"400
+[; ;blink.c: 408: TMR2IE = 0;
+"408
+[e = _TMR2IE -> -> 0 `i `b ]
+[; ;blink.c: 409: RA0 = 1;
+"409
 [e = _RA0 -> -> 1 `i `b ]
-[; ;blink.c: 402: number = (preScaleValue * 256 * TMR0cnt) + (preScaleValue * TMR0);
-"402
+[; ;blink.c: 411: number = (preScaleValue * 256 * TMR0cnt) + (preScaleValue * TMR0);
+"411
 [e = _number + * -> * _preScaleValue -> -> -> 256 `i `m `um `ul _TMR0cnt -> * _preScaleValue -> _TMR0 `um `ul ]
-[; ;blink.c: 403: _delay((unsigned long)((10)*(20000000/4000.0)));
-"403
+[; ;blink.c: 412: _delay((unsigned long)((10)*(20000000/4000.0)));
+"412
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;blink.c: 404: }
-"404
-[e :UE 76 ]
+[; ;blink.c: 413: }
+"413
+[e :UE 78 ]
 }
-"410
+"419
 [v _main `(v  1 ef ]
 {
-[; ;blink.c: 410: void main(void){
+[; ;blink.c: 419: void main(void){
 [e :U _main ]
 [f ]
-[; ;blink.c: 413: init();
-"413
+[; ;blink.c: 422: init();
+"422
 [e ( _init ..  ]
-[; ;blink.c: 414: lcd_init();
-"414
-[e ( _lcd_init ..  ]
-[; ;blink.c: 416: timersON();
-"416
-[e ( _timersON ..  ]
-[; ;blink.c: 418: lcd_puts(&qbytes);
-"418
-[e ( _lcd_puts (1 &U _qbytes ]
-[; ;blink.c: 420: lcd_goto(0x40);
-"420
-[e ( _lcd_goto (1 -> -> 64 `i `uc ]
-[; ;blink.c: 421: lcd_puts(&version);
-"421
-[e ( _lcd_puts (1 &U _version ]
-[; ;blink.c: 423: _delay((unsigned long)((2000)*(20000000/4000.0)));
+[; ;blink.c: 423: lcd_init();
 "423
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;blink.c: 425: lcd_clear();
+[e ( _lcd_init ..  ]
+[; ;blink.c: 425: timersON();
 "425
-[e ( _lcd_clear ..  ]
-[; ;blink.c: 428: while(1)
-"428
-[e :U 79 ]
-[; ;blink.c: 429: {
+[e ( _timersON ..  ]
+[; ;blink.c: 427: lcd_puts(&qbytes);
+"427
+[e ( _lcd_puts (1 &U _qbytes ]
+[; ;blink.c: 429: lcd_goto(0x40);
 "429
-{
-[; ;blink.c: 430: while (TMR1cnt < findScale) {}
+[e ( _lcd_goto (1 -> -> 64 `i `uc ]
+[; ;blink.c: 430: lcd_puts(&version);
 "430
-[e $U 81  ]
-[e :U 82 ]
-{
-}
-[e :U 81 ]
-[e $ < _TMR1cnt -> _findScale `i 82  ]
-[e :U 83 ]
-[; ;blink.c: 431: {
-"431
-{
-[; ;blink.c: 432: timersOFF();
+[e ( _lcd_puts (1 &U _version ]
+[; ;blink.c: 432: _delay((unsigned long)((2000)*(20000000/4000.0)));
 "432
-[e ( _timersOFF ..  ]
-[; ;blink.c: 434: if (findScale == SCALE)
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;blink.c: 434: lcd_clear();
 "434
-[e $ ! == -> _findScale `i -> _SCALE `i 84  ]
-[; ;blink.c: 435: {
-"435
-{
-[; ;blink.c: 436: doScale();
-"436
-[e ( _doScale ..  ]
-[; ;blink.c: 437: findScale=FREQ;
+[e ( _lcd_clear ..  ]
+[; ;blink.c: 437: while(1)
 "437
-[e = _findScale _FREQ ]
+[e :U 81 ]
+[; ;blink.c: 438: {
 "438
-}
-[; ;blink.c: 438: }
-[e $U 85  ]
+{
+[; ;blink.c: 439: while (TMR1cnt < findScale) {}
 "439
+[e $U 83  ]
 [e :U 84 ]
-[; ;blink.c: 439: else
+{
+}
+[e :U 83 ]
+[e $ < _TMR1cnt -> _findScale `i 84  ]
+[e :U 85 ]
 [; ;blink.c: 440: {
 "440
 {
-[; ;blink.c: 441: doFrequency();
+[; ;blink.c: 441: timersOFF();
 "441
-[e ( _doFrequency ..  ]
-[; ;blink.c: 442: findScale=SCALE;
-"442
-[e = _findScale _SCALE ]
+[e ( _timersOFF ..  ]
+[; ;blink.c: 443: if (findScale == SCALE)
+"443
+[e $ ! == -> _findScale `i -> _SCALE `i 86  ]
+[; ;blink.c: 444: {
+"444
+{
+[; ;blink.c: 445: doScale();
+"445
+[e ( _doScale ..  ]
+[; ;blink.c: 446: findScale=FREQ;
 "446
+[e = _findScale _FREQ ]
+"447
 }
-[e :U 85 ]
-[; ;blink.c: 446: }
-[; ;blink.c: 448: timersON();
+[; ;blink.c: 447: }
+[e $U 87  ]
 "448
-[e ( _timersON ..  ]
+[e :U 86 ]
+[; ;blink.c: 448: else
+[; ;blink.c: 449: {
 "449
-}
+{
+[; ;blink.c: 450: doFrequency();
 "450
-}
-[e :U 78 ]
-"428
-[e $U 79  ]
-[e :U 80 ]
-[; ;blink.c: 449: }
-[; ;blink.c: 450: }
-[; ;blink.c: 451: }
+[e ( _doFrequency ..  ]
+[; ;blink.c: 451: findScale=SCALE;
 "451
-[e :UE 77 ]
+[e = _findScale _SCALE ]
+"455
+}
+[e :U 87 ]
+[; ;blink.c: 455: }
+[; ;blink.c: 457: timersON();
+"457
+[e ( _timersON ..  ]
+"458
+}
+"459
+}
+[e :U 80 ]
+"437
+[e $U 81  ]
+[e :U 82 ]
+[; ;blink.c: 458: }
+[; ;blink.c: 459: }
+[; ;blink.c: 460: }
+"460
+[e :UE 79 ]
 }
 [a 4C 32 77 0 ]
 [a 2C 86 76 0 ]
@@ -1790,8 +1835,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 7C 85 72 0 ]
 [a 8C 83 72 0 ]
 [a 5C 32 72 0 ]
-[a 11C 70 0 ]
+[a 10C 70 0 ]
 [a 9C 63 63 0 ]
-[a 12C 32 49 47 0 ]
-[a 10C 109 87 47 100 66 32 0 ]
-[a 13C 32 32 32 0 ]
+[a 11C 32 49 47 0 ]
+[a 12C 32 32 32 0 ]

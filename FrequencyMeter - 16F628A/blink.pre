@@ -1,5 +1,5 @@
 
-# 1 "C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c"
+# 1 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c"
 
 # 81 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f628a.h"
 volatile unsigned char INDF @ 0x000;
@@ -595,7 +595,7 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 8 "C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.h"
+# 8 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\lcd.h"
 extern void lcd_write(unsigned char);
 
 
@@ -777,7 +777,7 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
-# 21 "C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c"
+# 21 "C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter - 16F628A\blink.c"
 int TMR1cnt = 0;
 
 unsigned long TMR0cnt = 0;
@@ -821,14 +821,14 @@ extern char * utoa(char * buf, unsigned val, int base);
 
 asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFEE & 0xFFFF & 0xFFBF & 0xFFF7 & 0xFFFB & 0xFF7F & 0xFFFF & 0xFFFF");
 
-# 90
-const unsigned char FREQ = 10;
-const unsigned char SCALE = 1;
+# 92
+const unsigned char FREQ = 80;
+const unsigned char SCALE = 10;
 unsigned char findScale = 1;
 
 void init(void){
 
-# 101
+# 103
 CMCON = 0b00000111;
 
 
@@ -847,14 +847,11 @@ void initTimer0(void)
 {
 INTCON = 0xA0;
 
-# 135
+# 137
 OPTION_REG = 0b10100000;
 OPTION_REG |= prescaleInternalBits[preScaleSelect];
 
-RB4 = !(!((prescaleExternalBits[preScaleSelect]) & (1 <<(0))));
-RB5 = !(!((prescaleExternalBits[preScaleSelect]) & (1 <<(1))));
-
-
+# 144
 preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
 
 TMR0 = 0;
@@ -872,16 +869,27 @@ GIE = 1;
 void initTimer1(void)
 {
 
-# 191
+# 182
 T1CON = 0x31;
 TMR1IF = 0;
 
-# 199
+
 TMR1H = 0x09;
 TMR1L = 0xAC;
 
-# 206
 INTCON = 0xC0;
+}
+
+void initTimer2(void)
+{
+
+
+
+T2CON = 0b01111111;
+
+PR2 = 199;
+TMR2IE = 1;
+
 }
 
 void interrupt ISR(void)
@@ -894,26 +902,38 @@ if (TMR0IF)
 {
 TMR0IF = 0;
 
-# 229
+# 224
 TMR0cnt++;
 
+
+RB4 = !RB4;
 }
 
-# 237
+# 234
 if (TMR1IF)
 {
 
-# 253
+# 250
 TMR1H = 0x0B;
 TMR1L = 0xDC;
 
 TMR1IF = 0;
 
+
+RB5 = ~RB5;
+}
+
+if (TMR2IF)
+{
+TMR2IF = 0;
+
 TMR1cnt++;
+PR2 = 244;
+RB6 = !RB6;
 }
 }
 
-# 270
+# 277
 void doScale(){
 
 number = number >> (17);
@@ -935,10 +955,10 @@ preScaleSelect=7;
 preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
 calcScaleValue = preScaleSelect;
 
-# 300
+# 307
 }
 
-# 309
+# 316
 void doFrequency(){
 TMR1cnt = TMR0cnt;
 
@@ -968,12 +988,7 @@ break;
 TMR0cnt *=10;
 }
 
-
-
-
-lcd_puts("mW/dB ");
-
-
+# 351
 char** pBands = bands;
 pBands += band;
 lcd_puts(*pBands);
@@ -988,7 +1003,7 @@ lcd_puts(buffer);
 preScaleSelect = 7;
 preScaleValue = (1 << prescaleInternalShift[preScaleSelect] << prescaleExternalShift[preScaleSelect]);
 
-# 372
+# 379
 lcd_puts("   ");
 }
 
@@ -1002,9 +1017,11 @@ TRISA = 0x10;
 
 initTimer0();
 initTimer1();
+initTimer2();
 
 TMR1cnt = 0;
 
+TMR2IE = 1;
 TMR1IE = 1;
 T0IE = 1;
 }
@@ -1016,14 +1033,14 @@ void timersOFF()
 TRISA = 0x00;
 T0IE = 0;
 TMR1IE = 0;
-
+TMR2IE = 0;
 RA0 = 1;
 
 number = (preScaleValue * 256 * TMR0cnt) + (preScaleValue * TMR0);
 _delay((unsigned long)((10)*(20000000/4000.0)));
 }
 
-# 410
+# 419
 void main(void){
 
 
