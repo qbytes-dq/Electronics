@@ -1,0 +1,8 @@
+_InitUART: CODE, 51 0 26
+_ISR: CODE, 17 0 34
+_main: CODE, 121 0 19
+_SendByteSerially: CODE, 158 0 12
+i1_SendByteSerially: CODE, 170 0 12
+_SendStringSerially: CODE, 77 0 25
+_ReceiveByteSerially: CODE, 140 0 18
+Total: 146
