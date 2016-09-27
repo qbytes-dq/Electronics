@@ -8,6 +8,9 @@
 
 // Comm Setup
 #define BAUDRATE 9600  //bps
+//#define BAUDRATE 38400  //bps
+//#define BAUDRATE 10417  //bps
+//#define BAUDRATE 19200  //bps
 // 8 bit data mode with one stop bit
 // No flow control, no parity bit
 

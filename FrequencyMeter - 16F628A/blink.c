@@ -42,10 +42,10 @@ const char qbytes[]  = "Q-Bytes World.";
 const char version[] = "Hz Counter v1.1h";
 const char noinput[] = "--->No input<---";
 
+char buffer[10];
+
 #define POSTSCALE    256
 #define MAXSCALE       7  // This will be 10 with the MB506 connected
-
-char buffer[10];
 
 unsigned char  preScaleSelect = MAXSCALE;  // interger for the below array
 
@@ -408,7 +408,7 @@ TRISA = 0x00;  //	TRISA0 = 0; RISA1 = 0; TRISA2 = 0; TRISA3 = 0; TRISA4 = 0; TRI
 			TMR2IE = 0; // Disable Timer1 interrupt	
 			GATE = 1; // gate LED ON 
 			
-			number = (preScaleValue * POSTSCALE * TMR0cnt) + (preScaleValue * TMR0);
+			number = (preScaleValue * TMR0cnt * POSTSCALE) + (preScaleValue * TMR0);
 			__delay_ms(10);
 }
 

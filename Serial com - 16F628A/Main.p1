@@ -474,14 +474,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "656 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f628a.h
 [v _VRCONbits `VS48  1 e@159 ]
 [p mainexit ]
-"15 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
-[v _InitUART `(v  0 ef ]
 "18 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
+[v _InitUART `(v  0 ef ]
+"21 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
 [v _SendStringSerially `(v  0 ef1`*Cuc ]
-"16 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
-[v _SendByteSerially `(v  0 ef1`uc ]
-"17 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
-[v _ReceiveByteSerially `(uc  0 ef ]
 [; ;pic16f628a.h: 81: volatile unsigned char INDF @ 0x000;
 [; ;pic16f628a.h: 85: volatile unsigned char TMR0 @ 0x001;
 [; ;pic16f628a.h: 89: volatile unsigned char PCL @ 0x002;
@@ -915,10 +911,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern void _delay(unsigned long);
-[; ;UART.h: 15: void InitUART(void);
-[; ;UART.h: 16: void SendByteSerially(unsigned char);
-[; ;UART.h: 17: unsigned char ReceiveByteSerially(void);
-[; ;UART.h: 18: void SendStringSerially(const unsigned char*);
+[; ;UART.h: 18: void InitUART(void);
+[; ;UART.h: 19: void SendByteSerially(unsigned char);
+[; ;UART.h: 20: unsigned char ReceiveByteSerially(void);
+[; ;UART.h: 21: void SendStringSerially(const unsigned char*);
 [; ;ISR.h: 5: void interrupt ISR(void);
 "11 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\Main.c
 [; ;Main.c: 11: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFEE & 0xFFFF & 0xFFBF & 0xFFF7 & 0xFFFB & 0xFF7F & 0xFFFF & 0xFFFF");
@@ -946,24 +942,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 24: TRISA0=0;
 "24
 [e = _TRISA0 -> -> 0 `i `b ]
-[; ;Main.c: 25: TRISB7=0;
+[; ;Main.c: 25: RA0=1;
 "25
-[e = _TRISB7 -> -> 0 `i `b ]
-[; ;Main.c: 26: RA0=0;
+[e = _RA0 -> -> 1 `i `b ]
+[; ;Main.c: 26: TRISB4=0;
 "26
-[e = _RA0 -> -> 0 `i `b ]
-[; ;Main.c: 27: RB7=0;
+[e = _TRISB4 -> -> 0 `i `b ]
+[; ;Main.c: 27: RB4=1;
 "27
-[e = _RB7 -> -> 0 `i `b ]
+[e = _RB4 -> -> 1 `i `b ]
 [; ;Main.c: 28: while(1)
 "28
 [e :U 53 ]
 [; ;Main.c: 29: {
 "29
 {
-[; ;Main.c: 33: SendByteSerially(ReceiveByteSerially());
-"33
-[e ( _SendByteSerially (1 ( _ReceiveByteSerially ..  ]
 "34
 }
 [e :U 52 ]

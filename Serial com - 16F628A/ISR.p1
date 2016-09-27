@@ -475,7 +475,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _VRCONbits `VS48  1 e@159 ]
 "4 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\ISR.c
 [v _chr `uc  1 e ]
-"16 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
+"20 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
+[v _ReceiveByteSerially `(uc  0 ef ]
+"19 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h
 [v _SendByteSerially `(v  0 ef1`uc ]
 [; ;pic16f628a.h: 81: volatile unsigned char INDF @ 0x000;
 [; ;pic16f628a.h: 85: volatile unsigned char TMR0 @ 0x001;
@@ -910,10 +912,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern void _delay(unsigned long);
-[; ;UART.h: 15: void InitUART(void);
-[; ;UART.h: 16: void SendByteSerially(unsigned char);
-[; ;UART.h: 17: unsigned char ReceiveByteSerially(void);
-[; ;UART.h: 18: void SendStringSerially(const unsigned char*);
+[; ;UART.h: 18: void InitUART(void);
+[; ;UART.h: 19: void SendByteSerially(unsigned char);
+[; ;UART.h: 20: unsigned char ReceiveByteSerially(void);
+[; ;UART.h: 21: void SendStringSerially(const unsigned char*);
 [; ;ISR.h: 5: void interrupt ISR(void);
 [; ;ISR.c: 4: unsigned char chr;
 "5 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\ISR.h
@@ -931,45 +933,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ISR.c: 9: {
 "9
 {
-[; ;ISR.c: 10: RA0=1;
+[; ;ISR.c: 10: if(OERR)
 "10
-[e = _RA0 -> -> 1 `i `b ]
-[; ;ISR.c: 11: if(OERR)
-"11
 [e $ ! _OERR 53  ]
-[; ;ISR.c: 12: {
-"12
+[; ;ISR.c: 11: {
+"11
 {
-[; ;ISR.c: 13: CREN = 0;
-"13
+[; ;ISR.c: 12: CREN = 0;
+"12
 [e = _CREN -> -> 0 `i `b ]
-[; ;ISR.c: 14: CREN = 1;
-"14
+[; ;ISR.c: 13: CREN = 1;
+"13
 [e = _CREN -> -> 1 `i `b ]
-"15
+"14
 }
 [e :U 53 ]
-[; ;ISR.c: 15: }
-[; ;ISR.c: 16: RA0=0;
+[; ;ISR.c: 14: }
+[; ;ISR.c: 16: chr = ReceiveByteSerially();
 "16
-[e = _RA0 -> -> 0 `i `b ]
-[; ;ISR.c: 17: RB7=1;
-"17
-[e = _RB7 -> -> 1 `i `b ]
-[; ;ISR.c: 18: chr=RCREG;
+[e = _chr ( _ReceiveByteSerially ..  ]
+[; ;ISR.c: 18: SendByteSerially(chr);
 "18
-[e = _chr _RCREG ]
-[; ;ISR.c: 20: SendByteSerially(chr);
-"20
 [e ( _SendByteSerially (1 _chr ]
-[; ;ISR.c: 21: RB7=0;
-"21
-[e = _RB7 -> -> 0 `i `b ]
-"22
+"20
 }
 [e :U 52 ]
-[; ;ISR.c: 22: }
-[; ;ISR.c: 23: }
-"23
+[; ;ISR.c: 20: }
+[; ;ISR.c: 21: }
+"21
 [e :UE 51 ]
 }

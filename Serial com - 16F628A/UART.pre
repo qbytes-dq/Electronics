@@ -595,7 +595,7 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 15 "C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h"
+# 18 "C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.h"
 void InitUART(void);
 void SendByteSerially(unsigned char);
 unsigned char ReceiveByteSerially(void);
@@ -610,8 +610,13 @@ void InitUART(void)
 TRISB2 = 0;
 TRISB1 = 1;
 
+# 16
 SPBRG = ((20000000/16)/9600) - 1;
 BRGH = 1;
+
+
+
+
 SYNC = 0;
 SPEN = 1;
 CREN = 1;
@@ -627,14 +632,16 @@ TXEN = 1;
 
 void SendByteSerially(unsigned char Byte)
 {
+RA0=1;
 while(!TXIF);
 TXREG = Byte;
+RA0=0;
 }
 
 unsigned char ReceiveByteSerially(void)
 {
 
-
+RB4=1;
 if(OERR)
 {
 CREN = 0;
@@ -643,7 +650,7 @@ CREN = 1;
 
 while(!RCIF);
 
-
+RB4=0;
 return RCREG;
 }
 

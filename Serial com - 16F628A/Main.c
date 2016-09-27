@@ -22,15 +22,15 @@ void main()
     PEIE = 1;  							// Enable Peripheral Interrupts
     
 TRISA0=0;    
-TRISB7=0;    
-RA0=0;
-RB7=0;
+   RA0=1;
+TRISB4=0;    
+   RB4=1;
 	while(1)
 	{
 		// Do nothing, as Received character is echoed back in the ISR
 		// If you decide to disable interrupts, then you can 
 		// echo back characters by uncommenting the line below
-		SendByteSerially(ReceiveByteSerially());  //Echo Back
+		//SendByteSerially(ReceiveByteSerially());  //Echo Back
 	}
 }
 

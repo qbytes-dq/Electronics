@@ -906,10 +906,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern void _delay(unsigned long);
-[; ;UART.h: 15: void InitUART(void);
-[; ;UART.h: 16: void SendByteSerially(unsigned char);
-[; ;UART.h: 17: unsigned char ReceiveByteSerially(void);
-[; ;UART.h: 18: void SendStringSerially(const unsigned char*);
+[; ;UART.h: 18: void InitUART(void);
+[; ;UART.h: 19: void SendByteSerially(unsigned char);
+[; ;UART.h: 20: unsigned char ReceiveByteSerially(void);
+[; ;UART.h: 21: void SendStringSerially(const unsigned char*);
 [; ;ISR.h: 5: void interrupt ISR(void);
 "8 C:\Users\davidq\Documents\GitHub\electronics\Serial com - 16F628A\UART.c
 [v _InitUART `(v  1 ef ]
@@ -924,126 +924,138 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;UART.c: 10: TRISB1 = 1;
 "10
 [e = _TRISB1 -> -> 1 `i `b ]
-[; ;UART.c: 12: SPBRG = ((20000000/16)/9600) - 1;
-"12
-[e = _SPBRG -> - / / -> 20000000 `l -> -> 16 `i `l -> -> 9600 `i `l -> -> 1 `i `l `uc ]
-[; ;UART.c: 13: BRGH = 1;
-"13
-[e = _BRGH -> -> 1 `i `b ]
-[; ;UART.c: 14: SYNC = 0;
-"14
-[e = _SYNC -> -> 0 `i `b ]
-[; ;UART.c: 15: SPEN = 1;
-"15
-[e = _SPEN -> -> 1 `i `b ]
-[; ;UART.c: 16: CREN = 1;
+[; ;UART.c: 16: SPBRG = ((20000000/16)/9600) - 1;
 "16
-[e = _CREN -> -> 1 `i `b ]
-[; ;UART.c: 17: SREN = 0;
+[e = _SPBRG -> - / / -> 20000000 `l -> -> 16 `i `l -> -> 9600 `i `l -> -> 1 `i `l `uc ]
+[; ;UART.c: 17: BRGH = 1;
 "17
-[e = _SREN -> -> 0 `i `b ]
-[; ;UART.c: 18: TXIE = 0;
-"18
-[e = _TXIE -> -> 0 `i `b ]
-[; ;UART.c: 19: RCIE = 1;
-"19
-[e = _RCIE -> -> 1 `i `b ]
-[; ;UART.c: 20: TX9 = 0;
-"20
-[e = _TX9 -> -> 0 `i `b ]
-[; ;UART.c: 21: RX9 = 0;
-"21
-[e = _RX9 -> -> 0 `i `b ]
-[; ;UART.c: 22: TXEN = 0;
+[e = _BRGH -> -> 1 `i `b ]
+[; ;UART.c: 22: SYNC = 0;
 "22
-[e = _TXEN -> -> 0 `i `b ]
-[; ;UART.c: 23: TXEN = 1;
+[e = _SYNC -> -> 0 `i `b ]
+[; ;UART.c: 23: SPEN = 1;
 "23
-[e = _TXEN -> -> 1 `i `b ]
-[; ;UART.c: 24: }
+[e = _SPEN -> -> 1 `i `b ]
+[; ;UART.c: 24: CREN = 1;
 "24
+[e = _CREN -> -> 1 `i `b ]
+[; ;UART.c: 25: SREN = 0;
+"25
+[e = _SREN -> -> 0 `i `b ]
+[; ;UART.c: 26: TXIE = 0;
+"26
+[e = _TXIE -> -> 0 `i `b ]
+[; ;UART.c: 27: RCIE = 1;
+"27
+[e = _RCIE -> -> 1 `i `b ]
+[; ;UART.c: 28: TX9 = 0;
+"28
+[e = _TX9 -> -> 0 `i `b ]
+[; ;UART.c: 29: RX9 = 0;
+"29
+[e = _RX9 -> -> 0 `i `b ]
+[; ;UART.c: 30: TXEN = 0;
+"30
+[e = _TXEN -> -> 0 `i `b ]
+[; ;UART.c: 31: TXEN = 1;
+"31
+[e = _TXEN -> -> 1 `i `b ]
+[; ;UART.c: 32: }
+"32
 [e :UE 51 ]
 }
-"28
+"36
 [v _SendByteSerially `(v  1 ef1`uc ]
 {
-[; ;UART.c: 27: void SendByteSerially(unsigned char Byte)
-[; ;UART.c: 28: {
+[; ;UART.c: 35: void SendByteSerially(unsigned char Byte)
+[; ;UART.c: 36: {
 [e :U _SendByteSerially ]
 [v _Byte `uc  1 r1 ]
 [f ]
-[; ;UART.c: 29: while(!TXIF);
-"29
+[; ;UART.c: 37: RA0=1;
+"37
+[e = _RA0 -> -> 1 `i `b ]
+[; ;UART.c: 38: while(!TXIF);
+"38
 [e $U 53  ]
 [e :U 54 ]
 [e :U 53 ]
 [e $ ! _TXIF 54  ]
 [e :U 55 ]
-[; ;UART.c: 30: TXREG = Byte;
-"30
+[; ;UART.c: 39: TXREG = Byte;
+"39
 [e = _TXREG _Byte ]
-[; ;UART.c: 31: }
-"31
+[; ;UART.c: 40: RA0=0;
+"40
+[e = _RA0 -> -> 0 `i `b ]
+[; ;UART.c: 41: }
+"41
 [e :UE 52 ]
 }
-"34
+"44
 [v _ReceiveByteSerially `(uc  1 ef ]
 {
-[; ;UART.c: 33: unsigned char ReceiveByteSerially(void)
-[; ;UART.c: 34: {
+[; ;UART.c: 43: unsigned char ReceiveByteSerially(void)
+[; ;UART.c: 44: {
 [e :U _ReceiveByteSerially ]
 [f ]
-[; ;UART.c: 37: if(OERR)
-"37
+[; ;UART.c: 46: RB4=1;
+"46
+[e = _RB4 -> -> 1 `i `b ]
+[; ;UART.c: 47: if(OERR)
+"47
 [e $ ! _OERR 57  ]
-[; ;UART.c: 38: {
-"38
+[; ;UART.c: 48: {
+"48
 {
-[; ;UART.c: 39: CREN = 0;
-"39
+[; ;UART.c: 49: CREN = 0;
+"49
 [e = _CREN -> -> 0 `i `b ]
-[; ;UART.c: 40: CREN = 1;
-"40
+[; ;UART.c: 50: CREN = 1;
+"50
 [e = _CREN -> -> 1 `i `b ]
-"41
+"51
 }
 [e :U 57 ]
-[; ;UART.c: 41: }
-[; ;UART.c: 43: while(!RCIF);
-"43
+[; ;UART.c: 51: }
+[; ;UART.c: 53: while(!RCIF);
+"53
 [e $U 58  ]
 [e :U 59 ]
 [e :U 58 ]
 [e $ ! _RCIF 59  ]
 [e :U 60 ]
-[; ;UART.c: 46: return RCREG;
-"46
+[; ;UART.c: 55: RB4=0;
+"55
+[e = _RB4 -> -> 0 `i `b ]
+[; ;UART.c: 56: return RCREG;
+"56
 [e ) _RCREG ]
 [e $UE 56  ]
-[; ;UART.c: 47: }
-"47
+[; ;UART.c: 57: }
+"57
 [e :UE 56 ]
 }
-"50
+"60
 [v _SendStringSerially `(v  1 ef1`*Cuc ]
 {
-[; ;UART.c: 49: void SendStringSerially(const unsigned char* st)
-[; ;UART.c: 50: {
+[; ;UART.c: 59: void SendStringSerially(const unsigned char* st)
+[; ;UART.c: 60: {
 [e :U _SendStringSerially ]
 [v _st `*Cuc  1 r1 ]
 [f ]
-[; ;UART.c: 51: while(*st)
-"51
+[; ;UART.c: 61: while(*st)
+"61
 [e $U 62  ]
 [e :U 63 ]
-[; ;UART.c: 52: SendByteSerially(*st++);
-"52
+[; ;UART.c: 62: SendByteSerially(*st++);
+"62
 [e ( _SendByteSerially (1 *U ++ _st * -> -> 1 `i `x -> -> # *U _st `i `x ]
 [e :U 62 ]
-"51
+"61
 [e $ != -> *U _st `i -> -> -> 0 `i `Cuc `i 63  ]
 [e :U 64 ]
-[; ;UART.c: 53: }
-"53
+[; ;UART.c: 63: }
+"63
 [e :UE 61 ]
 }
