@@ -1,0 +1,188 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\openxlcd.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File001]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\usb_device.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File002]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\band.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File003]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\db.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File004]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\debug.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File005]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\eeprom.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File006]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\frequency.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File007]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\main.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File008]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\scale.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File009]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\timers.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File010]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\usb_descriptors.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File011]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\usb_function_hid.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File012]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\FrequencyMeter_2550_USB.cof
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File013]
+Location=C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\FrequencyMeter_2550_USB\FrequencyMeter_2550_USB.hex
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\v3.47\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|..\Microchip Solutions v2011-07-14\Microchip\Include||$(LIBDIR)|C:\MCC18\v3.47\lib||$(LKRDIR)||
+SOLK=<src>|C:\MCC18\v3.47\src\pmc_common\XLCD\openxlcd.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\2550_QBW_magic_LED\usb_device.c|band.c|db.c|debug.c|eeprom.c|frequency.c|main.c|scale.c|timers.c|usb_descriptors.c|C:\Users\davidq\Documents\GitHub\arcade\Firmware\2550\Microchip Solutions v2011-07-14\Microchip\USB\HID Device Driver\usb_function_hid.c||<obj>||<lib>||<lkr>|rm18f2550 - HID Bootload.lkr||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[TOOL_LOC_STAMPS]
+tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\MCC18\v3.47\bin\mplink.exe
+tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\MCC18\v3.47\bin\mcc18.exe
