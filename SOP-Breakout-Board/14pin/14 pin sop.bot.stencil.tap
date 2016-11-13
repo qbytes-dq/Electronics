@@ -1,0 +1,34 @@
+N00000 (.../pcb-gcode-3.6.2.4/pcb-gcode.ulp)
+N00010 (Copyright 2005 - 2012 by John Johnson)
+N00020 (See readme.txt for licensing terms.)
+N00030 (This file generated from the board:)
+N00040 (.../Q-Berry2/BreakOut/14 pin sop.brd)
+N00050 (Current profile is .../pcb-gcode-3.6.2.4/profiles/emc.pp  )
+N00060 (This file generated 3/30/2015 6:36:07 PM)
+N00070 (Settings from pcb-machine.h)
+N00080 (spindle on time = 3.0000)
+N00090 (tool change at 0.0000 0.0000 -10.0000 )
+N00100 (feed rate xy = F0.00  )
+N00110 (feed rate z  = F0.00  )
+N00120 (Z Axis Settings)
+N00130 (  High     Up        Down     Drill)
+N00140 (-10.0000 	-60.0000 	-65.0000 	-67.0000 )
+N00150 (Settings from pcb-defaults.h)
+N00160 (isolate min = 0.0254)
+N00170 (isolate max = 0.5080)
+N00180 (isolate step = 0.1270)
+N00190 (Generated top outlines, top drill, top stencil, bottom outlines, bottom drill, bottom stencil)
+N00200 (Unit of measure: mm)
+N00210 (Metric Mode)
+N00220 G21
+N00230 (Absolute Coordinates)
+N00240 G90
+N00250 S24000
+N00260 G00 Z-10.0000 
+N00270 G00 X0.0000 Y0.0000 
+N00280 M03
+N00290 G04 P3.000000
+N00300 G00 Z-60.0000 
+N00310 G00 Z-10.0000 
+N00320 M05
+N00330 M02

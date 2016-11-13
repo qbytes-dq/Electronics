@@ -1,0 +1,17 @@
+<openscam>
+  <!-- Note, all values are in mm regardless of 'units' option. -->
+  <!-- NC Files -->
+  <nc-files>
+    ..\capacitor.ngc
+  </nc-files>
+
+  <!-- Renderer -->
+  <resolution v='0.248579'/>
+
+  <!-- Workpiece -->
+  <automatic-workpiece v='false'/>
+  <workpiece-max v='(120,160,0.2)'/>
+  <workpiece-min v='(0,0,0)'/>
+
+  <tool_table/>
+</openscam>

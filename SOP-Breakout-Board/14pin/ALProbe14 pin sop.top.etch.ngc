@@ -1,0 +1,104 @@
+(AutoLeveller, Version: 0.8.6, http://autoleveller.co.uk)
+(Copyright 2013-2014 James Hawthorne PhD)
+(Original GCode file: 14 pin sop.top.etch.tap)
+(Creation date: 19/04/2015 time: 12:29)
+
+(This program and any of its output is licensed under GPLv2 and as such...)
+(AutoLeveller comes with ABSOLUTELY NO WARRANTY; for details, see sections 11 and 12 of the GPLv2)
+
+(prerequisites)
+(1. need a working probe)
+(2. Zero your Z axis on or just above the surface)
+(Note: The first probe will touch off Z to 0.000 when it first touches to copper, )
+(all other probe values are relative to this first point)
+
+G21 (millimeters)
+G90 (absolute distance mode, not incremental)
+
+(begin initial probe and set Z to 0)
+G0 Z20 (Move clear of the board first)
+G0 X0 Y0 (Move to bottom left corner)
+
+(QQ)
+G0 Z-55
+G38.2 Z-60 F20
+(QQ)
+
+G10 L20 P0 Z0
+G0 Z2
+G38.2 Z-1 F50
+G10 L20 P0 Z0
+(PROBEOPEN RawProbeLog.txt)
+G0 Z2
+G0 X0 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X11.635283 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X23.270567 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X34.90585 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X46.541133 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X58.176417 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X69.8117 Y0
+G38.2 Z-1 F100
+G0 Z2
+G0 X69.8117 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X58.176417 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X46.541133 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X34.90585 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X23.270567 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X11.635283 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X0 Y14.93335
+G38.2 Z-1 F100
+G0 Z2
+G0 X0 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X11.635283 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X23.270567 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X34.90585 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X46.541133 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X58.176417 Y29.8667
+G38.2 Z-1 F100
+G0 Z2
+G0 X69.8117 Y29.8667
+G38.2 Z-1 F100
+
+(QQ)
+G0 Z3.31 (go to Z finish height)
+G0 X0 Y0 Z3.32 (go to initial position)
+(QQ)
+
+(PROBECLOSE)
+
+M2---
+%

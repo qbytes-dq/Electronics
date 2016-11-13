@@ -15,3 +15,8 @@ C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommuni
 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb
 C:\Users\davidq\Documents\GitHub\electronics\FrequencyMeter\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications_3_0_0_0.csprojResolveAssemblyReference.cache
+C:\Users\davidq\Documents\GitHub\Electronics\FrequencyMeter - 16F628\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\Electronics\FrequencyMeter - 16F628\usbGenericHidCommunications\bin\Debug\usbGenericHidCommunications.pdb
+C:\Users\davidq\Documents\GitHub\Electronics\FrequencyMeter - 16F628\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications_3_0_0_0.csprojResolveAssemblyReference.cache
+C:\Users\davidq\Documents\GitHub\Electronics\FrequencyMeter - 16F628\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.dll
+C:\Users\davidq\Documents\GitHub\Electronics\FrequencyMeter - 16F628\usbGenericHidCommunications\obj\Debug\usbGenericHidCommunications.pdb

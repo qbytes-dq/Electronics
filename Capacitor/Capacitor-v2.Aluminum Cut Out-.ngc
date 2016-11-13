@@ -1,0 +1,17 @@
+<openscam>
+  <!-- Note, all values are in mm regardless of 'units' option. -->
+  <!-- NC Files -->
+  <nc-files>
+    Capacitor-v2.Aluminum%20Cut%20Out.ngc
+  </nc-files>
+
+  <!-- Renderer -->
+  <resolution v='0.563802'/>
+
+  <!-- Workpiece -->
+  <automatic-workpiece v='false'/>
+  <workpiece-max v='(126.327,165.227,2.1)'/>
+  <workpiece-min v='(-0.327,-3.227,0)'/>
+
+  <tool_table/>
+</openscam>
