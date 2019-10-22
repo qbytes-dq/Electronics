@@ -1,0 +1,2525 @@
+	1	IDENT	16
+		Object code version	= 3.10
+		Machine			= 16F628A
+		32 bit order		= 0 1 2 3
+		16 bit order		= 0 1
+	2	PSECT	10
+		text671
+	3	XPSECT	26
+		text671 space = 00 delta = 02 class=CODE
+	4	PSECT	11
+		intentry	GLOBAL
+	5	XPSECT	27
+		intentry space = 00 delta = 02 class=CODE
+	6	PSECTBOUND	27
+		intentry	start=0000	end=0018 delta = 02 space = 0 class=CODE	GLOBAL
+	7	PSECT	10
+		text670
+	8	XPSECT	26
+		text670 space = 00 delta = 02 class=CODE
+	9	PSECTBOUND	26
+		text670	start=0000	end=0064 delta = 02 space = 0 class=CODE
+	10	PSECT	10
+		text669
+	11	XPSECT	26
+		text669 space = 00 delta = 02 class=CODE
+	12	PSECTBOUND	26
+		text669	start=0000	end=001A delta = 02 space = 0 class=CODE
+	13	PSECT	10
+		text668
+	14	XPSECT	26
+		text668 space = 00 delta = 02 class=CODE
+	15	PSECTBOUND	26
+		text668	start=0000	end=0094 delta = 02 space = 0 class=CODE
+	16	PSECT	10
+		text667
+	17	XPSECT	26
+		text667 space = 00 delta = 02 class=CODE
+	18	PSECTBOUND	26
+		text667	start=0000	end=0016 delta = 02 space = 0 class=CODE
+	19	PSECT	10
+		text666
+	20	XPSECT	26
+		text666 space = 00 delta = 02 class=CODE
+	21	PSECTBOUND	26
+		text666	start=0000	end=0098 delta = 02 space = 0 class=CODE
+	22	PSECT	10
+		text665
+	23	XPSECT	26
+		text665 space = 00 delta = 02 class=CODE
+	24	PSECTBOUND	26
+		text665	start=0000	end=00BC delta = 02 space = 0 class=CODE
+	25	PSECT	10
+		text664
+	26	XPSECT	26
+		text664 space = 00 delta = 02 class=CODE
+	27	PSECTBOUND	26
+		text664	start=0000	end=00E0 delta = 02 space = 0 class=CODE
+	28	PSECT	10
+		text663
+	29	XPSECT	26
+		text663 space = 00 delta = 02 class=CODE
+	30	PSECTBOUND	26
+		text663	start=0000	end=00D0 delta = 02 space = 0 class=CODE
+	31	PSECT	10
+		text662
+	32	XPSECT	26
+		text662 space = 00 delta = 02 class=CODE
+	33	PSECTBOUND	26
+		text662	start=0000	end=007C delta = 02 space = 0 class=CODE
+	34	PSECT	10
+		text661
+	35	XPSECT	26
+		text661 space = 00 delta = 02 class=CODE
+	36	PSECTBOUND	26
+		text661	start=0000	end=0122 delta = 02 space = 0 class=CODE
+	37	PSECT	10
+		text660
+	38	XPSECT	26
+		text660 space = 00 delta = 02 class=CODE
+	39	PSECTBOUND	26
+		text660	start=0000	end=0034 delta = 02 space = 0 class=CODE
+	40	PSECT	10
+		text659
+	41	XPSECT	26
+		text659 space = 00 delta = 02 class=CODE
+	42	PSECTBOUND	26
+		text659	start=0000	end=0010 delta = 02 space = 0 class=CODE
+	43	PSECT	10
+		text658
+	44	XPSECT	26
+		text658 space = 00 delta = 02 class=CODE
+	45	PSECTBOUND	26
+		text658	start=0000	end=003E delta = 02 space = 0 class=CODE
+	46	PSECT	10
+		text657
+	47	XPSECT	26
+		text657 space = 00 delta = 02 class=CODE
+	48	PSECTBOUND	26
+		text657	start=0000	end=0022 delta = 02 space = 0 class=CODE
+	49	PSECT	10
+		text656
+	50	XPSECT	26
+		text656 space = 00 delta = 02 class=CODE
+	51	PSECTBOUND	26
+		text656	start=0000	end=0010 delta = 02 space = 0 class=CODE
+	52	PSECT	10
+		text655
+	53	XPSECT	26
+		text655 space = 00 delta = 02 class=CODE
+	54	PSECTBOUND	26
+		text655	start=0000	end=0072 delta = 02 space = 0 class=CODE
+	55	PSECT	10
+		text654
+	56	XPSECT	26
+		text654 space = 00 delta = 02 class=CODE
+	57	PSECTBOUND	26
+		text654	start=0000	end=022C delta = 02 space = 0 class=CODE
+	58	PSECT	11
+		maintext	GLOBAL
+	59	XPSECT	27
+		maintext space = 00 delta = 02 class=CODE
+	60	PSECTBOUND	27
+		maintext	start=0000	end=0528 delta = 02 space = 0 class=CODE	GLOBAL
+	61	PSECT	14
+		cstackBANK0	GLOBAL
+	62	XPSECT	31
+		cstackBANK0 space = 01 delta = 01 class=BANK0
+	63	PSECTBOUND	31
+		cstackBANK0	start=0000	end=002E delta = 01 space = 1 class=BANK0	GLOBAL
+	64	PSECT	15
+		cstackCOMMON	GLOBAL
+	65	XPSECT	33
+		cstackCOMMON space = 01 delta = 01 class=COMMON
+	66	PSECTBOUND	33
+		cstackCOMMON	start=0000	end=0007 delta = 01 space = 1 class=COMMON	GLOBAL
+	67	PSECT	10
+		clrtext	GLOBAL
+	68	XPSECT	26
+		clrtext space = 00 delta = 02 class=CODE
+	69	PSECTBOUND	26
+		clrtext	start=0000	end=0010 delta = 02 space = 0 class=CODE	GLOBAL
+	70	PSECT	12
+		dataBANK0	GLOBAL
+	71	XPSECT	29
+		dataBANK0 space = 01 delta = 01 class=BANK0
+	72	PSECTBOUND	29
+		dataBANK0	start=0000	end=0002 delta = 01 space = 1 class=BANK0	GLOBAL
+	73	PSECT	11
+		bssBANK0	GLOBAL
+	74	XPSECT	28
+		bssBANK0 space = 01 delta = 01 class=BANK0
+	75	PSECTBOUND	28
+		bssBANK0	start=0000	end=0018 delta = 01 space = 1 class=BANK0	GLOBAL
+	76	PSECT	12
+		bssCOMMON	GLOBAL
+	77	XPSECT	30
+		bssCOMMON space = 01 delta = 01 class=COMMON
+	78	PSECTBOUND	30
+		bssCOMMON	start=0000	end=0003 delta = 01 space = 1 class=COMMON	GLOBAL
+	79	PSECT	8
+		cinit	GLOBAL
+	80	XPSECT	24
+		cinit space = 00 delta = 02 class=CODE
+	81	PSECTBOUND	24
+		cinit	start=0000	end=001C delta = 02 space = 0 class=CODE	GLOBAL
+	82	PSECT	10
+		strings	GLOBAL
+	83	XPSECT	28
+		strings space = 00 delta = 02 class=STRING
+	84	PSECTBOUND	28
+		strings	start=0000	end=0166 delta = 02 space = 0 class=STRING	GLOBAL
+	85	PSECT	13
+		idataBANK0	GLOBAL
+	86	XPSECT	29
+		idataBANK0 space = 00 delta = 02 class=CODE
+	87	PSECTBOUND	29
+		idataBANK0	start=0000	end=0004 delta = 02 space = 0 class=CODE	GLOBAL
+	88	PSECT	9
+		config	GLOBAL
+	89	XPSECT	27
+		config space = 00 delta = 02 class=CONFIG
+	90	PSECTBOUND	27
+		config	start=0000	end=0002 delta = 02 space = 0 class=CONFIG	GLOBAL
+	91	PSECT	3
+		(abs)	GLOBAL	OVRLD	ABS
+	92	XPSECT	15
+		(abs) space = 00 delta = 01
+	93	SYM	492
+		_RD	(abs)	4E0	GLOBAL	
+		_HZ	strings	10	GLOBAL	
+		_WR	(abs)	4E1	GLOBAL	
+		?_lcd_putdigit	cstackCOMMON	0	GLOBAL	
+		_GIE	(abs)	5F	GLOBAL	
+		_RA0	(abs)	28	GLOBAL	
+		_RA1	(abs)	29	GLOBAL	
+		_RA3	(abs)	2B	GLOBAL	
+		_RA6	(abs)	2E	GLOBAL	
+		_RA7	(abs)	2F	GLOBAL	
+		_ISR	text670	0	GLOBAL	
+		_sig	bssBANK0	16	GLOBAL	
+		___awmod@sign	cstackCOMMON	6	GLOBAL	
+		lcd_goto@pos	cstackCOMMON	6	GLOBAL	
+		?_ISR	cstackCOMMON	0	GLOBAL	
+		_T0IE	(abs)	5D	GLOBAL	
+		_PEIE	(abs)	5E	GLOBAL	
+		_TMR0	(abs)	1	GLOBAL	
+		_WREN	(abs)	4E2	GLOBAL	
+		?_lcd_putnumber	cstackBANK0	D	GLOBAL	
+		_ms10	bssBANK0	12	GLOBAL	
+		_band	bssBANK0	14	GLOBAL	
+		_disp	bssCOMMON	2	GLOBAL	
+		_main	maintext	0	GLOBAL	
+		_init	text669	0	GLOBAL	
+		btemp	(abs)	7E	GLOBAL	
+		start		0	GLOBAL	EXTERN
+	94	SYM	503
+		??_ISR	cstackCOMMON	0	GLOBAL	
+		??_lcd_putdigit	cstackCOMMON	6	GLOBAL	
+		?_main	cstackCOMMON	0	GLOBAL	
+		?_init	cstackCOMMON	0	GLOBAL	
+		_EEADR	(abs)	9B	GLOBAL	
+		__end_of___awmod	text663	68	GLOBAL	
+		_CARRY	(abs)	18	GLOBAL	
+		_CMCON	(abs)	1F	GLOBAL	
+		__end_of___lldiv	text664	70	GLOBAL	
+		_T1CON	(abs)	10	GLOBAL	
+		__end_of___llmod	text665	5E	GLOBAL	
+		_TMR1H	(abs)	F	GLOBAL	
+		_TMR1L	(abs)	E	GLOBAL	
+		_PORTB	(abs)	6	GLOBAL	
+		_TRISA	(abs)	85	GLOBAL	
+		_TRISB	(abs)	86	GLOBAL	
+		___lmul@multiplicand	cstackBANK0	4	GLOBAL	
+		_bands	strings	5F	GLOBAL	
+		_divBy	bssBANK0	0	GLOBAL	
+		_digit	bssBANK0	15	GLOBAL	
+		_ultoa	text661	0	GLOBAL	
+		wtemp0	(abs)	7E	GLOBAL	
+		_preScaleSelect	dataBANK0	1	GLOBAL	
+	95	SYM	482
+		__end_of_main	maintext	294	GLOBAL	
+		__end_of_init	text669	D	GLOBAL	
+		??_main	cstackBANK0	19	GLOBAL	
+		??_init	cstackCOMMON	4	GLOBAL	
+		___llmod@dividend	cstackBANK0	4	GLOBAL	
+		_EEDATA	(abs)	9A	GLOBAL	
+		_EECON1	(abs)	9C	GLOBAL	
+		_EECON2	(abs)	9D	GLOBAL	
+		??_lcd_putnumber	cstackBANK0	11	GLOBAL	
+		?_ultoa	cstackBANK0	D	GLOBAL	
+		_INTCON	(abs)	B	GLOBAL	
+		_TMR0IF	(abs)	5A	GLOBAL	
+		_TMR1IE	(abs)	460	GLOBAL	
+		_TMR1IF	(abs)	60	GLOBAL	
+		__end_of_lcd_init	text655	39	GLOBAL	
+		__end_of_lcd_goto	text659	8	GLOBAL	
+		__end_of_lcd_puts	text658	1F	GLOBAL	
+		___lmul	text666	0	GLOBAL	
+		___tmul	text662	0	GLOBAL	
+		??___awmod	cstackCOMMON	4	GLOBAL	
+	96	SYM	490
+		??___lldiv	cstackCOMMON	4	GLOBAL	
+		??___llmod	cstackCOMMON	4	GLOBAL	
+		___awmod@divisor	cstackBANK0	0	GLOBAL	
+		_qbytes	strings	6F	GLOBAL	
+		_number	bssBANK0	8	GLOBAL	
+		___awmod@counter	cstackCOMMON	5	GLOBAL	
+		lcd_putdigit@c	cstackCOMMON	6	GLOBAL	
+		saved_w	(abs)	7E	GLOBAL	
+		ultoa@c	cstackBANK0	17	GLOBAL	
+		ultoa@v	cstackBANK0	13	GLOBAL	
+		__end_of_lcd_putdigit	text656	8	GLOBAL	
+		__pcstackCOMMON	cstackCOMMON	0	GLOBAL	
+		__pidataBANK0	idataBANK0	0	GLOBAL	
+		__end_of_ultoa	text661	91	GLOBAL	
+		__size_of_lcd_clear	(abs)	0	GLOBAL	
+		__size_of_lcd_write	(abs)	0	GLOBAL	
+		??_ultoa	cstackCOMMON	6	GLOBAL	
+	97	SYM	493
+		__pbssBANK0	bssBANK0	0	GLOBAL	
+		__pmaintext	maintext	0	GLOBAL	
+		?___lmul	cstackBANK0	0	GLOBAL	
+		?___tmul	cstackBANK0	0	GLOBAL	
+		__pintentry	intentry	0	GLOBAL	
+		___lmul@product	cstackBANK0	8	GLOBAL	
+		?_lcd_init	cstackCOMMON	0	GLOBAL	
+		?_lcd_goto	cstackCOMMON	0	GLOBAL	
+		?_lcd_puts	cstackBANK0	0	GLOBAL	
+		__end_of_lcd_clear	text657	11	GLOBAL	
+		_initTimer0	text668	0	GLOBAL	
+		_initTimer1	text667	0	GLOBAL	
+		__size_of___lmul	(abs)	0	GLOBAL	
+		___awmod	text663	0	GLOBAL	
+		__end_of_lcd_write	text660	1A	GLOBAL	
+		__size_of___tmul	(abs)	0	GLOBAL	
+		___lldiv	text664	0	GLOBAL	
+		___llmod	text665	0	GLOBAL	
+	98	SYM	484
+		_gateCNT	bssCOMMON	0	GLOBAL	
+		_prescaleInternalBits	strings	32	GLOBAL	
+		__size_of_ISR	(abs)	0	GLOBAL	
+		___awmod@dividend	cstackBANK0	2	GLOBAL	
+		_noinput	strings	3D	GLOBAL	
+		_version	strings	4E	GLOBAL	
+		__size_of_lcd_putdigit	(abs)	0	GLOBAL	
+		??_lcd_init	cstackBANK0	2	GLOBAL	
+		??_lcd_goto	cstackCOMMON	6	GLOBAL	
+		??_lcd_puts	cstackCOMMON	6	GLOBAL	
+		end_of_initialization	cinit	C	GLOBAL	
+		_prescaleExternalBits	strings	1C	GLOBAL	
+		___lldiv@divisor	cstackBANK0	0	GLOBAL	
+		___lldiv@counter	cstackBANK0	C	GLOBAL	
+		_lcd_putdigit	text656	0	GLOBAL	
+		main@pBands	cstackBANK0	2D	GLOBAL	
+	99	SYM	501
+		__end_of_lcd_putnumber	text654	116	GLOBAL	
+		main@buffer	cstackBANK0	23	GLOBAL	
+		lcd_write@c	cstackCOMMON	5	GLOBAL	
+		?_initTimer0	cstackCOMMON	0	GLOBAL	
+		?_initTimer1	cstackCOMMON	0	GLOBAL	
+		__end_of___lmul	text666	4C	GLOBAL	
+		__end_of___tmul	text662	3E	GLOBAL	
+		_preScaleValue	bssBANK0	F	GLOBAL	
+		start_initialization	cinit	0	GLOBAL	
+		__end_of_ISR	text670	32	GLOBAL	
+		_calcScaleValue	bssBANK0	C	GLOBAL	
+		___llmod@divisor	cstackBANK0	0	GLOBAL	
+		___llmod@counter	cstackCOMMON	5	GLOBAL	
+		??___lmul	cstackCOMMON	4	GLOBAL	
+		??___tmul	cstackCOMMON	4	GLOBAL	
+		__pdataBANK0	dataBANK0	0	GLOBAL	
+	100	SYM	499
+		___tmul@product	cstackCOMMON	4	GLOBAL	
+		__pbssCOMMON	bssCOMMON	0	GLOBAL	
+		__pcstackBANK0	cstackBANK0	0	GLOBAL	
+		lcd_putnumber@number	cstackBANK0	D	GLOBAL	
+		_fOverflow	bssBANK0	4	GLOBAL	
+		__size_of_initTimer0	(abs)	0	GLOBAL	
+		__size_of_initTimer1	(abs)	0	GLOBAL	
+		__size_of_lcd_init	(abs)	0	GLOBAL	
+		__size_of_lcd_goto	(abs)	0	GLOBAL	
+		__size_of_lcd_puts	(abs)	0	GLOBAL	
+		?___awmod	cstackBANK0	0	GLOBAL	
+		__ptext660	text660	0	GLOBAL	
+		__ptext661	text661	0	GLOBAL	
+		__ptext670	text670	0	GLOBAL	
+		__ptext662	text662	0	GLOBAL	
+		__ptext654	text654	0	GLOBAL	
+		__ptext671	text671	0	GLOBAL	
+		__ptext663	text663	0	GLOBAL	
+	101	SYM	482
+		__ptext655	text655	0	GLOBAL	
+		__ptext664	text664	0	GLOBAL	
+		__ptext656	text656	0	GLOBAL	
+		__ptext665	text665	0	GLOBAL	
+		__ptext657	text657	0	GLOBAL	
+		__ptext666	text666	0	GLOBAL	
+		__ptext658	text658	0	GLOBAL	
+		__ptext667	text667	0	GLOBAL	
+		__ptext659	text659	0	GLOBAL	
+		__ptext668	text668	0	GLOBAL	
+		__ptext669	text669	0	GLOBAL	
+		?___lldiv	cstackBANK0	0	GLOBAL	
+		?___llmod	cstackBANK0	0	GLOBAL	
+		_findScale	dataBANK0	0	GLOBAL	
+		_lcd_clear	text657	0	GLOBAL	
+		__pstrings	strings	0	GLOBAL	
+		_displayHZ	bssBANK0	17	GLOBAL	
+		_lcd_write	text660	0	GLOBAL	
+		__size_of_ultoa	(abs)	0	GLOBAL	
+	102	SYM	501
+		interrupt_function	intentry	0	GLOBAL	
+		_PCONbits	(abs)	8E	GLOBAL	
+		?_lcd_clear	cstackCOMMON	0	GLOBAL	
+		?_lcd_write	cstackCOMMON	0	GLOBAL	
+		lcd_puts@s	cstackBANK0	0	GLOBAL	
+		___tmul@multiplicand	cstackBANK0	3	GLOBAL	
+		___lmul@multiplier	cstackBANK0	0	GLOBAL	
+		??_initTimer0	cstackBANK0	0	GLOBAL	
+		??_initTimer1	cstackCOMMON	4	GLOBAL	
+		__size_of___awmod	(abs)	0	GLOBAL	
+		__size_of___lldiv	(abs)	0	GLOBAL	
+		__size_of___llmod	(abs)	0	GLOBAL	
+		_prescaleInternalShift	strings	7E	GLOBAL	
+		_lcd_init	text655	0	GLOBAL	
+		_lcd_goto	text659	0	GLOBAL	
+		_lcd_puts	text658	0	GLOBAL	
+		__end_of_initTimer0	text668	4A	GLOBAL	
+	103	SYM	500
+		__end_of_initTimer1	text667	B	GLOBAL	
+		__size_of_main	(abs)	0	GLOBAL	
+		__size_of_init	(abs)	0	GLOBAL	
+		clear_ram	clrtext	0	GLOBAL	
+		??_lcd_clear	cstackBANK0	0	GLOBAL	
+		??_lcd_write	cstackCOMMON	4	GLOBAL	
+		__size_of_lcd_putnumber	(abs)	0	GLOBAL	
+		_prescaleExternalShift	strings	27	GLOBAL	
+		ultoa@base	cstackBANK0	11	GLOBAL	
+		lcd_putnumber@loop	cstackBANK0	13	GLOBAL	
+		intlevel1		0	GLOBAL	EXTERN
+		___lldiv@dividend	cstackBANK0	4	GLOBAL	
+		___tmul@multiplier	cstackBANK0	0	GLOBAL	
+		ultoa@buf	cstackBANK0	18	GLOBAL	
+		ultoa@val	cstackBANK0	D	GLOBAL	
+		_OPTION_REG	(abs)	81	GLOBAL	
+		___lldiv@quotient	cstackBANK0	8	GLOBAL	
+	104	SYM	29
+		_lcd_putnumber	text654	0	GLOBAL	
+	105	SIGNAT	7
+		_ISR	88
+	106	SIGNAT	8
+		_main	88
+	107	SIGNAT	8
+		_init	88
+	108	SIGNAT	9
+		_ultoa	12409
+	109	SIGNAT	10
+		___lmul	8316
+	110	SIGNAT	10
+		___tmul	8315
+	111	SIGNAT	14
+		_initTimer0	88
+	112	SIGNAT	14
+		_initTimer1	88
+	113	SIGNAT	11
+		___awmod	8314
+	114	SIGNAT	11
+		___lldiv	8316
+	115	SIGNAT	11
+		___llmod	8316
+	116	SIGNAT	16
+		_lcd_putdigit	4216
+	117	SIGNAT	13
+		_lcd_clear	88
+	118	SIGNAT	13
+		_lcd_write	4216
+	119	SIGNAT	12
+		_lcd_init	88
+	120	SIGNAT	12
+		_lcd_goto	4216
+	121	SIGNAT	12
+		_lcd_puts	4216
+	122	SIGNAT	17
+		_lcd_putnumber	4216
+	123	FNINFO	497
+		FNROOT	_main
+		FNCALL	_main -> _init
+		FNCALL	_main -> _lcd_init
+		FNCALL	_main -> _initTimer0
+		FNCALL	_main -> _initTimer1
+		FNCALL	_main -> _lcd_goto
+		FNCALL	_main -> _lcd_puts
+		FNCALL	_main -> _lcd_clear
+		FNCALL	_main -> ___tmul
+		FNCALL	_main -> ___lmul
+		FNCALL	_main -> _ultoa
+		FNCALL	_main -> _lcd_putnumber
+		FNCALL	_ultoa -> ___lldiv
+		FNCALL	_ultoa -> ___llmod
+		FNCALL	_lcd_putdigit -> _lcd_write
+		FNCALL	_lcd_clear -> _lcd_write
+		FNCALL	_lcd_init -> _lcd_clear
+		FNCALL	_lcd_init -> _lcd_write
+		FNCALL	_lcd_goto -> _lcd_write
+		FNCALL	_lcd_puts -> _lcd_write
+		FNROOT	intlevel1
+		FNCALL	intlevel1 -> _ISR
+		FNCALL	_lcd_putnumber -> _lcd_puts
+		FNCALL	_lcd_putnumber -> ___lldiv
+		FNCALL	_lcd_putnumber -> ___llmod
+		FNCALL	_lcd_putnumber -> _lcd_putdigit
+	124	DABS	9
+		DABS	1,0x7E,2
+	125	TEXT	13
+		config	0x0	0x2
+	     0: 30 FF                                          	0.
+	126	TEXT	19
+		idataBANK0	0x0	0x4
+	     0: 01 34 07 34                                    	.4.4
+	127	TEXT	370
+		strings	0x0	0x166
+	     0: FF 1B 0A 28 83 13 7F 18 83 17 00 08 84 0A 03 19	...(............
+	    10: FF 0A 08 00 00 30 8A 00 04 08 84 0A 82 07 00 34	.....0.........4
+	    20: 20 34 20 34 20 34 20 34 4B 34 4B 34 4B 34 4D 34	 4 4 4 4K4K4K4M4
+	    30: 4D 34 4D 34 47 34 00 34 00 34 00 34 00 34 00 34	M4M4G4.4.4.4.4.4
+	    40: 00 34 00 34 00 34 00 34 01 34 02 34 03 34 00 34	.4.4.4.4.4.4.4.4
+	    50: 00 34 00 34 00 34 00 34 00 34 00 34 00 34 06 34	.4.4.4.4.4.4.4.4
+	    60: 07 34 08 34 00 34 01 34 02 34 03 34 04 34 05 34	.4.4.4.4.4.4.4.4
+	    70: 06 34 07 34 02 34 02 34 02 34 2D 34 2D 34 2D 34	.4.4.4.4.4-4-4-4
+	    80: 3E 34 4E 34 6F 34 20 34 69 34 6E 34 70 34 75 34	>4N4o4 4i4n4p4u4
+	    90: 74 34 3C 34 2D 34 2D 34 2D 34 00 34 48 34 7A 34	t4<4-4-4-4.4H4z4
+	    A0: 20 34 43 34 6F 34 75 34 6E 34 74 34 65 34 72 34	 4C4o4u4n4t4e4r4
+	    B0: 20 34 76 34 31 34 2E 34 31 34 43 34 00 34 93 34	 4v414.414C4.4.4
+	    C0: 96 34 90 34 99 34 84 34 8D 34 8A 34 87 34 00 34	.4.4.4.4.4.4.4.4
+	    D0: 00 34 00 34 00 34 00 34 00 34 00 34 00 34 51 34	.4.4.4.4.4.4.4Q4
+	    E0: 2D 34 42 34 79 34 74 34 65 34 73 34 20 34 57 34	-4B4y4t4e4s4 4W4
+	    F0: 6F 34 72 34 6C 34 64 34 2E 34 00 34 01 34 02 34	o4r4l4d4.4.4.4.4
+	   100: 03 34 04 34 05 34 06 34 07 34 08 34 03 34 03 34	.4.4.4.4.4.4.4.4
+	   110: 03 34 20 34 31 34 2F 34 00 34 20 34 20 34 00 34	.4 414/4.4 4 4.4
+	   120: 48 34 7A 34 00 34 20 34 48 34 00 34 53 34 48 34	H4z4.4 4H4.4S4H4
+	   130: 00 34 55 34 48 34 00 34 56 34 48 34 00 34 20 34	.4U4H4.4V4H4.4 4
+	   140: 4C 34 00 34 45 34 4C 34 00 34 56 34 4C 34 00 34	L4.4E4L4.4V4L4.4
+	   150: 20 34 4D 34 00 34 2C 34 00 34 2E 34 00 34 3F 34	 4M4.4,4.4.4.4?4
+	   160: 00 34 46 34 00 34                              	.4F4.4
+	128	RELOC	31
+		0x2	RELBITS RPSECT	strings	11
+		0x14	COMPLEX		1
+		high (0xA + strings)
+	129	TEXT	38
+		cinit	0x0	0x1C
+	     0: 80 01 80 01 80 01 83 13 00 30 84 00 00 30 00 20	.........0...0. 
+	    10: 00 20 80 00 00 20 80 00 83 01 00 28            	. ... .....(
+	130	RELOC	240
+		0x0	RELBITS COMPLEX		7
+		bssCOMMON & 0x7F
+		0x2	RELBITS COMPLEX		7
+		(0x1 + bssCOMMON) & 0x7F
+		0x4	RELBITS COMPLEX		7
+		(0x2 + bssCOMMON) & 0x7F
+		0x8	COMPLEX		1
+		low bssBANK0
+		0xC	COMPLEX		1
+		low (0x18 + bssBANK0)
+		0xE	RELBITS COMPLEX		11
+		clrtext & 0x7FF
+		0x10	RELBITS COMPLEX		11
+		idataBANK0 & 0x7FF
+		0x12	RELBITS COMPLEX		7
+		dataBANK0 & 0x7F
+		0x14	RELBITS COMPLEX		11
+		(0x1 + idataBANK0) & 0x7FF
+		0x16	RELBITS COMPLEX		7
+		(0x1 + dataBANK0) & 0x7F
+		0x1A	RELBITS RPSECT	maintext	11
+	131	TEXT	28
+		clrtext	0x0	0x10
+	     0: 64 00 80 01 84 0A 04 06 03 19 00 34 04 06 01 28	d..........4...(
+	132	RELOC	11
+		0xE	RELBITS RPSECT	clrtext	11
+	133	SYM	493
+		C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c		0	FILNAM
+		71	config	0	LINENO
+		81	idataBANK0	0	LINENO
+		44	idataBANK0	1	LINENO
+		C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c		0	FILNAM
+		49	strings	10	LINENO
+		C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c		0	FILNAM
+		58	strings	1C	LINENO
+		59	strings	27	LINENO
+		56	strings	32	LINENO
+		39	strings	3D	LINENO
+		38	strings	4E	LINENO
+		61	strings	5F	LINENO
+		37	strings	6F	LINENO
+		57	strings	7E	LINENO
+		44	cinit	0	LINENO
+		219	maintext	0	LINENO
+		223	maintext	3	LINENO
+		224	maintext	4	LINENO
+		226	maintext	5	LINENO
+	134	TEXT	137
+		maintext	0x0	0x7C
+	     0: 83 12 03 13 05 13 00 20 00 20 00 20 00 20 8B 16	....... . . . ..
+	    10: 83 16 03 13 0C 14 00 30 00 20 60 30 83 12 03 13	.......0. `0....
+	    20: 80 00 80 30 81 00 00 20 40 30 00 20 3F 30 83 12	...0... @0. ?0..
+	    30: 03 13 80 00 80 30 81 00 00 20 0D 30 83 12 03 13	.....0... .0....
+	    40: 9B 00 AF 30 9A 00 C1 30 99 00 99 0B 25 28 9A 0B	...0...0....%(..
+	    50: 25 28 9B 0B 25 28 64 00 00 20 2E 28 83 12 03 13	%(..%(d.. .(....
+	    60: 00 08 01 3A 03 1D 35 28 36 28 49 29 13 08 12 04	...:..5(6(I)....
+	    70: 03 1D 3B 28 3C 28 49 29 80 01 92 01            	..;(<(I)....
+	135	RELOC	503
+		0x6	RELBITS COMPLEX		11
+		text669 & 0x7FF
+		0x8	RELBITS COMPLEX		11
+		text655 & 0x7FF
+		0xA	RELBITS COMPLEX		11
+		text668 & 0x7FF
+		0xC	RELBITS COMPLEX		11
+		text667 & 0x7FF
+		0x18	RELBITS COMPLEX		11
+		text659 & 0x7FF
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x2A	RELBITS COMPLEX		11
+		text659 & 0x7FF
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	maintext	11
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	maintext	11
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	maintext	11
+		0x58	RELBITS COMPLEX		11
+		text657 & 0x7FF
+		0x5A	RELBITS RPSECT	maintext	11
+		0x60	RELBITS RPSECT	dataBANK0	7
+		0x66	RELBITS RPSECT	maintext	11
+		0x68	RELBITS RPSECT	maintext	11
+		0x6A	RELBITS RPSECT	maintext	11
+		0x6C	RELBITS RPSECT	bssBANK0	7
+		0x6E	RELBITS RPSECT	bssBANK0	7
+		0x72	RELBITS RPSECT	maintext	11
+		0x74	RELBITS RPSECT	maintext	11
+		0x76	RELBITS RPSECT	maintext	11
+		0x78	RELBITS RPSECT	dataBANK0	7
+		0x7A	RELBITS RPSECT	bssBANK0	7
+	136	TEXT	111
+		maintext	0x7C	0x62
+	     0: 93 01 83 16 03 13 0C 10 8B 12 83 12 03 13 05 17	................
+	    10: 01 08 99 00 9A 01 9B 01 19 08 80 00 1A 08 81 00	................
+	    20: 1B 08 82 00 0F 08 83 00 10 08 84 00 11 08 85 00	................
+	    30: 00 20 83 12 03 13 00 08 9C 00 01 08 9D 00 02 08	. ..............
+	    40: 9E 00 9F 01 0F 08 A0 00 10 08 A1 00 11 08 A2 00	................
+	    50: 08 30 03 10 A0 0D A1 0D A2 0D FF 3E 03 1D 67 28	.0.........>..g(
+	    60: 20 08                                          	 .
+	137	RELOC	505
+		0x0	RELBITS RPSECT	bssBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	bssBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	bssBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	bssBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS COMPLEX		11
+		text662 & 0x7FF
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	bssBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	bssBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	bssBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5E	RELBITS RPSECT	maintext	11
+		0x60	RELBITS RPSECT	cstackBANK0	7
+	138	TEXT	101
+		maintext	0xDE	0x58
+	     0: 80 00 21 08 81 00 22 08 82 00 83 01 07 08 87 00	..!...".........
+	    10: 06 08 86 00 05 08 85 00 04 08 84 00 00 20 83 12	............. ..
+	    20: 03 13 00 08 9C 07 01 08 03 18 01 0F 87 28 88 28	.............(.(
+	    30: 9D 07 02 08 03 18 02 0F 8D 28 8E 28 9E 07 03 08	.........(.(....
+	    40: 03 18 03 0A 9F 07 07 30 03 10 9F 0C 9E 0C 9D 0C	.......0........
+	    50: 9C 0C FF 3E 03 1D 93 28                        	...>...(
+	139	RELOC	502
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	bssBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	bssBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	bssBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	bssBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS COMPLEX		11
+		text666 & 0x7FF
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	maintext	11
+		0x2E	RELBITS RPSECT	maintext	11
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	maintext	11
+		0x3A	RELBITS RPSECT	maintext	11
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	maintext	11
+	140	TEXT	113
+		maintext	0x136	0x64
+	     0: 1F 08 8B 00 1E 08 8A 00 1D 08 89 00 1C 08 88 00	................
+	    10: 00 30 87 00 00 30 86 00 00 30 85 00 01 30 84 00	.0...0...0...0..
+	    20: 81 01 08 30 01 02 03 1C B1 28 B2 28 B4 28 EC 28	...0.....(.(.(.(
+	    30: EC 28 0B 08 07 02 03 1D C2 28 0A 08 06 02 03 1D	.(.......(......
+	    40: C2 28 09 08 05 02 03 1D C2 28 08 08 04 02 03 1C	.(.......(......
+	    50: C5 28 C6 28 C8 28 EC 28 EC 28 04 08 99 00 05 08	.(.(.(.(.(......
+	    60: 9A 00 06 08                                    	....
+	141	RELOC	500
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	bssBANK0	7
+		0x12	RELBITS RPSECT	bssBANK0	7
+		0x16	RELBITS RPSECT	bssBANK0	7
+		0x1A	RELBITS RPSECT	bssBANK0	7
+		0x1E	RELBITS RPSECT	bssBANK0	7
+		0x20	RELBITS RPSECT	dataBANK0	7
+		0x24	RELBITS RPSECT	dataBANK0	7
+		0x28	RELBITS RPSECT	maintext	11
+		0x2A	RELBITS RPSECT	maintext	11
+		0x2C	RELBITS RPSECT	maintext	11
+		0x2E	RELBITS RPSECT	maintext	11
+		0x30	RELBITS RPSECT	maintext	11
+		0x32	RELBITS RPSECT	bssBANK0	7
+		0x34	RELBITS RPSECT	bssBANK0	7
+		0x38	RELBITS RPSECT	maintext	11
+		0x3A	RELBITS RPSECT	bssBANK0	7
+		0x3C	RELBITS RPSECT	bssBANK0	7
+		0x40	RELBITS RPSECT	maintext	11
+		0x42	RELBITS RPSECT	bssBANK0	7
+		0x44	RELBITS RPSECT	bssBANK0	7
+		0x48	RELBITS RPSECT	maintext	11
+		0x4A	RELBITS RPSECT	bssBANK0	7
+		0x4C	RELBITS RPSECT	bssBANK0	7
+		0x50	RELBITS RPSECT	maintext	11
+		0x52	RELBITS RPSECT	maintext	11
+		0x54	RELBITS RPSECT	maintext	11
+		0x56	RELBITS RPSECT	maintext	11
+		0x58	RELBITS RPSECT	maintext	11
+		0x5A	RELBITS RPSECT	bssBANK0	7
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+		0x5E	RELBITS RPSECT	bssBANK0	7
+		0x60	RELBITS RPSECT	cstackBANK0	7
+		0x62	RELBITS RPSECT	bssBANK0	7
+	142	TEXT	111
+		maintext	0x19A	0x62
+	     0: 9B 00 07 08 9C 00 01 30 03 10 99 0D 9A 0D 9B 0D	.......0........
+	    10: 9C 0D FF 3E 03 1D D1 28 1C 08 87 00 1B 08 86 00	...>...(........
+	    20: 1A 08 85 00 19 08 84 00 01 30 99 00 19 08 81 07	.........0......
+	    30: 08 30 01 02 03 1C EA 28 EB 28 B4 28 EC 28 01 08	.0.....(.(.(.(..
+	    40: 18 3E 84 00 00 20 99 00 99 0A 01 08 6F 3E 84 00	.>... ......o>..
+	    50: 00 20 9A 00 9A 0A 01 30 9B 00 00 30 9C 00 00 29	. .....0...0...)
+	    60: 03 10                                          	..
+	143	RELOC	504
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	maintext	11
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	bssBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	bssBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	bssBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	bssBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	dataBANK0	7
+		0x32	RELBITS RPSECT	dataBANK0	7
+		0x36	RELBITS RPSECT	maintext	11
+		0x38	RELBITS RPSECT	maintext	11
+		0x3A	RELBITS RPSECT	maintext	11
+		0x3C	RELBITS RPSECT	maintext	11
+		0x3E	RELBITS RPSECT	dataBANK0	7
+		0x44	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	dataBANK0	7
+		0x50	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+		0x5E	RELBITS RPSECT	maintext	11
+	144	TEXT	95
+		maintext	0x1FC	0x52
+	     0: 9B 0D 9C 0D 9A 0B FD 28 06 29 03 10 9B 0D 9C 0D	.......(.)......
+	    10: 99 0B 03 29 1B 08 8F 00 1C 08 90 00 00 30 9C 1B	...).........0..
+	    20: FF 30 91 00 01 08 99 00 9A 01 9B 01 19 08 8C 00	.0..............
+	    30: 1A 08 8D 00 1B 08 8E 00 40 30 00 20 83 12 03 13	........@0. ....
+	    40: 01 08 99 00 9A 01 9B 01 9C 01 1C 08 90 00 1B 08	................
+	    50: 8F 00                                          	..
+	145	RELOC	498
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	maintext	11
+		0x8	RELBITS RPSECT	maintext	11
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	maintext	11
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	bssBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	bssBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	bssBANK0	7
+		0x24	RELBITS RPSECT	dataBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	bssBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	bssBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	bssBANK0	7
+		0x3A	RELBITS COMPLEX		11
+		text659 & 0x7FF
+		0x40	RELBITS RPSECT	dataBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+	146	SYM	494
+		227	maintext	6	LINENO
+		229	maintext	7	LINENO
+		230	maintext	8	LINENO
+		232	maintext	B	LINENO
+		233	maintext	D	LINENO
+		235	maintext	14	LINENO
+		236	maintext	16	LINENO
+		239	maintext	1D	LINENO
+		241	maintext	2C	LINENO
+		259	maintext	2E	LINENO
+		261	maintext	3C	LINENO
+		262	maintext	3D	LINENO
+		264	maintext	3F	LINENO
+		265	maintext	42	LINENO
+		267	maintext	43	LINENO
+		272	maintext	46	LINENO
+		280	maintext	A3	LINENO
+		281	maintext	AB	LINENO
+		283	maintext	B4	LINENO
+		285	maintext	C7	LINENO
+		287	maintext	C8	LINENO
+		281	maintext	E1	LINENO
+		294	maintext	EC	LINENO
+		295	maintext	110	LINENO
+		299	maintext	11A	LINENO
+		300	maintext	11C	LINENO
+	147	TEXT	139
+		maintext	0x24E	0x7E
+	     0: 1A 08 8E 00 19 08 8D 00 0A 30 91 00 00 30 92 00	.........0...0..
+	    10: 00 30 00 20 00 30 83 12 03 13 80 00 00 30 81 00	.0. .0.......0..
+	    20: 00 20 A0 30 83 12 03 13 80 00 80 30 81 00 00 20	. .0.......0... 
+	    30: 00 20 00 20 8B 16 83 16 03 13 0C 14 83 12 03 13	. . ............
+	    40: 05 13 49 29 13 08 80 3A FF 00 80 30 7F 02 03 1D	..I)...:...0....
+	    50: 52 29 08 30 12 02 03 1C 55 29 56 29 2E 28 83 16	R).0....U)V).(..
+	    60: 03 13 0C 10 8B 12 83 12 03 13 05 17 01 08 99 00	................
+	    70: 9A 01 9B 01 19 08 80 00 1A 08 81 00 1B 08      	..............
+	148	RELOC	507
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	COMPLEX		1
+		(0x23 + cstackBANK0) & 0xFF
+		0x12	RELBITS COMPLEX		11
+		text661 & 0x7FF
+		0x14	COMPLEX		1
+		(0x23 + cstackBANK0) & 0xFF
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x30	RELBITS COMPLEX		11
+		text668 & 0x7FF
+		0x32	RELBITS COMPLEX		11
+		text667 & 0x7FF
+		0x42	RELBITS RPSECT	maintext	11
+		0x44	RELBITS RPSECT	bssBANK0	7
+		0x50	RELBITS RPSECT	maintext	11
+		0x54	RELBITS RPSECT	bssBANK0	7
+		0x58	RELBITS RPSECT	maintext	11
+		0x5A	RELBITS RPSECT	maintext	11
+		0x5C	RELBITS RPSECT	maintext	11
+		0x6E	RELBITS RPSECT	cstackBANK0	7
+		0x70	RELBITS RPSECT	cstackBANK0	7
+		0x72	RELBITS RPSECT	cstackBANK0	7
+		0x74	RELBITS RPSECT	cstackBANK0	7
+		0x76	RELBITS RPSECT	cstackBANK0	7
+		0x78	RELBITS RPSECT	cstackBANK0	7
+		0x7A	RELBITS RPSECT	cstackBANK0	7
+		0x7C	RELBITS RPSECT	cstackBANK0	7
+	149	TEXT	95
+		maintext	0x2CC	0x52
+	     0: 82 00 0F 08 83 00 10 08 84 00 11 08 85 00 00 20	............... 
+	    10: 83 12 03 13 00 08 9C 00 01 08 9D 00 02 08 9E 00	................
+	    20: 9F 01 0F 08 A0 00 10 08 A1 00 11 08 A2 00 08 30	...............0
+	    30: 03 10 A0 0D A1 0D A2 0D FF 3E 03 1D 7E 29 20 08	.........>..~) .
+	    40: 80 00 21 08 81 00 22 08 82 00 83 01 07 08 87 00	..!...".........
+	    50: 06 08                                          	..
+	150	RELOC	502
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS COMPLEX		11
+		text662 & 0x7FF
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	bssBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	bssBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	bssBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	maintext	11
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	bssBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	bssBANK0	7
+	151	TEXT	103
+		maintext	0x31E	0x5A
+	     0: 86 00 05 08 85 00 04 08 84 00 00 20 83 12 03 13	........... ....
+	    10: 00 08 9C 07 01 08 03 18 01 0F 9E 29 9F 29 9D 07	...........).)..
+	    20: 02 08 03 18 02 0F A4 29 A5 29 9E 07 03 08 03 18	.......).)......
+	    30: 03 0A 9F 07 1F 08 8B 00 1E 08 8A 00 1D 08 89 00	................
+	    40: 1C 08 88 00 00 30 00 20 83 12 03 13 0B 08 0A 04	.....0. ........
+	    50: 09 04 08 04 03 19 BC 29 BD 29                  	.......).)
+	152	RELOC	500
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS COMPLEX		11
+		text666 & 0x7FF
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	maintext	11
+		0x1C	RELBITS RPSECT	maintext	11
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	maintext	11
+		0x28	RELBITS RPSECT	maintext	11
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	bssBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	bssBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	bssBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	bssBANK0	7
+		0x46	RELBITS COMPLEX		11
+		text659 & 0x7FF
+		0x4C	RELBITS RPSECT	bssBANK0	7
+		0x4E	RELBITS RPSECT	bssBANK0	7
+		0x50	RELBITS RPSECT	bssBANK0	7
+		0x52	RELBITS RPSECT	bssBANK0	7
+		0x56	RELBITS RPSECT	maintext	11
+		0x58	RELBITS RPSECT	maintext	11
+	153	TEXT	125
+		maintext	0x378	0x70
+	     0: C7 29 0B 08 90 00 0A 08 8F 00 09 08 8E 00 08 08	.)..............
+	    10: 8D 00 00 20 CF 29 2E 30 83 12 03 13 80 00 80 30	... .).0.......0
+	    20: 81 00 00 20 CF 29 40 30 00 20 00 30 83 12 03 13	... .)@0. .0....
+	    30: 87 00 00 30 86 00 0B 30 85 00 B8 30 84 00 94 01	...0...0...0....
+	    40: 08 30 14 02 03 1C E1 29 E2 29 E4 29 1E 2A 1E 2A	.0.....).).).*.*
+	    50: 07 08 0B 02 03 1D F2 29 06 08 0A 02 03 1D F2 29	.......).......)
+	    60: 05 08 09 02 03 1D F2 29 04 08 08 02 03 18 F5 29	.......).......)
+	154	RELOC	507
+		0x0	RELBITS RPSECT	maintext	11
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	bssBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS COMPLEX		11
+		text654 & 0x7FF
+		0x14	RELBITS RPSECT	maintext	11
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x24	RELBITS RPSECT	maintext	11
+		0x28	RELBITS COMPLEX		11
+		text659 & 0x7FF
+		0x30	RELBITS RPSECT	bssBANK0	7
+		0x34	RELBITS RPSECT	bssBANK0	7
+		0x38	RELBITS RPSECT	bssBANK0	7
+		0x3C	RELBITS RPSECT	bssBANK0	7
+		0x3E	RELBITS RPSECT	bssBANK0	7
+		0x42	RELBITS RPSECT	bssBANK0	7
+		0x46	RELBITS RPSECT	maintext	11
+		0x48	RELBITS RPSECT	maintext	11
+		0x4A	RELBITS RPSECT	maintext	11
+		0x4C	RELBITS RPSECT	maintext	11
+		0x4E	RELBITS RPSECT	maintext	11
+		0x50	RELBITS RPSECT	bssBANK0	7
+		0x52	RELBITS RPSECT	bssBANK0	7
+		0x56	RELBITS RPSECT	maintext	11
+		0x58	RELBITS RPSECT	bssBANK0	7
+		0x5A	RELBITS RPSECT	bssBANK0	7
+		0x5E	RELBITS RPSECT	maintext	11
+		0x60	RELBITS RPSECT	bssBANK0	7
+		0x62	RELBITS RPSECT	bssBANK0	7
+		0x66	RELBITS RPSECT	maintext	11
+		0x68	RELBITS RPSECT	bssBANK0	7
+		0x6A	RELBITS RPSECT	bssBANK0	7
+		0x6E	RELBITS RPSECT	maintext	11
+	155	TEXT	107
+		maintext	0x3E8	0x5E
+	     0: F6 29 F8 29 1E 2A 1E 2A 00 30 83 00 00 30 82 00	.).).*.*.0...0..
+	    10: 00 30 81 00 0A 30 80 00 07 08 87 00 06 08 86 00	.0...0..........
+	    20: 05 08 85 00 04 08 84 00 00 20 83 12 03 13 03 08	......... ......
+	    30: 87 00 02 08 86 00 01 08 85 00 00 08 84 00 01 30	...............0
+	    40: 99 00 19 08 94 07 08 30 14 02 03 1C 1C 2A 1D 2A	.......0.....*.*
+	    50: E4 29 1E 2A 50 30 99 00 19 08 AD 00 14 08      	.).*P0........
+	156	RELOC	502
+		0x0	RELBITS RPSECT	maintext	11
+		0x2	RELBITS RPSECT	maintext	11
+		0x4	RELBITS RPSECT	maintext	11
+		0x6	RELBITS RPSECT	maintext	11
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	bssBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	bssBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	bssBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	bssBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS COMPLEX		11
+		text666 & 0x7FF
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	bssBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	bssBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	bssBANK0	7
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	bssBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	bssBANK0	7
+		0x48	RELBITS RPSECT	bssBANK0	7
+		0x4C	RELBITS RPSECT	maintext	11
+		0x4E	RELBITS RPSECT	maintext	11
+		0x50	RELBITS RPSECT	maintext	11
+		0x52	RELBITS RPSECT	maintext	11
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	bssBANK0	7
+	157	SYM	494
+		301	maintext	131	LINENO
+		302	maintext	138	LINENO
+		304	maintext	13F	LINENO
+		305	maintext	140	LINENO
+		307	maintext	141	LINENO
+		308	maintext	142	LINENO
+		310	maintext	145	LINENO
+		321	maintext	149	LINENO
+		323	maintext	156	LINENO
+		324	maintext	159	LINENO
+		326	maintext	15A	LINENO
+		330	maintext	15D	LINENO
+		334	maintext	1B1	LINENO
+		335	maintext	1B3	LINENO
+		337	maintext	1BD	LINENO
+		338	maintext	1C6	LINENO
+		341	maintext	1C7	LINENO
+		345	maintext	1CF	LINENO
+		363	maintext	1D1	LINENO
+		364	maintext	1DB	LINENO
+		366	maintext	1E4	LINENO
+		368	maintext	1F7	LINENO
+		370	maintext	1F8	LINENO
+		364	maintext	213	LINENO
+		375	maintext	21E	LINENO
+		376	maintext	222	LINENO
+	158	TEXT	103
+		maintext	0x446	0x5A
+	     0: 99 00 19 08 AD 07 2D 08 84 00 00 20 80 00 00 20	......-.... ... 
+	    10: 81 00 00 20 A2 30 83 12 03 13 80 00 80 30 81 00	... .0.......0..
+	    20: 00 20 7A 30 83 12 03 13 80 00 80 30 81 00 00 20	. z0.......0... 
+	    30: 83 12 03 13 0F 08 8D 00 10 08 8E 00 11 08 8F 00	................
+	    40: 90 01 0A 30 91 00 00 30 92 00 00 30 00 20 00 30	...0...0...0. .0
+	    50: 83 12 03 13 80 00 00 30 81 00                  	.......0..
+	159	RELOC	490
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x34	RELBITS RPSECT	bssBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	bssBANK0	7
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	bssBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	COMPLEX		1
+		(0x23 + cstackBANK0) & 0xFF
+		0x4C	RELBITS COMPLEX		11
+		text661 & 0x7FF
+		0x4E	COMPLEX		1
+		(0x23 + cstackBANK0) & 0xFF
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+	160	TEXT	113
+		maintext	0x4A0	0x64
+	     0: 00 20 7F 30 83 12 03 13 80 00 80 30 81 00 00 20	. .0.......0... 
+	    10: 83 12 03 13 92 01 93 01 80 01 03 14 80 0D 07 30	...............0
+	    20: 99 00 19 08 81 00 01 08 18 3E 84 00 00 20 99 00	.........>... ..
+	    30: 99 0A 01 08 6F 3E 84 00 00 20 9A 00 9A 0A 01 30	....o>... .....0
+	    40: 9B 00 00 30 9C 00 77 2A 03 10 9B 0D 9C 0D 9A 0B	...0..w*........
+	    50: 74 2A 7D 2A 03 10 9B 0D 9C 0D 99 0B 7A 2A 1B 08	t*}*........z*..
+	    60: 8F 00 1C 08                                    	....
+	161	RELOC	507
+		0x0	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x14	RELBITS RPSECT	bssBANK0	7
+		0x16	RELBITS RPSECT	bssBANK0	7
+		0x18	RELBITS RPSECT	dataBANK0	7
+		0x1C	RELBITS RPSECT	dataBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	dataBANK0	7
+		0x26	RELBITS RPSECT	dataBANK0	7
+		0x2C	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	dataBANK0	7
+		0x38	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	maintext	11
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	maintext	11
+		0x52	RELBITS RPSECT	maintext	11
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	maintext	11
+		0x5E	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	bssBANK0	7
+		0x62	RELBITS RPSECT	cstackBANK0	7
+	162	TEXT	49
+		maintext	0x504	0x24
+	     0: 90 00 00 30 9C 1B FF 30 91 00 00 20 00 20 8B 16	...0...0... . ..
+	    10: 83 16 03 13 0C 14 83 12 03 13 05 13 2E 28 2E 28	.............(.(
+	    20: 2E 28 00 28                                    	.(.(
+	163	RELOC	122
+		0x0	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	bssBANK0	7
+		0xA	RELBITS COMPLEX		11
+		text668 & 0x7FF
+		0xC	RELBITS COMPLEX		11
+		text667 & 0x7FF
+		0x1C	RELBITS RPSECT	maintext	11
+		0x1E	RELBITS RPSECT	maintext	11
+		0x20	RELBITS RPSECT	maintext	11
+		0x22	RELBITS RNAME	start	11
+	164	TEXT	120
+		text654	0x0	0x6C
+	     0: 3B 30 83 12 03 13 83 00 9A 30 82 00 CA 30 81 00	;0.......0...0..
+	    10: 00 30 80 00 96 01 93 01 94 01 14 08 80 3A FF 00	.0...........:..
+	    20: 80 30 7F 02 03 1D 16 28 0A 30 13 02 03 1C 19 28	.0.....(.0.....(
+	    30: 1A 28 1C 28 00 29 00 29 83 12 03 13 03 08 83 00	.(.(.).)........
+	    40: 02 08 82 00 01 08 81 00 00 08 80 00 10 08 87 00	................
+	    50: 0F 08 86 00 0E 08 85 00 0D 08 84 00 00 20 83 12	............. ..
+	    60: 03 13 00 08 91 00 11 08 95 00 03 08            	............
+	165	RELOC	502
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xE	RELBITS RPSECT	bssBANK0	7
+		0x12	RELBITS RPSECT	bssBANK0	7
+		0x14	RELBITS RPSECT	bssBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	text654	11
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	text654	11
+		0x30	RELBITS RPSECT	text654	11
+		0x32	RELBITS RPSECT	text654	11
+		0x34	RELBITS RPSECT	text654	11
+		0x36	RELBITS RPSECT	text654	11
+		0x3C	RELBITS RPSECT	bssBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	bssBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	bssBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	bssBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS COMPLEX		11
+		text664 & 0x7FF
+		0x62	RELBITS RPSECT	cstackBANK0	7
+		0x64	RELBITS RPSECT	cstackBANK0	7
+		0x66	RELBITS RPSECT	cstackBANK0	7
+		0x68	RELBITS RPSECT	bssBANK0	7
+		0x6A	RELBITS RPSECT	bssBANK0	7
+	166	SYM	495
+		377	maintext	226	LINENO
+		378	maintext	22D	LINENO
+		381	maintext	234	LINENO
+		382	maintext	23B	LINENO
+		383	maintext	24A	LINENO
+		384	maintext	251	LINENO
+		405	maintext	258	LINENO
+		412	maintext	25C	LINENO
+		415	maintext	25F	LINENO
+		416	maintext	263	LINENO
+		419	maintext	287	LINENO
+		420	maintext	288	LINENO
+		422	maintext	289	LINENO
+		423	maintext	28A	LINENO
+		425	maintext	28D	LINENO
+		426	maintext	291	LINENO
+		248	maintext	292	LINENO
+		428	maintext	293	LINENO
+		C:\Users\davidq\Downloads\Program1 blink\Program1\lcd.c		0	FILNAM
+		152	text654	0	LINENO
+		153	text654	A	LINENO
+		156	text654	B	LINENO
+		158	text654	1C	LINENO
+		159	text654	35	LINENO
+	167	TEXT	98
+		text654	0x6C	0x56
+	     0: 83 00 02 08 82 00 01 08 81 00 00 08 80 00 10 08	................
+	    10: 87 00 0F 08 86 00 0E 08 85 00 0D 08 84 00 00 20	............... 
+	    20: 83 12 03 13 03 08 90 00 02 08 8F 00 01 08 8E 00	................
+	    30: 00 08 8D 00 95 08 03 1D 54 28 55 28 5A 28 16 08	........T(U(Z(..
+	    40: 03 1D 59 28 9B 28 5A 28 15 08 00 20 01 30 83 12	..Y(.(Z(... .0..
+	    50: 03 13 91 00 11 08                              	......
+	168	RELOC	506
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS COMPLEX		11
+		text665 & 0x7FF
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	bssBANK0	7
+		0x38	RELBITS RPSECT	text654	11
+		0x3A	RELBITS RPSECT	text654	11
+		0x3C	RELBITS RPSECT	text654	11
+		0x3E	RELBITS RPSECT	bssBANK0	7
+		0x42	RELBITS RPSECT	text654	11
+		0x44	RELBITS RPSECT	text654	11
+		0x46	RELBITS RPSECT	text654	11
+		0x48	RELBITS RPSECT	bssBANK0	7
+		0x4A	RELBITS COMPLEX		11
+		text656 & 0x7FF
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+	169	TEXT	124
+		text654	0xC2	0x70
+	     0: 96 07 03 30 80 00 00 30 81 00 13 09 91 00 14 09	...0...0........
+	    10: 92 00 91 0A 03 19 92 0A 11 08 09 3E 82 00 12 08	...........>....
+	    20: 03 18 01 3E 00 3E 83 00 00 20 83 12 03 13 01 08	...>.>... ......
+	    30: 00 04 03 1D 7D 28 7E 28 CF 28 09 30 13 06 14 04	....}(~(.(.0....
+	    40: 03 19 84 28 85 28 CF 28 04 30 16 02 03 18 8A 28	...(.(.(.0.....(
+	    50: 8B 28 91 28 9E 30 80 00 80 30 81 00 00 20 CF 28	.(.(.0...0... .(
+	    60: 9C 30 83 12 03 13 80 00 80 30 81 00 00 20 CF 28	.0.......0... .(
+	170	RELOC	502
+		0x0	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS COMPLEX		11
+		text663 & 0x7FF
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	text654	11
+		0x36	RELBITS RPSECT	text654	11
+		0x38	RELBITS RPSECT	text654	11
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	text654	11
+		0x44	RELBITS RPSECT	text654	11
+		0x46	RELBITS RPSECT	text654	11
+		0x4A	RELBITS RPSECT	bssBANK0	7
+		0x4E	RELBITS RPSECT	text654	11
+		0x50	RELBITS RPSECT	text654	11
+		0x52	RELBITS RPSECT	text654	11
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x5E	RELBITS RPSECT	text654	11
+		0x66	RELBITS RPSECT	cstackBANK0	7
+		0x6A	RELBITS RPSECT	cstackBANK0	7
+		0x6C	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x6E	RELBITS RPSECT	text654	11
+	171	TEXT	134
+		text654	0x132	0x7A
+	     0: CF 28 CF 28 03 30 83 12 03 13 80 00 00 30 81 00	.(.(.0.......0..
+	    10: 13 09 91 00 14 09 92 00 91 0A 03 19 92 0A 11 08	................
+	    20: 09 3E 82 00 12 08 03 18 01 3E 00 3E 83 00 00 20	.>.......>.>... 
+	    30: 83 12 03 13 01 08 00 04 03 1D B8 28 B9 28 C6 28	...........(.(.(
+	    40: 09 30 13 06 14 04 03 19 BF 28 C0 28 C6 28 7E 30	.0.......(.(.(~0
+	    50: 80 00 80 30 81 00 00 20 CF 28 7F 30 83 12 03 13	...0... .(.0....
+	    60: 80 00 80 30 81 00 00 20 CF 28 CF 28 00 30 83 12	...0... .(.(.0..
+	    70: 03 13 83 00 00 30 82 00 00 30                  	.....0...0
+	172	RELOC	508
+		0x0	RELBITS RPSECT	text654	11
+		0x2	RELBITS RPSECT	text654	11
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS COMPLEX		11
+		text663 & 0x7FF
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	text654	11
+		0x3C	RELBITS RPSECT	text654	11
+		0x3E	RELBITS RPSECT	text654	11
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	text654	11
+		0x4A	RELBITS RPSECT	text654	11
+		0x4C	RELBITS RPSECT	text654	11
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x58	RELBITS RPSECT	text654	11
+		0x60	RELBITS RPSECT	cstackBANK0	7
+		0x64	RELBITS RPSECT	cstackBANK0	7
+		0x66	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0x68	RELBITS RPSECT	text654	11
+		0x6A	RELBITS RPSECT	text654	11
+		0x72	RELBITS RPSECT	cstackBANK0	7
+		0x76	RELBITS RPSECT	cstackBANK0	7
+	173	TEXT	116
+		text654	0x1AC	0x68
+	     0: 81 00 0A 30 80 00 03 08 87 00 02 08 86 00 01 08	...0............
+	    10: 85 00 00 08 84 00 00 20 83 12 03 13 03 08 83 00	....... ........
+	    20: 02 08 82 00 01 08 81 00 00 08 80 00 01 30 93 07	.............0..
+	    30: 03 18 94 0A 00 30 94 07 14 08 80 3A FF 00 80 30	.....0.....:...0
+	    40: 7F 02 03 1D FB 28 0A 30 13 02 03 1C FE 28 FF 28	.....(.0.....(.(
+	    50: 1C 28 00 29 83 12 03 13 16 08 01 3E 84 00 00 20	.(.).......>... 
+	    60: 91 00 11 08 97 00 00 30                        	.......0
+	174	RELOC	500
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	bssBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	bssBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	bssBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS COMPLEX		11
+		text664 & 0x7FF
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	bssBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	bssBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	bssBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	bssBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	text654	11
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	text654	11
+		0x4E	RELBITS RPSECT	text654	11
+		0x50	RELBITS RPSECT	text654	11
+		0x52	RELBITS RPSECT	text654	11
+		0x58	RELBITS RPSECT	bssBANK0	7
+		0x5E	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x60	RELBITS RPSECT	cstackBANK0	7
+		0x62	RELBITS RPSECT	cstackBANK0	7
+		0x64	RELBITS RPSECT	bssBANK0	7
+		0x66	COMPLEX		1
+		(0x17 + bssBANK0) & 0xFF
+	175	TEXT	36
+		text654	0x214	0x18
+	     0: 80 00 00 30 81 00 00 20 81 30 83 12 03 13 80 00	...0... .0......
+	    10: 80 30 81 00 00 20 08 00                        	.0... ..
+	176	RELOC	98
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS COMPLEX		11
+		text658 & 0x7FF
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS COMPLEX		11
+		text658 & 0x7FF
+	177	SYM	497
+		160	text654	50	LINENO
+		163	text654	5A	LINENO
+		164	text654	5C	LINENO
+		165	text654	62	LINENO
+		167	text654	85	LINENO
+		169	text654	8B	LINENO
+		170	text654	90	LINENO
+		173	text654	91	LINENO
+		174	text654	99	LINENO
+		176	text654	9A	LINENO
+		181	text654	9B	LINENO
+		183	text654	C0	LINENO
+		184	text654	C5	LINENO
+		187	text654	C6	LINENO
+		188	text654	CE	LINENO
+		191	text654	CF	LINENO
+		156	text654	EC	LINENO
+		194	text654	100	LINENO
+		195	text654	109	LINENO
+		196	text654	10E	LINENO
+		198	text654	115	LINENO
+		70	text655	0	LINENO
+		72	text655	B	LINENO
+		73	text655	F	LINENO
+		74	text655	11	LINENO
+		75	text655	19	LINENO
+		76	text655	1D	LINENO
+		77	text655	22	LINENO
+	178	TEXT	126
+		text655	0x0	0x72
+	     0: 14 30 83 12 03 13 83 00 79 30 82 00 82 0B 06 28	.0......y0.....(
+	    10: 83 0B 06 28 0B 28 03 30 83 12 03 13 86 00 85 14	...(.(.0........
+	    20: 85 10 07 30 83 00 7D 30 82 00 82 0B 15 28 83 0B	...0..}0.....(..
+	    30: 15 28 83 12 03 13 85 14 85 10 42 30 82 00 82 0B	.(........B0....
+	    40: 1F 28 64 00 83 12 03 13 85 14 85 10 42 30 82 00	.(d.........B0..
+	    50: 82 0B 28 28 64 00 02 30 83 12 03 13 86 00 85 14	..((d..0........
+	    60: 85 10 28 30 00 20 0C 30 00 20 00 20 06 30 00 20	..(0. .0. . .0. 
+	    70: 08 00                                          	..
+	179	RELOC	333
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	text655	11
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	text655	11
+		0x14	RELBITS RPSECT	text655	11
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	text655	11
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	text655	11
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	text655	11
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	text655	11
+		0x64	RELBITS COMPLEX		11
+		text660 & 0x7FF
+		0x68	RELBITS COMPLEX		11
+		text660 & 0x7FF
+		0x6A	RELBITS COMPLEX		11
+		text657 & 0x7FF
+		0x6E	RELBITS COMPLEX		11
+		text660 & 0x7FF
+	180	TEXT	28
+		text656	0x0	0x10
+	     0: 86 00 83 12 03 13 85 15 06 08 30 3E 00 20 08 00	..........0>. ..
+	181	RELOC	51
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x8	RELBITS RPSECT	cstackCOMMON	7
+		0xC	RELBITS COMPLEX		11
+		text660 & 0x7FF
+	182	TEXT	46
+		text657	0x0	0x22
+	     0: 83 12 03 13 85 11 01 30 00 20 03 30 83 12 03 13	.......0. .0....
+	    10: 81 00 97 30 80 00 80 0B 0B 28 81 0B 0B 28 10 28	...0.....(...(.(
+	    20: 08 00                                          	..
+	183	RELOC	112
+		0x8	RELBITS COMPLEX		11
+		text660 & 0x7FF
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	text657	11
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	text657	11
+		0x1E	RELBITS RPSECT	text657	11
+	184	TEXT	74
+		text658	0x0	0x3E
+	     0: 83 12 03 13 85 15 13 28 01 08 FF 00 00 08 84 00	.......(........
+	    10: 00 20 00 20 01 30 83 12 03 13 80 07 03 18 81 0A	. . .0..........
+	    20: 00 30 81 07 13 28 01 08 FF 00 00 08 84 00 00 20	.0...(......... 
+	    30: 00 38 03 1D 1C 28 1D 28 04 28 1E 28 08 00      	.8...(.(.(.(..
+	185	RELOC	228
+		0x6	RELBITS RPSECT	text658	11
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS COMPLEX		11
+		strings & 0x7FF
+		0x12	RELBITS COMPLEX		11
+		text660 & 0x7FF
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	text658	11
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS COMPLEX		11
+		strings & 0x7FF
+		0x34	RELBITS RPSECT	text658	11
+		0x36	RELBITS RPSECT	text658	11
+		0x38	RELBITS RPSECT	text658	11
+		0x3A	RELBITS RPSECT	text658	11
+	186	TEXT	28
+		text659	0x0	0x10
+	     0: 86 00 83 12 03 13 85 11 06 08 80 3E 00 20 08 00	...........>. ..
+	187	RELOC	51
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x8	RELBITS RPSECT	cstackCOMMON	7
+		0xC	RELBITS COMPLEX		11
+		text660 & 0x7FF
+	188	SYM	493
+		78	text655	26	LINENO
+		79	text655	2B	LINENO
+		80	text655	2F	LINENO
+		82	text655	31	LINENO
+		84	text655	33	LINENO
+		85	text655	35	LINENO
+		86	text655	36	LINENO
+		87	text655	38	LINENO
+		144	text656	0	LINENO
+		145	text656	1	LINENO
+		146	text656	4	LINENO
+		147	text656	7	LINENO
+		107	text657	0	LINENO
+		108	text657	3	LINENO
+		109	text657	5	LINENO
+		110	text657	10	LINENO
+		116	text658	0	LINENO
+		117	text658	3	LINENO
+		118	text658	4	LINENO
+		117	text658	13	LINENO
+		119	text658	1E	LINENO
+		135	text659	0	LINENO
+		136	text659	1	LINENO
+		137	text659	4	LINENO
+		138	text659	7	LINENO
+		93	text660	0	LINENO
+		94	text660	1	LINENO
+		95	text660	5	LINENO
+	189	TEXT	64
+		text660	0x0	0x34
+	     0: 85 00 0D 30 84 00 84 0B 03 28 05 08 84 00 04 30	...0.....(.....0
+	    10: 03 10 84 0C FF 3E 03 1D 08 28 04 08 0F 39 83 12	.....>...(...9..
+	    20: 03 13 86 00 85 14 85 10 05 08 0F 39 86 00 85 14	...........9....
+	    30: 85 10 08 00                                    	....
+	190	RELOC	150
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x4	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackCOMMON	7
+		0x8	RELBITS RPSECT	text660	11
+		0xA	RELBITS RPSECT	cstackCOMMON	7
+		0xC	RELBITS RPSECT	cstackCOMMON	7
+		0x12	RELBITS RPSECT	cstackCOMMON	7
+		0x18	RELBITS RPSECT	text660	11
+		0x1A	RELBITS RPSECT	cstackCOMMON	7
+		0x28	RELBITS RPSECT	cstackCOMMON	7
+	191	TEXT	90
+		text661	0x0	0x4E
+	     0: 83 12 03 13 98 00 10 08 96 00 0F 08 95 00 0E 08	................
+	    10: 94 00 0D 08 93 00 0C 28 11 08 80 00 12 08 81 00	.......(........
+	    20: 00 30 81 1B FF 30 82 00 83 00 16 08 87 00 15 08	.0...0..........
+	    30: 86 00 14 08 85 00 13 08 84 00 00 20 83 12 03 13	........... ....
+	    40: 03 08 96 00 02 08 95 00 01 08 94 00 00 08      	..............
+	192	RELOC	495
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	text661	11
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS COMPLEX		11
+		text664 & 0x7FF
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+	193	TEXT	100
+		text661	0x4E	0x58
+	     0: 93 00 01 30 86 00 06 08 98 07 16 08 15 04 14 04	...0............
+	    10: 13 04 03 1D 33 28 34 28 0C 28 35 28 18 08 84 00	....3(4(.(5(....
+	    20: 83 13 80 01 01 30 98 02 3C 28 11 08 80 00 12 08	.....0..<(......
+	    30: 81 00 00 30 81 1B FF 30 82 00 83 00 10 08 87 00	...0...0........
+	    40: 0F 08 86 00 0E 08 85 00 0D 08 84 00 00 20 83 12	............. ..
+	    50: 03 13 00 08 86 00 06 08                        	........
+	194	RELOC	498
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackCOMMON	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	text661	11
+		0x16	RELBITS RPSECT	text661	11
+		0x18	RELBITS RPSECT	text661	11
+		0x1A	RELBITS RPSECT	text661	11
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	text661	11
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS COMPLEX		11
+		text665 & 0x7FF
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackCOMMON	7
+		0x56	RELBITS RPSECT	cstackCOMMON	7
+	195	TEXT	96
+		text661	0xA6	0x54
+	     0: 97 00 11 08 80 00 12 08 81 00 00 30 81 1B FF 30	...........0...0
+	    10: 82 00 83 00 10 08 87 00 0F 08 86 00 0E 08 85 00	................
+	    20: 0D 08 84 00 00 20 83 12 03 13 03 08 90 00 02 08	..... ..........
+	    30: 8F 00 01 08 8E 00 00 08 8D 00 0A 30 17 02 03 1C	...........0....
+	    40: 75 28 76 28 7A 28 07 30 86 00 06 08 97 07 30 30	u(v(z(.0......00
+	    50: 86 00 06 08                                    	....
+	196	RELOC	506
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS COMPLEX		11
+		text664 & 0x7FF
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	text661	11
+		0x42	RELBITS RPSECT	text661	11
+		0x44	RELBITS RPSECT	text661	11
+		0x48	RELBITS RPSECT	cstackCOMMON	7
+		0x4A	RELBITS RPSECT	cstackCOMMON	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackCOMMON	7
+		0x52	RELBITS RPSECT	cstackCOMMON	7
+	197	TEXT	52
+		text661	0xFA	0x28
+	     0: 97 07 17 08 86 00 18 08 84 00 06 08 83 13 80 00	................
+	    10: 01 30 98 02 10 08 0F 04 0E 04 0D 04 03 1D 8E 28	.0.............(
+	    20: 8F 28 3C 28 90 28 08 00                        	.(<(.(..
+	198	RELOC	196
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackCOMMON	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	text661	11
+		0x20	RELBITS RPSECT	text661	11
+		0x22	RELBITS RPSECT	text661	11
+		0x24	RELBITS RPSECT	text661	11
+	199	SYM	497
+		96	text660	12	LINENO
+		97	text660	14	LINENO
+		98	text660	17	LINENO
+		99	text660	19	LINENO
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\ltoa.c		0	FILNAM
+		21	text661	0	LINENO
+		23	text661	C	LINENO
+		24	text661	28	LINENO
+		25	text661	2C	LINENO
+		26	text661	35	LINENO
+		28	text661	3C	LINENO
+		29	text661	54	LINENO
+		30	text661	70	LINENO
+		31	text661	76	LINENO
+		32	text661	7A	LINENO
+		33	text661	7E	LINENO
+		34	text661	87	LINENO
+		36	text661	90	LINENO
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\tmul.c		0	FILNAM
+		4	text662	0	LINENO
+		7	text662	7	LINENO
+		8	text662	D	LINENO
+		9	text662	1E	LINENO
+	200	TEXT	124
+		text662	0x0	0x70
+	     0: 00 30 84 00 00 30 85 00 00 30 86 00 07 28 83 12	.0...0...0...(..
+	    10: 03 13 00 1C 0C 28 0D 28 1E 28 03 08 84 07 04 08	.....(.(.(......
+	    20: 03 11 03 18 04 0A 03 19 16 28 85 07 05 08 03 11	.........(......
+	    30: 03 18 05 0A 03 19 1D 28 86 07 1E 28 01 30 03 10	.......(...(.0..
+	    40: 83 0D 84 0D 85 0D FF 3E 03 1D 1F 28 01 30 03 10	.......>...(.0..
+	    50: 82 0C 81 0C 80 0C FF 3E 03 1D 27 28 02 08 01 04	.......>..'(....
+	    60: 00 04 03 1D 34 28 35 28 07 28 36 28 04 08 80 00	....4(5(.(6(....
+	201	RELOC	495
+		0x2	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackCOMMON	7
+		0xA	RELBITS RPSECT	cstackCOMMON	7
+		0xC	RELBITS RPSECT	text662	11
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	text662	11
+		0x16	RELBITS RPSECT	text662	11
+		0x18	RELBITS RPSECT	text662	11
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackCOMMON	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	text662	11
+		0x2A	RELBITS RPSECT	cstackCOMMON	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	text662	11
+		0x38	RELBITS RPSECT	cstackCOMMON	7
+		0x3A	RELBITS RPSECT	text662	11
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	text662	11
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	text662	11
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+		0x5E	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	cstackBANK0	7
+		0x64	RELBITS RPSECT	text662	11
+		0x66	RELBITS RPSECT	text662	11
+		0x68	RELBITS RPSECT	text662	11
+		0x6A	RELBITS RPSECT	text662	11
+		0x6C	RELBITS RPSECT	cstackCOMMON	7
+		0x6E	RELBITS RPSECT	cstackBANK0	7
+	202	TEXT	24
+		text662	0x70	0xC
+	     0: 05 08 81 00 06 08 82 00 3D 28 08 00            	........=(..
+	203	RELOC	73
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	text662	11
+	204	TEXT	110
+		text663	0x0	0x62
+	     0: 86 01 83 12 03 13 83 1F 06 28 07 28 10 28 82 09	.........(.(.(..
+	    10: 83 09 82 0A 03 19 83 0A 86 01 03 14 86 0D 10 28	...............(
+	    20: 81 1F 13 28 14 28 1A 28 80 09 81 09 80 0A 03 19	...(.(.(........
+	    30: 81 0A 1A 28 01 08 00 04 03 19 1F 28 20 28 56 28	...(.......( (V(
+	    40: 85 01 03 14 85 0D 30 28 01 30 03 10 80 0D 81 0D	......0(.0......
+	    50: FF 3E 03 1D 25 28 01 30 84 00 04 08 85 07 30 28	.>..%(.0......0(
+	    60: 81 1F                                          	..
+	205	RELOC	507
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	text663	11
+		0xA	RELBITS RPSECT	text663	11
+		0xC	RELBITS RPSECT	text663	11
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackCOMMON	7
+		0x1C	RELBITS RPSECT	cstackCOMMON	7
+		0x1E	RELBITS RPSECT	text663	11
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	text663	11
+		0x24	RELBITS RPSECT	text663	11
+		0x26	RELBITS RPSECT	text663	11
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	text663	11
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	text663	11
+		0x3C	RELBITS RPSECT	text663	11
+		0x3E	RELBITS RPSECT	text663	11
+		0x40	RELBITS RPSECT	cstackCOMMON	7
+		0x44	RELBITS RPSECT	cstackCOMMON	7
+		0x46	RELBITS RPSECT	text663	11
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	text663	11
+		0x58	RELBITS RPSECT	cstackCOMMON	7
+		0x5A	RELBITS RPSECT	cstackCOMMON	7
+		0x5C	RELBITS RPSECT	cstackCOMMON	7
+		0x5E	RELBITS RPSECT	text663	11
+		0x60	RELBITS RPSECT	cstackBANK0	7
+	206	TEXT	110
+		text663	0x62	0x62
+	     0: 33 28 34 28 24 28 36 28 36 28 01 08 03 02 03 1D	3(4($(6(6(......
+	    10: 3C 28 00 08 02 02 03 1C 3F 28 40 28 47 28 00 08	<(......?(@(G(..
+	    20: 82 02 01 08 03 1C 83 03 83 02 47 28 01 30 03 10	..........G(.0..
+	    30: 81 0C 80 0C FF 3E 03 1D 48 28 01 30 85 02 03 1D	.....>..H(.0....
+	    40: 53 28 54 28 36 28 56 28 56 28 06 08 03 1D 5A 28	S(T(6(V(V(....Z(
+	    50: 60 28 82 09 83 09 82 0A 03 19 83 0A 60 28 03 08	`(..........`(..
+	    60: 81 01                                          	..
+	207	RELOC	496
+		0x0	RELBITS RPSECT	text663	11
+		0x2	RELBITS RPSECT	text663	11
+		0x4	RELBITS RPSECT	text663	11
+		0x6	RELBITS RPSECT	text663	11
+		0x8	RELBITS RPSECT	text663	11
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	text663	11
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	text663	11
+		0x1A	RELBITS RPSECT	text663	11
+		0x1C	RELBITS RPSECT	text663	11
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	text663	11
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	text663	11
+		0x3C	RELBITS RPSECT	cstackCOMMON	7
+		0x40	RELBITS RPSECT	text663	11
+		0x42	RELBITS RPSECT	text663	11
+		0x44	RELBITS RPSECT	text663	11
+		0x46	RELBITS RPSECT	text663	11
+		0x48	RELBITS RPSECT	text663	11
+		0x4A	RELBITS RPSECT	cstackCOMMON	7
+		0x4E	RELBITS RPSECT	text663	11
+		0x50	RELBITS RPSECT	text663	11
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	text663	11
+		0x5E	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	cstackBANK0	7
+	208	TEXT	24
+		text663	0xC4	0xC
+	     0: 81 07 02 08 80 01 80 07 67 28 08 00            	........g(..
+	209	RELOC	71
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x2	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	text663	11
+	210	SYM	479
+		10	text662	26	LINENO
+		11	text662	2E	LINENO
+		12	text662	36	LINENO
+		13	text662	3D	LINENO
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\awmod.c		0	FILNAM
+		8	text663	0	LINENO
+		9	text663	1	LINENO
+		10	text663	7	LINENO
+		11	text663	C	LINENO
+		13	text663	10	LINENO
+		14	text663	14	LINENO
+		15	text663	1A	LINENO
+		16	text663	20	LINENO
+		17	text663	23	LINENO
+		18	text663	24	LINENO
+		19	text663	2B	LINENO
+		17	text663	30	LINENO
+		22	text663	36	LINENO
+		23	text663	40	LINENO
+		24	text663	47	LINENO
+		25	text663	4E	LINENO
+		27	text663	56	LINENO
+		28	text663	5A	LINENO
+		29	text663	60	LINENO
+		30	text663	67	LINENO
+	211	TEXT	110
+		text664	0x0	0x62
+	     0: 00 30 83 12 03 13 8B 00 00 30 8A 00 00 30 89 00	.0.......0...0..
+	    10: 00 30 88 00 03 08 02 04 01 04 00 04 03 19 11 28	.0.............(
+	    20: 12 28 66 28 8C 01 03 14 8C 0D 24 28 01 30 84 00	.(f(......$(.0..
+	    30: 03 10 80 0D 81 0D 82 0D 83 0D 84 0B 18 28 01 30	.............(.0
+	    40: 84 00 04 08 8C 07 24 28 83 1F 27 28 28 28 16 28	......$(..'(((.(
+	    50: 2A 28 2A 28 01 30 84 00 03 10 88 0D 89 0D 8A 0D	*(*(.0..........
+	    60: 8B 0D                                          	..
+	212	RELOC	501
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	text664	11
+		0x20	RELBITS RPSECT	text664	11
+		0x22	RELBITS RPSECT	text664	11
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	text664	11
+		0x2E	RELBITS RPSECT	cstackCOMMON	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x36	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	cstackCOMMON	7
+		0x3C	RELBITS RPSECT	text664	11
+		0x40	RELBITS RPSECT	cstackCOMMON	7
+		0x42	RELBITS RPSECT	cstackCOMMON	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	text664	11
+		0x48	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	text664	11
+		0x4C	RELBITS RPSECT	text664	11
+		0x4E	RELBITS RPSECT	text664	11
+		0x50	RELBITS RPSECT	text664	11
+		0x52	RELBITS RPSECT	text664	11
+		0x56	RELBITS RPSECT	cstackCOMMON	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+		0x5E	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	cstackBANK0	7
+	213	TEXT	110
+		text664	0x62	0x62
+	     0: 84 0B 2C 28 03 08 07 02 03 1D 41 28 02 08 06 02	..,(......A(....
+	    10: 03 1D 41 28 01 08 05 02 03 1D 41 28 00 08 04 02	..A(......A(....
+	    20: 03 1C 44 28 45 28 55 28 00 08 84 02 01 08 03 1C	..D(E(U(........
+	    30: 01 0F 85 02 02 08 03 1C 02 0F 86 02 03 08 03 1C	................
+	    40: 03 0F 87 02 08 14 55 28 01 30 03 10 83 0C 82 0C	......U(.0......
+	    50: 81 0C 80 0C FF 3E 03 1D 56 28 01 30 8C 02 03 1D	.....>..V(.0....
+	    60: 63 28                                          	c(
+	214	RELOC	501
+		0x0	RELBITS RPSECT	cstackCOMMON	7
+		0x2	RELBITS RPSECT	text664	11
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	text664	11
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	text664	11
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	text664	11
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	text664	11
+		0x24	RELBITS RPSECT	text664	11
+		0x26	RELBITS RPSECT	text664	11
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x34	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x42	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	text664	11
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	text664	11
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	text664	11
+	215	TEXT	40
+		text664	0xC4	0x1C
+	     0: 64 28 2A 28 66 28 66 28 0B 08 83 00 0A 08 82 00	d(*(f(f(........
+	    10: 09 08 81 00 08 08 80 00 6F 28 08 00            	........o(..
+	216	RELOC	175
+		0x0	RELBITS RPSECT	text664	11
+		0x2	RELBITS RPSECT	text664	11
+		0x4	RELBITS RPSECT	text664	11
+		0x6	RELBITS RPSECT	text664	11
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	text664	11
+	217	SYM	500
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\lldiv.c		0	FILNAM
+		9	text664	0	LINENO
+		10	text664	A	LINENO
+		11	text664	12	LINENO
+		12	text664	15	LINENO
+		13	text664	16	LINENO
+		14	text664	1F	LINENO
+		12	text664	24	LINENO
+		17	text664	2A	LINENO
+		18	text664	33	LINENO
+		19	text664	45	LINENO
+		20	text664	53	LINENO
+		22	text664	55	LINENO
+		23	text664	5E	LINENO
+		25	text664	66	LINENO
+		26	text664	6F	LINENO
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\llmod.c		0	FILNAM
+		8	text665	0	LINENO
+		9	text665	A	LINENO
+		10	text665	D	LINENO
+		11	text665	E	LINENO
+		12	text665	17	LINENO
+		10	text665	1C	LINENO
+	218	TEXT	106
+		text665	0x0	0x5E
+	     0: 83 12 03 13 03 08 02 04 01 04 00 04 03 19 09 28	...............(
+	    10: 0A 28 54 28 85 01 03 14 85 0D 1C 28 01 30 84 00	.(T(.......(.0..
+	    20: 03 10 80 0D 81 0D 82 0D 83 0D 84 0B 10 28 01 30	.............(.0
+	    30: 84 00 04 08 85 07 1C 28 83 1F 1F 28 20 28 0E 28	.......(...( (.(
+	    40: 22 28 22 28 03 08 07 02 03 1D 30 28 02 08 06 02	"("(......0(....
+	    50: 03 1D 30 28 01 08 05 02 03 1D 30 28 00 08      	..0(......0(..
+	219	RELOC	506
+		0x4	RELBITS RPSECT	cstackBANK0	7
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0x8	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	text665	11
+		0x10	RELBITS RPSECT	text665	11
+		0x12	RELBITS RPSECT	text665	11
+		0x14	RELBITS RPSECT	cstackCOMMON	7
+		0x18	RELBITS RPSECT	cstackCOMMON	7
+		0x1A	RELBITS RPSECT	text665	11
+		0x1E	RELBITS RPSECT	cstackCOMMON	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	cstackBANK0	7
+		0x28	RELBITS RPSECT	cstackBANK0	7
+		0x2A	RELBITS RPSECT	cstackCOMMON	7
+		0x2C	RELBITS RPSECT	text665	11
+		0x30	RELBITS RPSECT	cstackCOMMON	7
+		0x32	RELBITS RPSECT	cstackCOMMON	7
+		0x34	RELBITS RPSECT	cstackCOMMON	7
+		0x36	RELBITS RPSECT	text665	11
+		0x38	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	text665	11
+		0x3C	RELBITS RPSECT	text665	11
+		0x3E	RELBITS RPSECT	text665	11
+		0x40	RELBITS RPSECT	text665	11
+		0x42	RELBITS RPSECT	text665	11
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	cstackBANK0	7
+		0x4A	RELBITS RPSECT	text665	11
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	text665	11
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	text665	11
+		0x5C	RELBITS RPSECT	cstackBANK0	7
+	220	TEXT	106
+		text665	0x5E	0x5E
+	     0: 04 02 03 1C 33 28 34 28 43 28 00 08 84 02 01 08	....3(4(C(......
+	    10: 03 1C 01 0F 85 02 02 08 03 1C 02 0F 86 02 03 08	................
+	    20: 03 1C 03 0F 87 02 43 28 01 30 03 10 83 0C 82 0C	......C(.0......
+	    30: 81 0C 80 0C FF 3E 03 1D 44 28 01 30 85 02 03 1D	.....>..D(.0....
+	    40: 51 28 52 28 22 28 54 28 54 28 07 08 83 00 06 08	Q(R("(T(T(......
+	    50: 82 00 05 08 81 00 04 08 80 00 5D 28 08 00      	..........](..
+	221	RELOC	497
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	text665	11
+		0x6	RELBITS RPSECT	text665	11
+		0x8	RELBITS RPSECT	text665	11
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	cstackBANK0	7
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x24	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	text665	11
+		0x2C	RELBITS RPSECT	cstackBANK0	7
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	cstackBANK0	7
+		0x38	RELBITS RPSECT	text665	11
+		0x3C	RELBITS RPSECT	cstackCOMMON	7
+		0x40	RELBITS RPSECT	text665	11
+		0x42	RELBITS RPSECT	text665	11
+		0x44	RELBITS RPSECT	text665	11
+		0x46	RELBITS RPSECT	text665	11
+		0x48	RELBITS RPSECT	text665	11
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	cstackBANK0	7
+		0x52	RELBITS RPSECT	cstackBANK0	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	text665	11
+	222	TEXT	132
+		text666	0x0	0x78
+	     0: 00 30 83 12 03 13 8B 00 00 30 8A 00 00 30 89 00	.0.......0...0..
+	    10: 00 30 88 00 0B 28 00 1C 0E 28 0F 28 27 28 04 08	.0...(...(.('(..
+	    20: 88 07 05 08 03 11 03 18 01 3E 03 19 18 28 89 07	.........>...(..
+	    30: 06 08 03 11 03 18 01 3E 03 19 1F 28 8A 07 07 08	.......>...(....
+	    40: 03 11 03 18 01 3E 03 19 26 28 8B 07 27 28 01 30	.....>..&(..'(.0
+	    50: 84 00 03 10 84 0D 85 0D 86 0D 87 0D 84 0B 29 28	..............)(
+	    60: 01 30 03 10 83 0C 82 0C 81 0C 80 0C FF 3E 03 1D	.0...........>..
+	    70: 31 28 03 08 02 04 01 04                        	1(......
+	223	RELOC	502
+		0x6	RELBITS RPSECT	cstackBANK0	7
+		0xA	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	text666	11
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	text666	11
+		0x1A	RELBITS RPSECT	text666	11
+		0x1C	RELBITS RPSECT	text666	11
+		0x1E	RELBITS RPSECT	cstackBANK0	7
+		0x20	RELBITS RPSECT	cstackBANK0	7
+		0x22	RELBITS RPSECT	cstackBANK0	7
+		0x2C	RELBITS RPSECT	text666	11
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x3A	RELBITS RPSECT	text666	11
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x3E	RELBITS RPSECT	cstackBANK0	7
+		0x48	RELBITS RPSECT	text666	11
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	text666	11
+		0x50	RELBITS RPSECT	cstackCOMMON	7
+		0x54	RELBITS RPSECT	cstackBANK0	7
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	cstackCOMMON	7
+		0x5E	RELBITS RPSECT	text666	11
+		0x64	RELBITS RPSECT	cstackBANK0	7
+		0x66	RELBITS RPSECT	cstackBANK0	7
+		0x68	RELBITS RPSECT	cstackBANK0	7
+		0x6A	RELBITS RPSECT	cstackBANK0	7
+		0x70	RELBITS RPSECT	text666	11
+		0x72	RELBITS RPSECT	cstackBANK0	7
+		0x74	RELBITS RPSECT	cstackBANK0	7
+		0x76	RELBITS RPSECT	cstackBANK0	7
+	224	TEXT	44
+		text666	0x78	0x20
+	     0: 00 04 03 1D 40 28 41 28 0B 28 42 28 0B 08 83 00	....@(A(.(B(....
+	    10: 0A 08 82 00 09 08 81 00 08 08 80 00 4B 28 08 00	............K(..
+	225	RELOC	190
+		0x0	RELBITS RPSECT	cstackBANK0	7
+		0x4	RELBITS RPSECT	text666	11
+		0x6	RELBITS RPSECT	text666	11
+		0x8	RELBITS RPSECT	text666	11
+		0xA	RELBITS RPSECT	text666	11
+		0xC	RELBITS RPSECT	cstackBANK0	7
+		0xE	RELBITS RPSECT	cstackBANK0	7
+		0x10	RELBITS RPSECT	cstackBANK0	7
+		0x12	RELBITS RPSECT	cstackBANK0	7
+		0x14	RELBITS RPSECT	cstackBANK0	7
+		0x16	RELBITS RPSECT	cstackBANK0	7
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x1C	RELBITS RPSECT	text666	11
+	226	TEXT	34
+		text667	0x0	0x16
+	     0: F0 30 83 12 03 13 8F 00 8E 01 0F 30 90 00 0C 10	.0.........0....
+	    10: 0B 17 8B 17 08 00                              	......
+	227	SYM	497
+		15	text665	22	LINENO
+		16	text665	34	LINENO
+		17	text665	43	LINENO
+		18	text665	4C	LINENO
+		20	text665	54	LINENO
+		21	text665	5D	LINENO
+		C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\lmul.c		0	FILNAM
+		4	text666	0	LINENO
+		7	text666	B	LINENO
+		8	text666	F	LINENO
+		9	text666	27	LINENO
+		10	text666	30	LINENO
+		11	text666	39	LINENO
+		12	text666	42	LINENO
+		13	text666	4B	LINENO
+		C:\Users\davidq\Downloads\Program1 blink\Program1\blink.c		0	FILNAM
+		154	text667	0	LINENO
+		155	text667	4	LINENO
+		167	text667	5	LINENO
+		168	text667	7	LINENO
+		170	text667	8	LINENO
+		171	text667	9	LINENO
+		172	text667	A	LINENO
+	228	TEXT	146
+		text668	0x0	0x86
+	     0: A0 30 8B 00 A0 30 83 16 03 13 81 00 83 12 03 13	.0...0..........
+	    10: 01 08 23 3E 84 00 00 20 80 00 00 08 83 16 03 13	..#>... ........
+	    20: 81 04 83 12 03 13 01 08 18 3E 84 00 00 20 80 00	.........>... ..
+	    30: 80 0A 01 08 6F 3E 84 00 00 20 81 00 81 0A 01 30	....o>... .....0
+	    40: 82 00 00 30 83 00 27 28 03 10 82 0D 83 0D 81 0B	...0..'(........
+	    50: 24 28 2D 28 03 10 82 0D 83 0D 80 0B 2A 28 02 08	$(-(........*(..
+	    60: 8F 00 03 08 90 00 00 30 83 1B FF 30 91 00 81 01	.......0...0....
+	    70: 00 30 87 00 00 30 86 00 00 30 85 00 00 30 84 00	.0...0...0...0..
+	    80: 00 30 8B 00 00 30                              	.0...0
+	229	RELOC	509
+		0x10	RELBITS RPSECT	dataBANK0	7
+		0x16	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x18	RELBITS RPSECT	cstackBANK0	7
+		0x1A	RELBITS RPSECT	cstackBANK0	7
+		0x26	RELBITS RPSECT	dataBANK0	7
+		0x2C	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x2E	RELBITS RPSECT	cstackBANK0	7
+		0x30	RELBITS RPSECT	cstackBANK0	7
+		0x32	RELBITS RPSECT	dataBANK0	7
+		0x38	RELBITS COMPLEX		11
+		(0xA + strings) & 0x7FF
+		0x3A	RELBITS RPSECT	cstackBANK0	7
+		0x3C	RELBITS RPSECT	cstackBANK0	7
+		0x40	RELBITS RPSECT	cstackBANK0	7
+		0x44	RELBITS RPSECT	cstackBANK0	7
+		0x46	RELBITS RPSECT	text668	11
+		0x4A	RELBITS RPSECT	cstackBANK0	7
+		0x4C	RELBITS RPSECT	cstackBANK0	7
+		0x4E	RELBITS RPSECT	cstackBANK0	7
+		0x50	RELBITS RPSECT	text668	11
+		0x52	RELBITS RPSECT	text668	11
+		0x56	RELBITS RPSECT	cstackBANK0	7
+		0x58	RELBITS RPSECT	cstackBANK0	7
+		0x5A	RELBITS RPSECT	cstackBANK0	7
+		0x5C	RELBITS RPSECT	text668	11
+		0x5E	RELBITS RPSECT	cstackBANK0	7
+		0x60	RELBITS RPSECT	bssBANK0	7
+		0x62	RELBITS RPSECT	cstackBANK0	7
+		0x64	RELBITS RPSECT	bssBANK0	7
+		0x68	RELBITS RPSECT	cstackBANK0	7
+		0x6C	RELBITS RPSECT	bssBANK0	7
+		0x72	RELBITS RPSECT	bssBANK0	7
+		0x76	RELBITS RPSECT	bssBANK0	7
+		0x7A	RELBITS RPSECT	bssBANK0	7
+		0x7E	RELBITS RPSECT	bssBANK0	7
+		0x82	RELBITS RPSECT	bssBANK0	7
+	230	TEXT	26
+		text668	0x86	0xE
+	     0: 8A 00 00 30 89 00 00 30 88 00 8B 17 08 00      	...0...0......
+	231	RELOC	36
+		0x0	RELBITS RPSECT	bssBANK0	7
+		0x4	RELBITS RPSECT	bssBANK0	7
+		0x8	RELBITS RPSECT	bssBANK0	7
+	232	TEXT	38
+		text669	0x0	0x1A
+	     0: 83 16 03 13 8E 15 07 30 83 12 03 13 9F 00 10 30	.......0.......0
+	    10: 83 16 03 13 85 00 86 01 08 00                  	..........
+	233	TEXT	112
+		text670	0x0	0x64
+	     0: 0B 1D 03 28 04 28 16 28 0B 11 01 30 84 07 00 30	...(.(.(...0...0
+	    10: 03 18 01 30 85 07 00 30 03 18 01 30 86 07 00 30	...0...0...0...0
+	    20: 03 18 01 30 87 07 80 30 85 06 16 28 0C 1C 19 28	...0...0...(...(
+	    30: 1A 28 27 28 F0 30 8F 00 8E 01 0C 10 01 30 92 07	.('(.0.......0..
+	    40: 03 18 93 0A 00 30 93 07 01 30 85 06 27 28 03 08	.....0...0..'(..
+	    50: FF 00 02 08 8A 00 01 08 84 00 00 0E 83 00 FE 0E	................
+	    60: 7E 0E 09 00                                    	~...
+	234	RELOC	244
+		0x2	RELBITS RPSECT	text670	11
+		0x4	RELBITS RPSECT	text670	11
+		0x6	RELBITS RPSECT	text670	11
+		0xC	RELBITS RPSECT	bssBANK0	7
+		0x14	RELBITS RPSECT	bssBANK0	7
+		0x1C	RELBITS RPSECT	bssBANK0	7
+		0x24	RELBITS RPSECT	bssBANK0	7
+		0x2A	RELBITS RPSECT	text670	11
+		0x2E	RELBITS RPSECT	text670	11
+		0x30	RELBITS RPSECT	text670	11
+		0x32	RELBITS RPSECT	text670	11
+		0x3E	RELBITS RPSECT	bssBANK0	7
+		0x42	RELBITS RPSECT	bssBANK0	7
+		0x46	RELBITS RPSECT	bssBANK0	7
+		0x4C	RELBITS RPSECT	text670	11
+		0x4E	RELBITS RPSECT	cstackCOMMON	7
+		0x52	RELBITS RPSECT	cstackCOMMON	7
+		0x56	RELBITS RPSECT	cstackCOMMON	7
+		0x5A	RELBITS COMPLEX		7
+		cstackCOMMON ^ 0xFFFFFF80
+	235	TEXT	37
+		intentry	0x0	0x18
+	     0: FE 00 03 0E 80 00 04 08 81 00 0A 08 82 00 83 12	................
+	    10: 03 13 7F 08 83 00 00 28                        	.......(
+	236	RELOC	75
+		0x4	RELBITS RPSECT	cstackCOMMON	7
+		0x8	RELBITS RPSECT	cstackCOMMON	7
+		0xC	RELBITS RPSECT	cstackCOMMON	7
+		0x14	RELBITS RPSECT	cstackCOMMON	7
+		0x16	RELBITS RPSECT	text670	11
+	237	TEXT	14
+		bssCOMMON	0x3	0x0
+	238	TEXT	13
+		bssBANK0	0x18	0x0
+	239	TEXT	14
+		dataBANK0	0x2	0x0
+	240	TEXT	17
+		cstackCOMMON	0x7	0x0
+	241	TEXT	16
+		cstackBANK0	0x2E	0x0
+	242	SYM	465
+		114	text668	0	LINENO
+		132	text668	2	LINENO
+		133	text668	6	LINENO
+		137	text668	11	LINENO
+		140	text668	37	LINENO
+		141	text668	38	LINENO
+		142	text668	40	LINENO
+		147	text668	48	LINENO
+		148	text668	49	LINENO
+		86	text669	0	LINENO
+		90	text669	3	LINENO
+		95	text669	7	LINENO
+		96	text669	B	LINENO
+		101	text669	C	LINENO
+		180	text670	0	LINENO
+		182	text670	4	LINENO
+		194	text670	5	LINENO
+		196	text670	13	LINENO
+		203	text670	16	LINENO
+		205	text670	1A	LINENO
+		206	text670	1C	LINENO
+		208	text670	1D	LINENO
+		210	text670	1E	LINENO
+		212	text670	24	LINENO
+		214	text670	27	LINENO
+		175	intentry	0	LINENO
+	243	LISTRELOC	20
+		'blink.rlf' -> 'blink.lst'
+	244	FNINFO	25
+		FNCALL	_lcd_putnumber -> ___awmod
+	245	END	2
+

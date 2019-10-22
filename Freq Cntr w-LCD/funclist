@@ -1,0 +1,23 @@
+_init: CODE, 3978 0 10
+_doFrequency: CODE, 314 0 255
+_lcd_puts: CODE, 1981 0 37
+_ISR: CODE, 1934 0 47
+_lcd_putdigit: CODE, 3998 0 10
+___awmod: CODE, 1519 0 104
+_lcd_putnumber: CODE, 19 0 295
+_main: CODE, 1068 0 119
+___lmul: CODE, 1796 0 76
+_timersON: CODE, 4039 0 22
+_timersOFF: CODE, 1413 0 106
+_lcd_clear: CODE, 4020 0 19
+_lcd_goto: CODE, 3988 0 10
+___lldiv: CODE, 1301 0 112
+_initTimer0: CODE, 1187 0 114
+_initTimer1: CODE, 4008 0 12
+_lcd_write: CODE, 4061 0 35
+___tmul: CODE, 1872 0 62
+___llmod: CODE, 1623 0 94
+_ultoa: CODE, 917 0 151
+_doScale: CODE, 755 0 162
+_lcd_init: CODE, 1717 0 79
+Total: 1931
