@@ -1,30 +1,19 @@
-/*
 
-  state = !state;
-*/
+  // ------------------------------------------------------
+  // open the serial port at 115200 bps:
+  // ------------------------------------------------------
+
+
+
+
+  // ------------------------------------------------------
+  // initialize Stepper motor.
+  // ------------------------------------------------------
+/*  state = !state;  */
 
 const byte motorStep = 3;
 const byte motorDir  = 4;
 const byte onOff  = 5;
-
-const byte interruptPinIR = 2;
-
-
-/**
- * Mitsumi 35PS-9
- * ==============
- * 24V 
- * 517mA max
- * 970 pps out
- * 740 pps in
- * --------------
- * 7.5 degree per step
- * Full -  48 steps full revolution (360 degree)
- * 1/2  -  96 steps
- * 1/4  - 192 steps
- * 1/8  - 384 steps
- * 1/16 - 768 steps --->  (this is what I'm using)
- */
 
 const double stepDegree = 7.5;
 const double microStep = 16; // 1/16
@@ -45,24 +34,72 @@ unsigned long loopCnt = 9999999;
 
 volatile boolean activeRun = false;
 
+  // ------------------------------------------------------
+  // iterupt for rotory encoder
+  // ------------------------------------------------------
+const byte interruptRotory = 2;
 
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // open the serial port at 115200 bps:
-  Serial.begin(115200);
+  // ------------------------------------------------------
+  // iterupt for IR winder loop counter 
+  // ------------------------------------------------------
+const byte interruptPinIR = 2;
   
-  // initialize digital pin LED_BUILTIN as an output.
+  // ------------------------------------------------------
+  // LCD setup
+  // ------------------------------------------------------
+// SDA is pin A4
+// SCL is pin A5
+#include <LiquidCrystal_I2C.h> //from newliquidcrystal library
+LiquidCrystal_I2C lcd(0x27, 20, 4);  // Set the LCD I2C address
+
+
+
+// SETUP function runs once when you press reset or power the board
+void setup() {
+  // ------------------------------------------------------
+  // open the serial port at 115200 bps:
+  // ------------------------------------------------------
+  Serial.begin(115200);
+  printInfo();
+  
+  // ------------------------------------------------------
+  // initialize Stepper motor.
+  // ------------------------------------------------------
   pinMode(motorStep, OUTPUT);
   pinMode(motorDir, OUTPUT);
   pinMode(onOff, OUTPUT);
 
-  pinMode (interruptPinIR, INPUT);
-  //attachInterrupt(digitalPinToInterrupt(interruptPinIR), cntDetectIR, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(interruptPinIR), debounceInterrupt, CHANGE);
+  digitalWrite(motorDir, HIGH); 
+
+  // ------------------------------------------------------
+  // iterupt for rotory encoder
+  // ------------------------------------------------------
+//  pinMode (interruptPinIR, INPUT);
+//  attachInterrupt(digitalPinToInterrupt(interruptPinIR), debounceInterrupt, CHANGE);
   
   state = LOW;
 
-  printInfo();
+  // ------------------------------------------------------
+  // iterupt for Loop counter 
+  // ------------------------------------------------------
+  pinMode (interruptPinIR, INPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptPinIR), debounceInterrupt, CHANGE);
+
+
+
+  // ------------------------------------------------------
+  // LCD setup
+  // ------------------------------------------------------
+  lcd.init();
+  lcd.backlight();
+
+  delay(2000);  
+  lcd.clear();  
+
+  lcd.setCursor(0, 0);
+  lcd.print("Coil Winder");
+  lcd.setCursor(0, 1);
+  lcd.print("abc                 ");
   }
 
 void printInfo(){
@@ -79,12 +116,15 @@ void printInfo(){
   Serial.println("-----------------------------");
 }
 
-// the loop function runs over and over again forever
+// LOOP function runs over and over again forever
 void loop() {
+
+  doStep();
+      
   if (activeRun){
     loopCnt++;
 
-    doStep();
+    //doStep();
 
 //    Serial.print(loopCnt);
 //    Serial.print (" _ ");
@@ -120,7 +160,6 @@ void debounceInterrupt() {
     
   Serial.print ("last_micros Time: ");
   Serial.println (last_millis);
-  
 }
 
 
