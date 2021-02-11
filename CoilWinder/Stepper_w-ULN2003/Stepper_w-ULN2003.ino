@@ -214,18 +214,6 @@ void setup() {
 //  delay(3000);  
 }
 
-void doDisplay(){
-  lcd.init();
-  lcd.backlight();
-  
-//  lcd.clear();  
-  
-  lcd.setCursor(0, 0);
-  lcd.print("Coil Winder");
-  lcd.setCursor(0, 1);
-  lcd.print("abc                 ");
-}
-
 void doStep(motion dir){
   if (dir == motion::UP){
     step++;
@@ -486,47 +474,86 @@ void loadShuttle(){
   Serial.print  ("Meters: ");
   Serial.println(meters);
 
-  // load loops
-  // number of overlaps
-  lcd.print(meters);
-  lcd.print("/");
-  lcd.print(shuttleWindings);
-
   Serial.print  ("Shuttle Windings: ");
   Serial.println(shuttleWindings);
 
-
+  // load loops
+  // number of overlaps
+  lcd.print(meters);
+  lcd.print("M of wire");
+//  lcd.print(shuttleWindings);
 
   while(digitalRead(rotorySwitch)){
   
   }
   debounceSwitch();
 
-  // Load the shuttle
-  // run motor revers
-  // count loops +1
+    // Load the shuttle
+    // run motor revers
+      digitalWrite(motor1A, LOW); 
+      digitalWrite(motor2A, HIGH); 
+      digitalWrite(motorEnable, HIGH); 
+
+   loopCount = 0;
+   int loopDisplay = -1;
+    while (loopCount < shuttleWindings){
+      if (loopCount != loopDisplay){
+        lcd.setCursor(0, 1);
+        lcd.print("Shuttle: ");            
+        lcd.print(loopCount);            
+        lcd.print(" of ");            
+        lcd.print(shuttleWindings);            
+      }
+    }
   // stop motor;
+    digitalWrite(motorEnable, LOW); 
 }
 
-void   loadWindToroid(){
+void windToroid(){
   lcd.setCursor(0, 0);
   lcd.print("Wind Coil");
   lcd.setCursor(0, 1);
   lcd.print("Loop / ETA : ");
 
   // load loops
-  // pause for overlaps
 
   while(digitalRead(rotorySwitch)){
-  
   }
   debounceSwitch();
 
-  // Load the shuttle
-  // run motor revers
-  // count loops +1
-  // increment stepper (wire diameter on ID but step for OD to meet the goal)
+  // Load the Toroid
+  // run motor forward
+  digitalWrite(motor1A, HIGH); 
+  digitalWrite(motor2A, LOW); 
+  digitalWrite(motorEnable, HIGH); 
+
+   loopCount = 0;
+   int loopDisplay = -1;
+    while (loopCount < windings){
+      if (loopCount != loopDisplay){
+        lcd.setCursor(0, 1);
+        lcd.print("Toroid: ");            
+        lcd.print(loopCount);            
+        lcd.print(" of ");            
+        lcd.print((int)windings);            
+      }
+// ----->>> increment stepper (wire diameter on ID but step for OD to meet the goal)
+// ----->>> Pause for overlaps
+//    for (int l = 0; l < fullRotationSteps; l++){
+//      doStep(motion::UP);
+//    }
+//    for (int l = 0; l < (fullRotationSteps/4); l++){
+//      doStep(motion::STOP);
+//    } 
+//    for (int l = 0; l < fullRotationSteps; l++){
+//      doStep(motion::DOWN);
+//    }    
+//    for (int l = 0; l < (fullRotationSteps/4); l++){
+//      doStep(motion::STOP);
+//    } 
+    }
   // stop motor;
+    digitalWrite(motorEnable, LOW); 
 }
 
 
@@ -539,52 +566,10 @@ void loop() {
   setWindings();
   setWireWidth();
   loadShuttle();
-  loadWindToroid();
+  windToroid();
   
   
-  doDisplay();
+  //doDisplay();
 
-  lcd.setCursor(0, 1);
-  lcd.print("rotoryCount:       ");
-  lcd.setCursor(6, 1);
-  lcd.print(rotoryCount);
-      
-  lcd.setCursor(10, 1);
-  lcd.print(loopCount);
-
-
-  while (true){
-    digitalWrite(motor1A, LOW); 
-    digitalWrite(motor2A, HIGH); 
-    digitalWrite(motorEnable, HIGH); 
-//    delay(2000); // waits for a 2 ms to simulate step deley
-while (digitalRead(rotorySwitch));
-    digitalWrite(motorEnable, LOW); 
-    delay(1000); // waits for a 2 ms to simulate step deley
-
-  
-    digitalWrite(motor1A, HIGH); 
-    digitalWrite(motor2A, LOW); 
-    digitalWrite(motorEnable, HIGH); 
-//    delay(2000); // waits for a 2 ms to simulate step deley
-while (digitalRead(rotorySwitch));
-    digitalWrite(motorEnable, LOW); 
-    delay(1000); // waits for a 2 ms to simulate step deley
-    }
-
-  
-  // put your main code here, to run repeatedly:
-  
-  for (int l = 0; l < fullRotationSteps; l++){
-    doStep(motion::UP);
-  }
-  for (int l = 0; l < (fullRotationSteps/4); l++){
-    doStep(motion::STOP);
-  } 
-  for (int l = 0; l < fullRotationSteps; l++){
-    doStep(motion::DOWN);
-  }    
-  for (int l = 0; l < (fullRotationSteps/4); l++){
-    doStep(motion::STOP);
-  } 
+  // do it again
 }
