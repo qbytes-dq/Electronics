@@ -3,7 +3,6 @@
   // ------------------------------------------------------
   unsigned long baudRate = 115200;
 
-
   // ------------------------------------------------------
   // initialize winder gear.
   // ------------------------------------------------------
@@ -68,7 +67,6 @@
   volatile double tempRotoryCount = 0.0;
   
   const byte rotorySwitch = 13;  // Pin 13
-
 
   // ------------------------------------------------------
   // LCD setup
@@ -217,7 +215,7 @@ void setup() {
 void doStep(motion dir){
   if (dir == motion::UP){
     step++;
-    if (step >=4)
+    if (step >= 4)
       step = 0;
   }else if (dir == motion::DOWN){
     step--;
@@ -226,7 +224,7 @@ void doStep(motion dir){
     }
   } else {//Stop
    // Do nothing
-   delay(2); // waits for a 2 ms to simulate step deley
+   //delay(2); // waits for a 2 ms to simulate step deley // Moved outside the doStep method
    return;
   }
 
@@ -290,7 +288,7 @@ void doStep(motion dir){
 //    break;
   }
   // Min delay is 2ms
-  delay(2); // waits for a 2 m2
+  // delay(2); // waits for a 2 m2 // moved outside the doStep method
 }
 
 const byte motorStep = 3;
@@ -338,13 +336,12 @@ double toroidH  = 0.0;
 int windings = 0;
 double wireWidth = 0;
 
-
-int debounceDelay = 100;
+int debounceSwitchMills = 100;
 void debounceSwitch(){
   while(!digitalRead(rotorySwitch)){
-    delay(debounceDelay);
+    delay(debounceSwitchMills);
   }
-  delay(debounceDelay * 4);
+  delay(debounceSwitchMills * 4);
 }
 
 void setOD(){
@@ -444,12 +441,6 @@ void setWireWidth(){
 }
 
 void loadShuttle(){
-  lcd.setCursor(0, 0);
-  lcd.print("Load Shuttle");
-  lcd.setCursor(0, 1);
-  lcd.print("M/W: ");
-
-  
   // meters required
   double toroidW = (toroidOD - toroidID) / 2;
   Serial.print  ("toroidW: ");
@@ -474,25 +465,24 @@ void loadShuttle(){
   Serial.print  ("Meters: ");
   Serial.println(meters);
 
-  Serial.print  ("Shuttle Windings: ");
-  Serial.println(shuttleWindings);
-
   // load loops
   // number of overlaps
+  lcd.setCursor(0, 0);
+  lcd.print("Load Shuttle");
+
+  lcd.setCursor(0, 1);
   lcd.print(meters);
   lcd.print("M of wire");
-//  lcd.print(shuttleWindings);
 
-  while(digitalRead(rotorySwitch)){
-  
+  while(digitalRead(rotorySwitch)){  
   }
   debounceSwitch();
 
-    // Load the shuttle
-    // run motor revers
-      digitalWrite(motor1A, LOW); 
-      digitalWrite(motor2A, HIGH); 
-      digitalWrite(motorEnable, HIGH); 
+  // Load the shuttle
+  // run motor revers
+  digitalWrite(motor1A, LOW); 
+  digitalWrite(motor2A, HIGH); 
+  digitalWrite(motorEnable, HIGH); 
 
    loopCount = 0;
    int loopDisplay = -1;
@@ -509,13 +499,15 @@ void loadShuttle(){
     digitalWrite(motorEnable, LOW); 
 }
 
+
+volatile unsigned long step_millis;
+
 void windToroid(){
   lcd.setCursor(0, 0);
   lcd.print("Wind Coil");
-  lcd.setCursor(0, 1);
-  lcd.print("Loop / ETA : ");
 
-  // load loops
+  lcd.setCursor(0, 1);
+  lcd.print("Thread the toroid");
 
   while(digitalRead(rotorySwitch)){
   }
@@ -536,24 +528,25 @@ void windToroid(){
         lcd.print(loopCount);            
         lcd.print(" of ");            
         lcd.print((int)windings);            
+
+        lcd.setCursor(0, 1);
+        lcd.print("Loop / ETA : ");
       }
-// ----->>> increment stepper (wire diameter on ID but step for OD to meet the goal)
+
+    if((long)(millis() - step_millis) <= 2) {
+      //   do stepper step.
+      step_millis = millis(); //micros();
+
+    // if (step degree to low){
+    // ----->>> increment stepper (wire diameter on ID but step for OD to meet the goal)
+    //      doStep(motion::UP);
+    //    }
+      //}
 // ----->>> Pause for overlaps
-//    for (int l = 0; l < fullRotationSteps; l++){
-//      doStep(motion::UP);
-//    }
-//    for (int l = 0; l < (fullRotationSteps/4); l++){
-//      doStep(motion::STOP);
-//    } 
-//    for (int l = 0; l < fullRotationSteps; l++){
-//      doStep(motion::DOWN);
-//    }    
-//    for (int l = 0; l < (fullRotationSteps/4); l++){
-//      doStep(motion::STOP);
-//    } 
     }
+  }
   // stop motor;
-    digitalWrite(motorEnable, LOW); 
+  digitalWrite(motorEnable, LOW); 
 }
 
 
@@ -568,8 +561,5 @@ void loop() {
   loadShuttle();
   windToroid();
   
-  
-  //doDisplay();
-
-  // do it again
+  // do it again?
 }
