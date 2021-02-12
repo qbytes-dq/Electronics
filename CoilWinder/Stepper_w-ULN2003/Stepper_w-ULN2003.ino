@@ -21,27 +21,22 @@
   */
   
   // 28BYJ-48 Gear Reduction Ratio
-  double topRatios = (28.0/22.0)* (22.0/22.0) *(22.0/20.0); // gears on top *(28.0/22.0)*(22.0/20.0);
-  double gearRatios = (32.0/9.0) * (22.0/11.0) * (26.0/9.0) * (31.0/10.0) * topRatios;
+  double printedRatios = (28.0/22.0)* (22.0/22.0) *(22.0/20.0); // gears on top *(28.0/22.0)*(22.0/20.0);
+  double gearRatios = (32.0/9.0) * (22.0/11.0) * (26.0/9.0) * (31.0/10.0) * printedRatios;
   
   // Stride Angle ： 5.625° x 1/64 datasheet is wrong
   // Stride Angle ： 11.25° x ~1/64 website above is correct
 
   // Cir
   #define PI 3.1415926535897932384626433832795  // Overkill.....
-  double postCircumference = 22.5 * PI;
-  double coilCircumference = 49.5 * PI;
   double shuttleCircumference = 184 * PI;
-  
-  double phys = coilCircumference/postCircumference;
-  
-  double fullRotationSteps = (360.0 / (11.25 / gearRatios) * phys);
+  double postCircumference = 22.5 * PI;
     
-  enum motion {UP, DOWN, STOP};
+  enum motion {CCW, CW, STOP};
   void doStep(motion dir);
   
-  int step = 0;
-
+  int stepPOS = 0;
+  int stepCount = 0;
   const byte D09 =  9;
   const byte D10 = 10;
   const byte D11 = 11;
@@ -55,7 +50,7 @@
   // iterupt for IR winder loop counter 
   // ------------------------------------------------------
   const byte interruptPinIR = 2; // pin 2, Pin D2 = INT0
-  volatile unsigned long loopCount = 0;
+  volatile unsigned long irCount = 0;
   
   // ------------------------------------------------------
   // interrupt for rotory encoder
@@ -147,14 +142,8 @@ void setup() {
   Serial.println("Stepper 28BYJ-48 Gear Reduction with ULN2003 driver");
   Serial.println("=============================");
 
-
   Serial.print  ("Gear Ratios: ");
   Serial.println(gearRatios);
-  Serial.print  ("Full Rotation Steps: ");
-  Serial.println(fullRotationSteps);
-  Serial.print  ("Step size: ");
-  byte precision = 9;  // Number of digits after the decimal point
-  printDouble(360.0/fullRotationSteps, precision);
  
   // ------------------------------------------------------
   // initialize winder gear.
@@ -205,30 +194,31 @@ void setup() {
   lcd.setCursor(0, 0);
   lcd.print("                    ");
   lcd.setCursor(0, 1);
-  lcd.print("                    ");
-
-//  lcd.setCursor(0, 1);
-//  lcdDouble(360.0/fullRotationSteps, precision);
-//  delay(3000);  
+  lcd.print("                    "); 
 }
 
 void doStep(motion dir){
-  if (dir == motion::UP){
-    step++;
-    if (step >= 4)
-      step = 0;
-  }else if (dir == motion::DOWN){
-    step--;
-    if (step < 0){
-      step = 3;
+  if (dir == motion::CCW){
+    stepPOS++;
+    if (stepPOS >= 4)
+      stepPOS = 0;
+  }else if (dir == motion::CW){
+    stepPOS--;
+    if (stepPOS < 0){
+      stepPOS = 3;
     }
-  } else {//Stop
-   // Do nothing
-   //delay(2); // waits for a 2 ms to simulate step deley // Moved outside the doStep method
+  } else {//Disable steppers to Stop
+    digitalWrite(D09, LOW); 
+    digitalWrite(D10, LOW); 
+    digitalWrite(D11, LOW); 
+    digitalWrite(D12, LOW);    
+    //delay(2); // waits for a 2 ms to simulate step deley // Moved outside the doStep method
    return;
   }
 
-  switch(step){
+  stepCount++;
+
+  switch(stepPOS){
     case 0:
     digitalWrite(D09, HIGH); 
     digitalWrite(D10, LOW); 
@@ -258,7 +248,7 @@ void doStep(motion dir){
     break;
   }
 
-  switch(step){
+  switch(stepPOS){
 //    case 0:
 //    digitalWrite(D09, HIGH); 
 //    digitalWrite(D10, HIGH); 
@@ -301,7 +291,7 @@ long debouncing_time = 100; //Debouncing Time in Milliseconds
 volatile unsigned long last_millis;
 
 void pinIRInterrupt(){
-  loopCount++;
+irCount++;
 }
 
 void interruptRotory() {
@@ -333,6 +323,7 @@ void interruptRotory() {
 double toroidOD = 0.0;
 double toroidID = 0.0;
 double toroidH  = 0.0;
+
 int windings = 0;
 double wireWidth = 0;
 
@@ -409,7 +400,7 @@ void setWindings(){
   lcd.print("Windings: ");
 
   rotoryCount = 1;
-  rotoryCount = 100;
+  rotoryCount = 10; //100;
   while(digitalRead(rotorySwitch)){
     if (rotoryCount !=  windings){
       windings = rotoryCount;
@@ -450,14 +441,14 @@ void loadShuttle(){
   Serial.print  ("area: ");
   Serial.println(area);
 
-  double milli = (area * windings);
+  double milli = area * windings;
   Serial.print  ("milli: ");
   Serial.println(milli);
 
   Serial.print  ("Shuttle Circum: ");
   Serial.println(shuttleCircumference);
 
-  double shuttleWindings = milli / shuttleCircumference;
+  double shuttleWindings = ( milli / shuttleCircumference ) + 1;
   Serial.print  ("shuttleWindings: ");
   Serial.println(shuttleWindings);
 
@@ -484,21 +475,21 @@ void loadShuttle(){
   digitalWrite(motor2A, HIGH); 
   digitalWrite(motorEnable, HIGH); 
 
-   loopCount = 0;
-   int loopDisplay = -1;
-    while (loopCount < shuttleWindings){
-      if (loopCount != loopDisplay){
-        lcd.setCursor(0, 1);
-        lcd.print("Shuttle: ");            
-        lcd.print(loopCount);            
-        lcd.print(" of ");            
-        lcd.print(shuttleWindings);            
-      }
+irCount = 0;
+  int shuttleLast = -1;
+  while (irCount <= shuttleWindings){
+    if (irCount != shuttleLast){
+      shuttleLast = irCount;
+      lcd.setCursor(0, 1);
+      lcd.print("Shuttle: ");            
+      lcd.print(irCount);            
+      lcd.print(" of ");            
+      lcd.print(shuttleWindings);            
     }
-  // stop motor;
-    digitalWrite(motorEnable, LOW); 
+  }
+  // Stop shuttle motor;
+  digitalWrite(motorEnable, LOW); 
 }
-
 
 volatile unsigned long step_millis;
 
@@ -507,7 +498,33 @@ void windToroid(){
   lcd.print("Wind Coil");
 
   lcd.setCursor(0, 1);
-  lcd.print("Thread the toroid");
+  lcd.print("Thread the toroid"); // under and up
+
+
+  Serial.println("=================");
+  byte precision = 9;  // Number of digits after the decimal point
+// calc some stuff
+  double odCoilCircumference = toroidOD * PI;
+  Serial.print  ("OD Circumference: ");
+  Serial.println(odCoilCircumference);
+
+  double idCoilCircumference = toroidID * PI;
+  Serial.print  ("ID Circumference: ");
+  Serial.println(idCoilCircumference);
+
+  double diff = idCoilCircumference / odCoilCircumference;
+  Serial.print  ("diff: ");
+  printDouble(diff, precision);
+
+  double phys = odCoilCircumference/postCircumference;  
+  double fullRotationSteps = (360.0 / (11.25 / gearRatios) * phys);  
+  Serial.print  ("OD Full Rotation Steps: ");
+  Serial.println(fullRotationSteps);
+
+  Serial.print  ("Step size: ");
+  printDouble(360.0/fullRotationSteps, precision);
+
+  Serial.println("=================");
 
   while(digitalRead(rotorySwitch)){
   }
@@ -519,34 +536,47 @@ void windToroid(){
   digitalWrite(motor2A, LOW); 
   digitalWrite(motorEnable, HIGH); 
 
-   loopCount = 0;
-   int loopDisplay = -1;
-    while (loopCount < windings){
-      if (loopCount != loopDisplay){
-        lcd.setCursor(0, 1);
-        lcd.print("Toroid: ");            
-        lcd.print(loopCount);            
-        lcd.print(" of ");            
-        lcd.print((int)windings);            
+  irCount = 0;
+  int toroidLast = -1;
+  while (irCount <= windings){
+    if (irCount != toroidLast){
+      toroidLast = irCount;
+      lcd.setCursor(0, 0);
+      lcd.print("Toroid: ");            
+      lcd.print(irCount);            
+      lcd.print(" of ");            
+      lcd.print((int)windings);            
+  
+      lcd.setCursor(0, 1);
+      lcd.print("Loop / ETA : ");
+    }
 
-        lcd.setCursor(0, 1);
-        lcd.print("Loop / ETA : ");
-      }
-
-    if((long)(millis() - step_millis) <= 2) {
+    if(millis() - step_millis >= 2) {
       //   do stepper step.
       step_millis = millis(); //micros();
-
-    // if (step degree to low){
-    // ----->>> increment stepper (wire diameter on ID but step for OD to meet the goal)
-    //      doStep(motion::UP);
-    //    }
-      //}
-// ----->>> Pause for overlaps
+  
+      // ----->>> increment stepper (wire diameter on ID but step for OD to meet the wire width goal)
+      if (true){ //step degree to low){
+        doStep(motion::CW);
+      }
+    }
+    
+    // ----->>> Pause for overlaps
+    if(stepCount >= fullRotationSteps){ //stepcount=overlap){ // stepCount >= fullRotationSteps 
+      stepCount = 0;
+      lcd.setCursor(0, 0);
+      lcd.print("Overlap:");
+      lcd.setCursor(0, 1);
+      lcd.print("Move wire left");
+      while(digitalRead(rotorySwitch)){
+      }
+    debounceSwitch();
     }
   }
-  // stop motor;
+  // Stop motor;
   digitalWrite(motorEnable, LOW); 
+  // Stop stepper;
+  doStep(motion::STOP);
 }
 
 
