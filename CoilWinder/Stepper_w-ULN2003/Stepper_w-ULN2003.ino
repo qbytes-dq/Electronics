@@ -243,6 +243,9 @@ void setup() {
   delay(3000);   
 }
 
+
+boolean fullPower = false;
+
 void doStep(motion dir){
   if (dir == motion::CCW){
     stepPOS++;
@@ -264,7 +267,38 @@ void doStep(motion dir){
 
   stepCount++;
 
+if (fullPower){
   switch(stepPOS){
+    case 0:
+    digitalWrite(D09, HIGH); 
+    digitalWrite(D10, HIGH); 
+    digitalWrite(D11, LOW); 
+    digitalWrite(D12, LOW); 
+    break;
+    
+    case 1:
+    digitalWrite(D09, LOW); 
+    digitalWrite(D10, HIGH); 
+    digitalWrite(D11, HIGH); 
+    digitalWrite(D12, LOW);
+    break;
+    
+    case 2:
+    digitalWrite(D09, LOW); 
+    digitalWrite(D10, LOW); 
+    digitalWrite(D11, HIGH); 
+    digitalWrite(D12, HIGH);
+    break;
+    
+    case 3:
+    digitalWrite(D09, HIGH); 
+    digitalWrite(D10, LOW); 
+    digitalWrite(D11, LOW); 
+    digitalWrite(D12, HIGH); 
+    break;
+  }
+}else{
+  switch(stepPOS){    
     case 0:
     digitalWrite(D09, HIGH); 
     digitalWrite(D10, LOW); 
@@ -293,36 +327,7 @@ void doStep(motion dir){
     digitalWrite(D12, HIGH); 
     break;
   }
-
-  switch(stepPOS){
-//    case 0:
-//    digitalWrite(D09, HIGH); 
-//    digitalWrite(D10, HIGH); 
-//    digitalWrite(D11, LOW); 
-//    digitalWrite(D12, LOW); 
-//    break;
-//    
-//    case 1:
-//    digitalWrite(D09, LOW); 
-//    digitalWrite(D10, HIGH); 
-//    digitalWrite(D11, HIGH); 
-//    digitalWrite(D12, LOW);
-//    break;
-//    
-//    case 2:
-//    digitalWrite(D09, LOW); 
-//    digitalWrite(D10, LOW); 
-//    digitalWrite(D11, HIGH); 
-//    digitalWrite(D12, HIGH);
-//    break;
-//    
-//    case 3:
-//    digitalWrite(D09, HIGH); 
-//    digitalWrite(D10, LOW); 
-//    digitalWrite(D11, LOW); 
-//    digitalWrite(D12, HIGH); 
-//    break;
-  }
+}
   // Min delay is 2ms
   // delay(2); // waits for a 2 m2 // moved outside the doStep method
 }
@@ -461,7 +466,7 @@ void setWindings(){
   lcd.print("Windings: ");
 
   rotoryCount = 1;
-  rotoryCount = 100;
+  rotoryCount = 500;
   windings = -1;
   while(digitalRead(rotorySwitch)){
     if (rotoryCount !=  windings){
@@ -485,10 +490,10 @@ void setWireWidth(){
   lcd.print("Width: ");
 
   rotoryCount = 1;
-  rotoryCount = 200;//64;
+  rotoryCount = 64;//200;
   wireWidth = -1;
   while(digitalRead(rotorySwitch)){
-    tempRotoryCount = (double)rotoryCount / 100.0; // 1.00mm  s/b 0.64mm
+    tempRotoryCount = (double)rotoryCount / 100.0;
     if (tempRotoryCount !=  wireWidth){
       wireWidth = tempRotoryCount;
       lcd.setCursor(9, 1);
