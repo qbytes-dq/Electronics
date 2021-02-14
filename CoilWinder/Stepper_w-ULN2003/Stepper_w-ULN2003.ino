@@ -94,19 +94,6 @@ void printDouble(double number, byte precision){
   Serial.print(printBuffer);
 }
 
-void printDouble4(double number, byte precision){
-  precision++; // Need an extra byte
-  // Make room for your floating point number, however you plan to format it.
-  char floatBuffer[precision];
-  
-  // Make room for entire print line, however long you plan to make it.
-  char printBuffer[precision];
-
-  dtostrf(number, precision, precision, floatBuffer);
-  sprintf(printBuffer, "%04d", floatBuffer);
-  Serial.print(printBuffer);
-}
-
 void lcdDouble(double number, byte precision){
   // Make room for your floating point number, however you plan to format it.
   char floatBuffer[precision + 1];
